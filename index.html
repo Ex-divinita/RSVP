@@ -42,7 +42,7 @@
         <!-- Main RSVP Card -->
         <div id="rsvp-card" class="bg-white rounded-xl shadow-2xl overflow-hidden fade-in">
             <!-- Header Image -->
-            <img src="https://placehold.co/1963x407/EFEFEF/333333?text=Tirana+International+Fair" alt="Tirana International Fair Header" class="w-full h-auto">
+            <img src="image1.jpg" class="w-full h-auto">
             
             <!-- Header Section -->
             <div class="p-6 md:p-8 text-center" style="background-color: #ed1b24;">
@@ -65,7 +65,7 @@
                     <div id="attendee-fields-container" class="space-y-6 pt-6 border-t border-gray-200">
                         <!-- Attendee 1 (Primary) -->
                         <div class="attendee-group">
-                            <h3 class="text-lg font-bold text-gray-900 mb-4">Attendee 1 (Primary)</h3>
+                            <h3 class="text-lg font-bold text-gray-900 mb-4">Attendee 1</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                                 <div class="md:col-span-2">
                                     <label for="fullname-1" class="block text-sm font-medium text-gray-700">Full Name</label>
@@ -122,18 +122,18 @@
     <script>
         const conferences = [
             // Thursday, 6 November 2025
-            { id: 'panel1', date: 'Thursday, 6 November 2025', time: '11:00–12:00', title: 'Panel 1: Tourism Now & Tomorrow', location: 'Conference Hall A', description: [ 'Comparison of where the tourism industry was 5 years ago, where it is now and where it will be in the next 5 years – Albania 2030.', 'Sustainable tourism practices and plans.', 'The importance of cultural tourism and strategies.' ], collaborators: 'In collaboration with the Ministry of Tourism, Culture and Sports', isSelectable: true },
-            { id: 'panel2', date: 'Thursday, 6 November 2025', time: '13:00–14:00', title: 'Panel 2: Mind vs Heart – Building a Sustainable Future', location: 'Conference Hall A', description: [ 'The balance between individual will (Heart) and systemic action (Mind) in driving environmental change.', 'Why the circular economy needs laws, infrastructure, and incentives beyond good intentions.', 'Debate: Which leads—Heart or Mind—and how can they work together for real impact?' ], collaborators: 'In collaboration with the Ministry of Environment', isSelectable: true },
+            { id: 'panel1', date: 'Thursday, 6 November 2025', time: '11:00–12:00', title: 'Tourism Now & Tomorrow', location: 'Conference Hall A', description: [ 'Comparison of where the tourism industry was 5 years ago, where it is now and where it will be in the next 5 years – Albania 2030.', 'Sustainable tourism practices and plans.', 'The importance of cultural tourism and strategies.' ], collaborators: 'In collaboration with the Ministry of Tourism, Culture and Sports', isSelectable: true },
+            { id: 'panel2', date: 'Thursday, 6 November 2025', time: '13:00–14:00', title: 'Mind vs Heart – Building a Sustainable Future', location: 'Conference Hall A', description: [ 'The balance between individual will (Heart) and systemic action (Mind) in driving environmental change.', 'Why the circular economy needs laws, infrastructure, and incentives beyond good intentions.', 'Debate: Which leads—Heart or Mind—and how can they work together for real impact?' ], collaborators: 'In collaboration with the Ministry of Environment', isSelectable: true },
             { id: 'vytal', date: 'Thursday, 6 November 2025', time: '14:00–14:30', title: 'VYTAL Press Conference: Launch of VYTAL Albania', location: 'Conference Hall A', description: [ 'Official presentation and launch of VYTAL Albania, introducing the brand’s mission and sustainable packaging model to the Albanian market.' ], collaborators: '', isSelectable: true },
-            { id: 'panel3', date: 'Thursday, 6 November 2025', time: '15:00–16:00', title: 'Panel 3: Albania’s Mega Infrastructure Projects – Gateway to Global Integration', location: 'Conference Hall A', description: [ 'Presentation of Porto Romano, Corridor VIII Railway, and Vlora & Gjirokastra International Airport.', 'Discussions on national impact, economic benefits, and timelines.' ], collaborators: 'In collaboration with the Ministry of Infrastructure and Energy and the Ministry of Tourism', isSelectable: true },
-            { id: 'panel4', date: 'Thursday, 6 November 2025', time: '17:00–18:00', title: 'Panel 4: Energy Roadmap for Albania and the Renewable Transition', location: 'Conference Hall A', description: [ 'Grid modernization, renewables, independence.', 'Public works: roads, rail, airports.' ], collaborators: 'In collaboration with Ministry of Infrastructure and Energy', isSelectable: true },
+            { id: 'panel3', date: 'Thursday, 6 November 2025', time: '15:00–16:00', title: 'Albania’s Mega Infrastructure Projects – Gateway to Global Integration', location: 'Conference Hall A', description: [ 'Presentation of Porto Romano, Corridor VIII Railway, and Vlora & Gjirokastra International Airport.', 'Discussions on national impact, economic benefits, and timelines.' ], collaborators: 'In collaboration with the Ministry of Infrastructure and Energy and the Ministry of Tourism', isSelectable: true },
+            { id: 'panel4', date: 'Thursday, 6 November 2025', time: '17:00–18:00', title: 'Energy Roadmap for Albania and the Renewable Transition', location: 'Conference Hall A', description: [ 'Grid modernization, renewables, independence.', 'Public works: roads, rail, airports.' ], collaborators: 'In collaboration with Ministry of Infrastructure and Energy', isSelectable: true },
             // Friday, 7 November 2025
-            { id: 'panel5', date: 'Friday, 7 November 2025', time: '11:00–12:00', title: 'Panel 5: From Farm to Future – Food Safety and Supply Chain Transparency', location: 'Conference Hall B', description: [ 'Strengthening agri-food systems through digital tracking and certification.', 'Aligning food safety with EU regulations and modernizing monitoring systems.' ], collaborators: 'In collaboration with the Ministry of Agriculture and Rural Development', isSelectable: true },
-            { id: 'panel6', date: 'Friday, 7 November 2025', time: '15:00–16:00', title: 'Panel 6: Albania’s Strategic Projects', location: 'Conference Hall A', description: [ 'Presentation of Expo Albania & Durana Tech Park.', 'Timelines, Opportunities & Integration.' ], collaborators: 'In collaboration with the Albanian Investment Corporation', isSelectable: true },
-            { id: 'panel7', date: 'Friday, 7 November 2025', time: '17:00–18:00', title: 'Panel 7: Cybersecurity & Digital Resilience in Albania', location: 'Conference Hall A', description: [ 'Protecting Progress: National and Business Strategies in the Digital Era.', 'Discussion on infrastructure, risk mitigation, and public-private partnerships.' ], collaborators: 'In collaboration with King’s College London, Burstock, AKSHI', isSelectable: true },
+            { id: 'panel5', date: 'Friday, 7 November 2025', time: '11:00–12:00', title: 'From Farm to Future – Food Safety and Supply Chain Transparency', location: 'Conference Hall B', description: [ 'Strengthening agri-food systems through digital tracking and certification.', 'Aligning food safety with EU regulations and modernizing monitoring systems.' ], collaborators: 'In collaboration with the Ministry of Agriculture and Rural Development', isSelectable: true },
+            { id: 'panel6', date: 'Friday, 7 November 2025', time: '15:00–16:00', title: 'Albania’s Strategic Projects', location: 'Conference Hall A', description: [ 'Presentation of Expo Albania & Durana Tech Park.', 'Timelines, Opportunities & Integration.' ], collaborators: 'In collaboration with the Albanian Investment Corporation', isSelectable: true },
+            { id: 'panel7', date: 'Friday, 7 November 2025', time: '17:00–18:00', title: 'Cybersecurity & Digital Resilience in Albania', location: 'Conference Hall A', description: [ 'Protecting Progress: National and Business Strategies in the Digital Era.', 'Discussion on infrastructure, risk mitigation, and public-private partnerships.' ], collaborators: 'In collaboration with King’s College London, Burstock, AKSHI', isSelectable: true },
             // Saturday, 8 November 2025
             { id: 'cefa', date: 'Saturday, 8 November 2025', time: '10:00–13:00', title: 'CEFA Steering Committee (Closed Session)', location: 'Conference Hall A', description: [ 'Meeting of European fair leaders.', 'Strategic discussions and upcoming calendar planning.' ], collaborators: '', isSelectable: false },
-            { id: 'panel8', date: 'Saturday, 8 November 2025', time: '15:00–16:00', title: 'Panel 8: Albania’s Market Overview and Investment Opportunities', location: 'Conference Hall A', description: [ 'Sectoral focus: energy, tourism, ICT, agriculture.', 'Legal frameworks, incentives.' ], collaborators: 'In collaboration with the Albanian Investment Development Agency', isSelectable: true },
+            { id: 'panel8', date: 'Saturday, 8 November 2025', time: '15:00–16:00', title: 'Albania’s Market Overview and Investment Opportunities', location: 'Conference Hall A', description: [ 'Sectoral focus: energy, tourism, ICT, agriculture.', 'Legal frameworks, incentives.' ], collaborators: 'In collaboration with the Albanian Investment Development Agency', isSelectable: true },
             { id: 'wb30', date: 'Saturday, 8 November 2025', time: '17:00–18:00', title: 'WB30 Press Conference: Western Balkans in the EU by 2030 (Closed Session)', location: 'Conference Hall A', description: [ 'Presentation of the WB30 Initiative: An ambition to unite all Western Balkan countries under the EU flag by 2030.' ], collaborators: '', isSelectable: false }
         ];
 
@@ -199,7 +199,7 @@
                 const allGroups = attendeeFieldsContainer.querySelectorAll('.attendee-group');
                 allGroups.forEach((group, index) => {
                     const num = index + 1;
-                    group.querySelector('h3').textContent = `Attendee ${num}` + (num === 1 ? ' (Primary)' : '');
+                    group.querySelector('h3').textContent = `Attendee ${num}`;
                     const fields = ['fullname', 'email', 'phone', 'company', 'position'];
                     fields.forEach(field => {
                         const input = group.querySelector(`input[id^="${field}-"]`);
