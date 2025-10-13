@@ -42,7 +42,7 @@
         <!-- Main RSVP Card -->
         <div id="rsvp-card" class="bg-white rounded-xl shadow-2xl overflow-hidden fade-in">
             <!-- Header Image -->
-            <img src="image1.jpg" class="w-full h-auto">
+            <img src="https://placehold.co/1963x407/EFEFEF/333333?text=Tirana+International+Fair" alt="Tirana International Fair Header" class="w-full h-auto">
             
             <!-- Header Section -->
             <div class="p-6 md:p-8 text-center" style="background-color: #ed1b24;">
@@ -121,19 +121,16 @@
 
     <script>
         const conferences = [
-            // Thursday, 6 November 2025
-            { id: 'panel1', date: 'Thursday, 6 November 2025', time: '11:00–12:00', title: 'Tourism Now & Tomorrow', location: 'Conference Hall A', description: [ 'Comparison of where the tourism industry was 5 years ago, where it is now and where it will be in the next 5 years – Albania 2030.', 'Sustainable tourism practices and plans.', 'The importance of cultural tourism and strategies.' ], collaborators: 'In collaboration with the Ministry of Tourism, Culture and Sports', isSelectable: true },
-            { id: 'panel2', date: 'Thursday, 6 November 2025', time: '13:00–14:00', title: 'Mind vs Heart – Building a Sustainable Future', location: 'Conference Hall A', description: [ 'The balance between individual will (Heart) and systemic action (Mind) in driving environmental change.', 'Why the circular economy needs laws, infrastructure, and incentives beyond good intentions.', 'Debate: Which leads—Heart or Mind—and how can they work together for real impact?' ], collaborators: 'In collaboration with the Ministry of Environment', isSelectable: true },
+            { id: 'tourism', date: 'Thursday, 6 November 2025', time: '11:00–12:00', title: 'Tourism Now & Tomorrow', location: 'Conference Hall A', description: [ 'Comparison of where the tourism industry was 5 years ago, where it is now and where it will be in the next 5 years – Albania 2030.', 'Sustainable tourism practices and plans.', 'The importance of cultural tourism and strategies.' ], collaborators: 'In collaboration with the Ministry of Tourism, Culture and Sports', isSelectable: true },
+            { id: 'sustainability', date: 'Thursday, 6 November 2025', time: '13:00–14:00', title: 'Mind vs Heart – Building a Sustainable Future', location: 'Conference Hall A', description: [ 'The balance between individual will (Heart) and systemic action (Mind) in driving environmental change.', 'Why the circular economy needs laws, infrastructure, and incentives beyond good intentions.', 'Debate: Which leads—Heart or Mind—and how can they work together for real impact?' ], collaborators: 'In collaboration with the Ministry of Environment', isSelectable: true },
             { id: 'vytal', date: 'Thursday, 6 November 2025', time: '14:00–14:30', title: 'VYTAL Press Conference: Launch of VYTAL Albania', location: 'Conference Hall A', description: [ 'Official presentation and launch of VYTAL Albania, introducing the brand’s mission and sustainable packaging model to the Albanian market.' ], collaborators: '', isSelectable: true },
-            { id: 'panel3', date: 'Thursday, 6 November 2025', time: '15:00–16:00', title: 'Albania’s Mega Infrastructure Projects – Gateway to Global Integration', location: 'Conference Hall A', description: [ 'Presentation of Porto Romano, Corridor VIII Railway, and Vlora & Gjirokastra International Airport.', 'Discussions on national impact, economic benefits, and timelines.' ], collaborators: 'In collaboration with the Ministry of Infrastructure and Energy and the Ministry of Tourism', isSelectable: true },
-            { id: 'panel4', date: 'Thursday, 6 November 2025', time: '17:00–18:00', title: 'Energy Roadmap for Albania and the Renewable Transition', location: 'Conference Hall A', description: [ 'Grid modernization, renewables, independence.', 'Public works: roads, rail, airports.' ], collaborators: 'In collaboration with Ministry of Infrastructure and Energy', isSelectable: true },
-            // Friday, 7 November 2025
-            { id: 'panel5', date: 'Friday, 7 November 2025', time: '11:00–12:00', title: 'From Farm to Future – Food Safety and Supply Chain Transparency', location: 'Conference Hall B', description: [ 'Strengthening agri-food systems through digital tracking and certification.', 'Aligning food safety with EU regulations and modernizing monitoring systems.' ], collaborators: 'In collaboration with the Ministry of Agriculture and Rural Development', isSelectable: true },
-            { id: 'panel6', date: 'Friday, 7 November 2025', time: '15:00–16:00', title: 'Albania’s Strategic Projects', location: 'Conference Hall A', description: [ 'Presentation of Expo Albania & Durana Tech Park.', 'Timelines, Opportunities & Integration.' ], collaborators: 'In collaboration with the Albanian Investment Corporation', isSelectable: true },
-            { id: 'panel7', date: 'Friday, 7 November 2025', time: '17:00–18:00', title: 'Cybersecurity & Digital Resilience in Albania', location: 'Conference Hall A', description: [ 'Protecting Progress: National and Business Strategies in the Digital Era.', 'Discussion on infrastructure, risk mitigation, and public-private partnerships.' ], collaborators: 'In collaboration with King’s College London, Burstock, AKSHI', isSelectable: true },
-            // Saturday, 8 November 2025
+            { id: 'infrastructure', date: 'Thursday, 6 November 2025', time: '15:00–16:00', title: 'Albania’s Mega Infrastructure Projects – Gateway to Global Integration', location: 'Conference Hall A', description: [ 'Presentation of Porto Romano, Corridor VIII Railway, and Vlora & Gjirokastra International Airport.', 'Discussions on national impact, economic benefits, and timelines.' ], collaborators: 'In collaboration with the Ministry of Infrastructure and Energy and the Ministry of Tourism', isSelectable: true },
+            { id: 'energy', date: 'Thursday, 6 November 2025', time: '17:00–18:00', title: 'Energy Roadmap for Albania and the Renewable Transition', location: 'Conference Hall A', description: [ 'Grid modernization, renewables, independence.', 'Public works: roads, rail, airports.' ], collaborators: 'In collaboration with Ministry of Infrastructure and Energy', isSelectable: true },
+            { id: 'food-safety', date: 'Friday, 7 November 2025', time: '11:00–12:00', title: 'From Farm to Future – Food Safety and Supply Chain Transparency', location: 'Conference Hall B', description: [ 'Strengthening agri-food systems through digital tracking and certification.', 'Aligning food safety with EU regulations and modernizing monitoring systems.' ], collaborators: 'In collaboration with the Ministry of Agriculture and Rural Development', isSelectable: true },
+            { id: 'strategic-projects', date: 'Friday, 7 November 2025', time: '15:00–16:00', title: 'Albania’s Strategic Projects', location: 'Conference Hall A', description: [ 'Presentation of Expo Albania & Durana Tech Park.', 'Timelines, Opportunities & Integration.' ], collaborators: 'In collaboration with the Albanian Investment Corporation', isSelectable: true },
+            { id: 'cybersecurity', date: 'Friday, 7 November 2025', time: '17:00–18:00', title: 'Cybersecurity & Digital Resilience in Albania', location: 'Conference Hall A', description: [ 'Protecting Progress: National and Business Strategies in the Digital Era.', 'Discussion on infrastructure, risk mitigation, and public-private partnerships.' ], collaborators: 'In collaboration with King’s College London, Burstock, AKSHI', isSelectable: true },
             { id: 'cefa', date: 'Saturday, 8 November 2025', time: '10:00–13:00', title: 'CEFA Steering Committee (Closed Session)', location: 'Conference Hall A', description: [ 'Meeting of European fair leaders.', 'Strategic discussions and upcoming calendar planning.' ], collaborators: '', isSelectable: false },
-            { id: 'panel8', date: 'Saturday, 8 November 2025', time: '15:00–16:00', title: 'Albania’s Market Overview and Investment Opportunities', location: 'Conference Hall A', description: [ 'Sectoral focus: energy, tourism, ICT, agriculture.', 'Legal frameworks, incentives.' ], collaborators: 'In collaboration with the Albanian Investment Development Agency', isSelectable: true },
+            { id: 'investment', date: 'Saturday, 8 November 2025', time: '15:00–16:00', title: 'Albania’s Market Overview and Investment Opportunities', location: 'Conference Hall A', description: [ 'Sectoral focus: energy, tourism, ICT, agriculture.', 'Legal frameworks, incentives.' ], collaborators: 'In collaboration with the Albanian Investment Development Agency', isSelectable: true },
             { id: 'wb30', date: 'Saturday, 8 November 2025', time: '17:00–18:00', title: 'WB30 Press Conference: Western Balkans in the EU by 2030 (Closed Session)', location: 'Conference Hall A', description: [ 'Presentation of the WB30 Initiative: An ambition to unite all Western Balkan countries under the EU flag by 2030.' ], collaborators: '', isSelectable: false }
         ];
 
@@ -148,43 +145,20 @@
             const attendeeFieldsContainer = document.getElementById('attendee-fields-container');
             const conferenceListContainer = document.getElementById('conference-list-container');
             
-            // --- Populate Conference List ---
             function populateConferences() {
                 let currentDay = '';
                 conferenceListContainer.innerHTML = conferences.map(conf => {
                     const dayHeader = conf.date !== currentDay ? `<h3 class="text-lg font-bold text-gray-800 pt-4">${conf.date}</h3>` : '';
                     currentDay = conf.date;
-                    
                     const descriptionHtml = conf.description.map(p => `<p class="text-sm text-gray-600">${p}</p>`).join('');
                     const collaboratorHtml = conf.collaborators ? `<p class="text-sm text-gray-500 italic mt-2">${conf.collaborators}</p>` : '';
-                    
                     const labelClasses = conf.isSelectable ? 'cursor-pointer hover:bg-gray-50 transition-colors' : 'not-selectable';
-
-                    return `
-                        ${dayHeader}
-                        <div class="relative">
-                            <input type="checkbox" name="conference" value="${conf.title}" id="${conf.id}" class="hidden" ${!conf.isSelectable ? 'disabled' : ''}>
-                            <label for="${conf.id}" class="block p-4 border border-gray-300 rounded-lg ${labelClasses}">
-                                <div class="flex justify-between items-start">
-                                    <div class="pr-4">
-                                        <div class="font-bold text-gray-800">${conf.title}</div>
-                                        <div class="text-sm text-gray-600 mt-1">${conf.time} - ${conf.location}</div>
-                                    </div>
-                                    <button type="button" class="more-info-btn text-sm font-medium text-gray-700 hover:text-gray-900 ml-4 flex-shrink-0 px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">More Info</button>
-                                </div>
-                                <div class="conference-details hidden mt-4 pt-4 border-t border-gray-200 space-y-2">
-                                    ${descriptionHtml}
-                                    ${collaboratorHtml}
-                                </div>
-                            </label>
-                        </div>
-                    `;
+                    return `${dayHeader}<div class="relative"><input type="checkbox" name="conference" value="${conf.title}" id="${conf.id}" class="hidden" ${!conf.isSelectable ? 'disabled' : ''}><label for="${conf.id}" class="block p-4 border border-gray-300 rounded-lg ${labelClasses}"><div class="flex justify-between items-start"><div class="pr-4"><div class="font-bold text-gray-800">${conf.title}</div><div class="text-sm text-gray-600 mt-1">${conf.time} - ${conf.location}</div></div><button type="button" class="more-info-btn text-sm font-medium text-gray-700 hover:text-gray-900 ml-4 flex-shrink-0 px-3 py-1 rounded-md bg-gray-100 hover:bg-gray-200">More Info</button></div><div class="conference-details hidden mt-4 pt-4 border-t border-gray-200 space-y-2">${descriptionHtml}${collaboratorHtml}</div></label></div>`;
                 }).join('');
             }
             
             populateConferences();
 
-            // --- Event Listener for Expanding Conference Details ---
             conferenceListContainer.addEventListener('click', (event) => {
                  if (event.target.classList.contains('more-info-btn')) {
                     event.preventDefault(); 
@@ -194,7 +168,6 @@
                 }
             });
 
-            // --- Function to update attendee headers and IDs after a change ---
             function updateAttendeeNumbering() {
                 const allGroups = attendeeFieldsContainer.querySelectorAll('.attendee-group');
                 allGroups.forEach((group, index) => {
@@ -212,23 +185,9 @@
                 });
             }
 
-            // --- Event Listener for Adding & Removing Attendees ---
             addAttendeeBtn.addEventListener('click', () => {
                 const newAttendeeId = attendeeFieldsContainer.querySelectorAll('.attendee-group').length + 1;
-                const newAttendeeFields = `
-                    <div class="attendee-group mt-6 pt-6 border-t border-gray-200">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-lg font-bold text-gray-900">Attendee ${newAttendeeId}</h3>
-                            <button type="button" class="remove-attendee-btn text-sm font-medium text-red-600 hover:text-red-800">Remove</button>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-                            <div class="md:col-span-2"><label for="fullname-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" id="fullname-${newAttendeeId}" name="fullname-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div>
-                            <div><label for="email-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Email Address</label><input type="email" id="email-${newAttendeeId}" name="email-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div>
-                            <div><label for="phone-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" id="phone-${newAttendeeId}" name="phone-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div>
-                            <div><label for="company-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Company <span class="text-gray-500">(Optional)</span></label><input type="text" id="company-${newAttendeeId}" name="company-${newAttendeeId}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"></div>
-                            <div><label for="position-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Position <span class="text-gray-500">(Optional)</span></label><input type="text" id="position-${newAttendeeId}" name="position-${newAttendeeId}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"></div>
-                        </div>
-                    </div>`;
+                const newAttendeeFields = `<div class="attendee-group mt-6 pt-6 border-t border-gray-200"><div class="flex justify-between items-center mb-4"><h3 class="text-lg font-bold text-gray-900">Attendee ${newAttendeeId}</h3><button type="button" class="remove-attendee-btn text-sm font-medium text-red-600 hover:text-red-800">Remove</button></div><div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4"><div class="md:col-span-2"><label for="fullname-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" id="fullname-${newAttendeeId}" name="fullname-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div><div><label for="email-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Email Address</label><input type="email" id="email-${newAttendeeId}" name="email-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div><div><label for="phone-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" id="phone-${newAttendeeId}" name="phone-${newAttendeeId}" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"><p class="error-text text-xs text-red-600 mt-1 hidden">This field is required.</p></div><div><label for="company-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Company <span class="text-gray-500">(Optional)</span></label><input type="text" id="company-${newAttendeeId}" name="company-${newAttendeeId}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"></div><div><label for="position-${newAttendeeId}" class="block text-sm font-medium text-gray-700">Position <span class="text-gray-500">(Optional)</span></label><input type="text" id="position-${newAttendeeId}" name="position-${newAttendeeId}" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-red-500 focus:border-red-500"></div></div></div>`;
                 attendeeFieldsContainer.insertAdjacentHTML('beforeend', newAttendeeFields);
             });
 
@@ -239,11 +198,9 @@
                 }
             });
 
-            // --- Event Listener for Form Submission ---
             rsvpForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 
-                // 1. Validate Form
                 let isValid = true;
                 rsvpForm.querySelectorAll('.error-text').forEach(err => err.classList.add('hidden'));
                 const requiredInputs = rsvpForm.querySelectorAll('input[required]');
@@ -258,9 +215,7 @@
                 });
                 
                 const selectedConferencesCheck = document.querySelectorAll('input[name="conference"]:checked');
-                if (selectedConferencesCheck.length === 0) {
-                    isValid = false;
-                }
+                if (selectedConferencesCheck.length === 0) isValid = false;
                 
                 if (!isValid) {
                     errorMessage.textContent = 'Please select at least one conference and fill out all required fields.';
@@ -269,12 +224,10 @@
                 }
                 errorMessage.classList.add('hidden');
                 
-                // 2. Set Loading State
                 const submitButton = rsvpForm.querySelector('button[type="submit"]');
                 submitButton.disabled = true;
                 submitButton.textContent = 'Submitting...';
 
-                // 3. Collect Form Data
                 const attendees = [];
                 const attendeeGroups = attendeeFieldsContainer.querySelectorAll('.attendee-group');
                 attendeeGroups.forEach((group, index) => {
@@ -296,21 +249,17 @@
                     conferences: selectedConferences
                 };
 
-                // 4. Send Data to Google Apps Script
                 const scriptURL = 'https://script.google.com/macros/s/AKfycbyAM2O85cFHidYOklPK9OxMvEUiYJYqjr_R5Ka_TQcc9JF3vhcZhQsatPLRBN-SoN6T/exec';
-                const dataForSheet = new FormData();
-                dataForSheet.append('submissionData', JSON.stringify(payload));
                 
                 try {
-                    // We send the data but don't wait for a reply from the script.
-                    // This is necessary to avoid the CORS error with Google Apps Script.
+                    // Send data without waiting for a response to avoid CORS issues.
                     fetch(scriptURL, { 
                         method: 'POST', 
-                        mode: 'no-cors', // This prevents the CORS error
-                        body: dataForSheet
+                        mode: 'no-cors', // <-- This is the key change
+                        body: new URLSearchParams({ submissionData: JSON.stringify(payload) }) 
                     });
 
-                    // 5. Assume success and show the confirmation message immediately.
+                    // Assume success and show confirmation immediately.
                     const primaryName = document.getElementById('fullname-1').value;
                     const totalAttendees = attendeeFieldsContainer.querySelectorAll('.attendee-group').length;
                     responseText.textContent = `Thank you, ${primaryName}! Your registration for ${totalAttendees} attendee(s) is confirmed. A confirmation email will be sent shortly.`;
@@ -322,13 +271,12 @@
                     sessionList.innerHTML = sessionsHtml;
                     rsvpCard.classList.add('hidden');
                     confirmationMessage.classList.remove('hidden');
-
-                } catch (error) {
+                
+                } catch(error) {
                     console.error('Error!', error.message);
                     errorMessage.textContent = 'An error occurred during submission. Please try again later.';
                     errorMessage.classList.remove('hidden');
                 } finally {
-                     // 6. Reset Button
                     submitButton.disabled = false;
                     submitButton.textContent = 'Register for Selected Sessions';
                 }
@@ -337,5 +285,4 @@
     </script>
 </body>
 </html>
-
 
