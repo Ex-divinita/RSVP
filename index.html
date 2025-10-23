@@ -262,11 +262,16 @@
                 
                 try {
                     // Send data without waiting for a response to avoid CORS issues.
-                    fetch(scriptURL, { 
-                        method: 'POST', 
-                        mode: 'no-cors', // <-- This is the key change
-                        body: new URLSearchParams({ submissionData: JSON.stringify(payload) }) 
-                    });
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        // Add headers to specify we are sending JSON
+                        headers: { 
+                          'Content-Type': 'application/json' 
+                        },
+                        // Send the payload directly as a JSON string
+                        body: JSON.stringify(payload)
+                    });
 
                     // Assume success and show confirmation immediately.
                     const primaryName = document.getElementById('fullname-1').value;
@@ -294,6 +299,7 @@
     </script>
 </body>
 </html>
+
 
 
 
