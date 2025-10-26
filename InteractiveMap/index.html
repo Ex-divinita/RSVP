@@ -58,13 +58,10 @@
         </div>
     </main>
 
-    <!-- Control Panel -->
+    <!-- Control Panel - Removed Load Button -->
     <footer class="bg-white p-3 flex justify-center items-center gap-4 border-t border-gray-200">
-        <!-- Only Load JSON button remains -->
-         <label id="loadJsonLabelViewer" for="loadJsonInput" class="control-btn cursor-pointer">
-            Load Floor Plan Data
-             <input type="file" id="loadJsonInput" class="hidden" accept=".json">
-        </label>
+        <!-- Footer content can be added here if needed later -->
+        <span class="text-sm text-gray-500">Interactive Map Viewer</span>
     </footer>
 
     <!-- Exhibitor Info Modal (Read-Only) -->
@@ -119,8 +116,7 @@
             const floorSwitchers = document.querySelectorAll('.floor-switcher');
             const searchInput = document.getElementById('searchInput');
             const appModeSubtitle = document.getElementById('app-mode-subtitle'); // Still useful to show mode
-            const loadJsonLabelViewer = document.getElementById('loadJsonLabelViewer');
-            const loadJsonInput = document.getElementById('loadJsonInput');
+            // Removed loadJsonLabelViewer and loadJsonInput references
             const detailsModal = document.getElementById('detailsModal');
             // Modal display elements
             const modalLogo = document.getElementById('modal-logo');
@@ -134,15 +130,9 @@
             const tooltipSector = document.getElementById('tooltip-sector');
 
             // --- Application State ---
-            let appState = {
+            let appState = { // Initialize with empty state until JSON is loaded
                 activeFloor: 0,
-                // Default structure, expects floor images named correctly
-                floors: {
-                    '-1': { backgroundURL: 'floor-1.jpg', objects: [] },
-                    '0': { backgroundURL: 'floor0.jpg', objects: [] },
-                    '1': { backgroundURL: 'floor1.jpg', objects: [] },
-                    '2': { backgroundURL: 'floor2.jpg', objects: [] }
-                }
+                floors: {}
             };
             const currentMode = 'viewer'; // Hardcoded to viewer mode
             let activeModalObject = null;
@@ -174,62 +164,73 @@
             });
 
             // --- Core Functions ---
-            const switchFloor = (floorNumber) => {
+             const switchFloor = (floorNumber) => {
+                // Ensure floor data exists before proceeding
+                if (!appState.floors || !appState.floors[floorNumber]) {
+                    console.error(`Floor data for floor ${floorNumber} not found.`);
+                    displayErrorMessage(`Floor data for floor ${floorNumber} not found in the loaded JSON.`);
+                    updateFloorSwitcherStyles(floorNumber); // Update buttons even if floor fails
+                    return;
+                }
+
                 appState.activeFloor = floorNumber;
                 canvas.clear(); // Clear previous floor objects
                 const newFloorData = appState.floors[floorNumber];
 
-                if (!newFloorData) {
-                    console.error(`Floor data for floor ${floorNumber} not found.`);
-                    // Display error message on canvas
-                    canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Reset background color
-                    const text = new fabric.Text(`Floor data for floor ${floorNumber} not found in JSON.`, {
-                        left: canvas.width / 2,
-                        top: canvas.height / 2,
-                        originX: 'center',
-                        originY: 'center',
-                        fontSize: 20,
-                        fill: 'red'
-                    });
-                    canvas.add(text);
-                    canvas.renderAll();
-                    updateFloorSwitcherStyles(floorNumber); // Still update buttons
-                    return; // Stop if floor data doesn't exist
+                // Set Background Image
+                if (newFloorData.backgroundURL) {
+                    fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
+                        if (img && img.width && img.height) { // Check if image loaded correctly
+                           canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                               scaleX: canvas.width / img.width,
+                               scaleY: canvas.height / img.height
+                           });
+                           // Load Objects *after* background is set (or attempted)
+                           loadFloorObjects(newFloorData);
+                        } else {
+                            console.error(`Background image ${newFloorData.backgroundURL} could not be loaded or has invalid dimensions.`);
+                            displayErrorMessage(`Background image ${newFloorData.backgroundURL} missing or invalid.`);
+                             // Still try to load objects even if background fails
+                            loadFloorObjects(newFloorData);
+                        }
+                    }, { crossOrigin: 'anonymous' });
+                } else {
+                     console.warn(`No backgroundURL specified for floor ${floorNumber}.`);
+                     canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Clear background
+                      // Still try to load objects
+                     loadFloorObjects(newFloorData);
                 }
 
-                // Set Background Image
-                fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
-                    if (img && img.width && img.height) { // Check if image loaded correctly
-                       canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
-                           scaleX: canvas.width / img.width,
-                           scaleY: canvas.height / img.height
-                       });
-                    } else {
-                        console.error(`Background image ${newFloorData.backgroundURL} could not be loaded or has invalid dimensions.`);
-                        canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Clear background if image fails
-                        const text = new fabric.Text(`Background image ${newFloorData.backgroundURL} missing or invalid.`, {
-                            left: canvas.width / 2,
-                            top: canvas.height / 2,
-                            originX: 'center',
-                            originY: 'center',
-                            fontSize: 16,
-                            fill: 'orange'
-                        });
-                        canvas.add(text);
-                        canvas.renderAll();
-                    }
-                }, { crossOrigin: 'anonymous' });
 
-                // Load Objects from JSON data
-                // Ensure objects array exists, even if empty
-                const objectsToLoad = newFloorData.objects || [];
+                updateFloorSwitcherStyles(floorNumber);
+            };
+
+            const loadFloorObjects = (floorData) => {
+                 // Ensure objects array exists, even if empty
+                const objectsToLoad = floorData.objects || [];
                 canvas.loadFromJSON({ objects: objectsToLoad }, () => {
                     canvas.renderAll();
                     updateCanvasInteractivity(); // Set objects to non-selectable
                 });
+            }
 
-                updateFloorSwitcherStyles(floorNumber);
-            };
+            // Helper to display error messages on the canvas
+            const displayErrorMessage = (message) => {
+                 canvas.clear(); // Clear previous content
+                 canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas));
+                 const text = new fabric.Text(message, {
+                     left: canvas.width / 2,
+                     top: canvas.height / 2,
+                     originX: 'center',
+                     originY: 'center',
+                     fontSize: 18,
+                     fill: 'red',
+                     textAlign: 'center'
+                 });
+                 canvas.add(text);
+                 canvas.renderAll();
+            }
+
 
              // Helper to update button styles
              const updateFloorSwitcherStyles = (floorNumber) => {
@@ -298,12 +299,12 @@
                 tooltipSector.classList.toggle('hidden', !exhibitorSector); // Hide if no sector
 
                 // Position tooltip above the booth, ensuring it stays within viewport
-                let topPos = canvasRect.top + bounds.top - tooltip.offsetHeight - 5; // 5px offset above
-                let leftPos = canvasRect.left + bounds.left;
+                let topPos = canvasRect.top + window.scrollY + bounds.top - tooltip.offsetHeight - 5; // Added scrollY
+                let leftPos = canvasRect.left + window.scrollX + bounds.left; // Added scrollX
 
                 // Adjust if tooltip goes off-screen top
                  if (topPos < window.scrollY) {
-                    topPos = canvasRect.top + bounds.top + bounds.height + 5; // Move below
+                    topPos = canvasRect.top + window.scrollY + bounds.top + bounds.height + 5; // Move below
                  }
                  // Adjust if tooltip goes off-screen left
                  if (leftPos < window.scrollX) {
@@ -354,9 +355,10 @@
 
 
                 if (query && !found) { // Alert only if search was performed and nothing found
-                    alert('No exhibitor found matching that name.');
+                    // Optional: remove alert for a cleaner viewer experience
+                    // alert('No exhibitor found matching that name.');
                     // Optionally reset opacity if nothing found, or leave dimmed
-                     // canvas.forEachObject(obj => obj.set({ opacity: 1 }));
+                     canvas.forEachObject(obj => obj.set({ opacity: 1 }));
                 }
                 canvas.renderAll();
             };
@@ -365,15 +367,17 @@
             floorSwitchers.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const floorIndex = parseInt(btn.dataset.floor, 10);
-                    // Check if floor exists in the loaded appState
+                    // Check if floor exists in the loaded appState before switching
                     if (appState.floors && appState.floors[floorIndex]) {
                          switchFloor(floorIndex);
                     } else {
-                        console.warn(`Floor ${floorIndex} does not exist in the loaded data.`);
-                        alert(`Floor ${floorIndex} data is not available. Please ensure it exists in the loaded JSON.`);
+                        console.warn(`Attempted to switch to non-existent floor ${floorIndex}.`);
+                        // Optionally provide user feedback like an alert
+                        // alert(`Floor ${floorIndex} data is not available.`);
                     }
                 });
             });
+
 
             // Double click to open modal in viewer mode
             canvas.on('mouse:dblclick', (options) => {
@@ -399,7 +403,7 @@
             canvas.on('mouse:out', (e) => {
                 if (e.target) {
                     hideTooltip();
-                    const sector = e.target.get('sector') || 'Unassigned';
+                    const sector = e.get('sector') || 'Unassigned';
                     const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
                     // Reset stroke only if it wasn't highlighted by search
                     if(e.target.stroke !== '#e11d48') {
@@ -409,73 +413,53 @@
                 }
             });
 
+
             // Modal close button
             closeModalBtn.addEventListener('click', hideModal);
 
             // Search input listener
             searchInput.addEventListener('input', searchExhibitor); // Search as user types
 
-            // --- JSON Load Functionality ---
-            const handleJsonLoad = (event) => {
-                const file = event.target.files[0];
-                if (!file) {
-                    console.log("No file selected.");
-                    return;
-                }
-                 // **CHANGE**: Ensure the filename matches
-                 if (file.name !== 'interactivemap.json') {
-                    alert(`Incorrect file selected. Please upload 'interactivemap.json'.`);
-                    loadJsonInput.value = ''; // Reset file input
-                    return;
-                }
+            // --- JSON Load Functionality (AUTOMATIC) ---
+            const loadInitialData = async () => {
+                 try {
+                     const response = await fetch('interactivemap.json'); // Fetch the specific file
+                     if (!response.ok) {
+                         throw new Error(`Could not load interactivemap.json: ${response.statusText}`);
+                     }
+                     const loadedData = await response.json();
+                     // Basic validation
+                     if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
+                         appState = loadedData; // Replace initial state
+                         const initialFloor = appState.activeFloor !== undefined ? appState.activeFloor : 0; // Default to 0 if undefined
+                         // Ensure the initial floor exists before trying to switch
+                         if (appState.floors[initialFloor]) {
+                             switchFloor(initialFloor);
+                         } else {
+                              console.warn(`Initial floor ${initialFloor} specified in JSON does not exist. Defaulting to first available floor.`);
+                              // Find the first available floor key and switch to it
+                              const firstFloorKey = Object.keys(appState.floors)[0];
+                              if(firstFloorKey !== undefined) {
+                                switchFloor(parseInt(firstFloorKey, 10));
+                              } else {
+                                  throw new Error("JSON file contains no valid floor data.");
+                              }
+                         }
+                         console.log('Floor plan data loaded successfully!');
+                     } else {
+                         throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
+                     }
+                 } catch (error) {
+                     alert(`Error loading floor plan data: ${error.message}`);
+                     console.error("JSON Loading Error:", error);
+                     displayErrorMessage(`Error: Could not load or parse 'interactivemap.json'.\nPlease ensure the file exists and is valid.`);
+                 }
+             };
 
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    try {
-                        const loadedData = JSON.parse(e.target.result);
-                        // Basic validation: Check if essential structure exists
-                        if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
-                            appState = loadedData; // Replace current state
-                            // Load the floor specified in the JSON file's activeFloor property
-                            const initialFloor = appState.activeFloor !== undefined ? appState.activeFloor : 0; // Default to 0 if undefined
-                            switchFloor(initialFloor);
-                            alert('Floor plan data loaded successfully!');
-                        } else {
-                            throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
-                        }
-                    } catch (error) {
-                        alert(`Error loading file: ${error.message}`);
-                        console.error("JSON Loading Error:", error);
-                    } finally {
-                        loadJsonInput.value = ''; // Reset file input
-                    }
-                };
-                reader.onerror = (e) => { // Handle file reading errors
-                     alert(`Error reading file: ${e.target.error}`);
-                     console.error("File Reading Error:", e.target.error);
-                     loadJsonInput.value = ''; // Reset file input
-                };
-                reader.readAsText(file);
-            };
-            loadJsonInput.addEventListener('change', handleJsonLoad);
 
             // --- Initial Application Load ---
             appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle
-            // **CHANGE**: Do not switch floor initially, wait for user to load JSON.
-            // Display a prompt or message to load the JSON file.
-            const initialText = new fabric.Text('Please load the interactivemap.json file.', {
-                left: canvas.width / 2,
-                top: canvas.height / 2,
-                originX: 'center',
-                originY: 'center',
-                fontSize: 22,
-                fill: '#555'
-            });
-            canvas.add(initialText);
-            canvas.renderAll();
-             // Activate floor 0 button visually by default, even if data isn't loaded yet
-             updateFloorSwitcherStyles(0);
-
+            loadInitialData(); // **CHANGE**: Call the automatic load function
 
         });
     </script>
