@@ -137,7 +137,7 @@
                 appState.activeFloor = floorNumber; canvas.clear();
                 const newFloorData = appState.floors[floorNumber];
                 if (!newFloorData) {
-                    console.error(Floor data for floor ${floorNumber} not found.);
+                    console.error(`Floor data for floor ${floorNumber} not found.`);
                     return;
                 }
                 fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
@@ -195,8 +195,8 @@
                 tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
                 tooltipSector.textContent = exhibitorSector || '';
                 tooltipSector.classList.toggle('hidden', !exhibitorSector);
-                tooltip.style.left = ${canvasRect.left + bounds.left}px;
-                tooltip.style.top = ${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px;
+                tooltip.style.left = `${canvasRect.left + bounds.left}px`;
+                tooltip.style.top = `${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px`;
                 tooltip.classList.remove('hidden');
             };
 
