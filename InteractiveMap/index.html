@@ -4,599 +4,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B Matchmaking Event</title>
-    <!-- Load Tailwind CSS -->
+    <title>Interactive Floor Plan - Viewer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
     <style>
-        /* Use Inter as the default font */
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        /* Custom scrollbar for the exhibitor list */
-        #exhibitor-list::-webkit-scrollbar {
-            width: 6px;
+        .active-floor {
+            background-color: #1d4ed8 !important;
+            color: white !important;
+            border-color: #1d4ed8 !important;
         }
-
-        #exhibitor-list::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
+        .control-btn { /* Basic style needed for Load button */
+            @apply px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all;
         }
-
-        #exhibitor-list::-webkit-scrollbar-thumb {
-            background: #c5c5c5;
-            border-radius: 10px;
-        }
-
-        #exhibitor-list::-webkit-scrollbar-thumb:hover {
-            background: #a8a8a8;
-        }
-
-        /* This is the class that will be toggled for selection */
-        .card-selected {
-            background-color: #fff1f2 !important;
-            /* red-50 */
-            border-color: #f43f5e !important;
-            /* red-500 */
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        /* Simple modal fade-in transition */
-        #info-modal {
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        /* Added for confirmation screen */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        #confirmation-message {
-            animation: fadeIn 0.5s ease-out;
-        }
+        /* Custom styles for disabled look in viewer */
+        .fabric-canvas-container { cursor: default !important; }
+        .canvas-container { cursor: default !important; }
     </style>
 </head>
 
-<body class="bg-gray-700">
+<body class="min-h-screen flex flex-col">
 
-    <!-- Main Container: Constrains the app width for a "mobile-app" feel, even on desktop -->
-    <div id="main-app-container" class="max-w-3xl mx-auto h-screen flex flex-col bg-white shadow-2xl overflow-hidden">
-
-        <!-- I. Upper Block: The Exhibitor Directory & Selection Tool -->
-        <div id="upper-block" class="h-[60vh] flex-shrink-0 flex flex-col border-b-4 border-gray-200">
-
-            <!-- Filter & Search Controls -->
-            <div class="p-4 bg-gray-50 border-b space-y-3">
-                <input type="text" id="search-bar" placeholder="Search by Exhibitor's Name..."
-                    class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <select id="sector-filter"
-                        class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="all">All Sectors</option>
-                        <!-- Options will be populated by JS -->
-                    </select>
-                    <select id="country-filter"
-                        class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="all">All Countries</option>
-                        <!-- Options will be populated by JS -->
-                    </select>
-                    <select id="sort-filter"
-                        class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="az">Sort A to Z</option>
-                        <option value="za">Sort Z to A</option>
-                    </select>
-                </div>
-                
-                <!-- ADMIN CONTROLS REMOVED -->
-
-            </div>
-
-            <!-- Exhibitor List: This is the internally scrolling container -->
-            <div id="exhibitor-list" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-100">
-                <!-- Exhibitor cards will be dynamically injected here by JavaScript -->
-                <!-- Loading Skeleton -->
-                <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
-                    <div class="flex-1 min-w-0 space-y-2">
-                        <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                        <div class="h-3 bg-gray-200 rounded w-1/2"></div>
-                    </div>
-                </div>
-                 <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
-                    <div class="flex-1 min-w-0 space-y-2">
-                        <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                        <div class="h-3 bg-gray-200 rounded w-1/2"></div>
-                    </div>
-                </div>
-                 <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
-                    <div class="flex-1 min-w-0 space-y-2">
-                        <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                        <div class="h-3 bg-gray-200 rounded w-1/2"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- Header Section -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-800">Palace of Congresses - Interactive Floor Plan</h1>
+            <h2 id="app-mode-subtitle" class="text-md text-gray-600">Viewer Mode</h2> <!-- Always Viewer -->
         </div>
-
-        <!-- II. Down Block: Selection Summary & Contact Form -->
-        <div id="down-block" class="flex-1 h-[40vh] flex flex-col overflow-y-auto p-5 bg-white">
-
-            <!-- Selection Summary -->
-            <div id="selection-summary-container" class="mb-4">
-                <h2 id="selection-summary" class="text-xl font-bold text-gray-800">0 Companies Selected</h2>
-                <p class="text-sm text-gray-500">Select companies from the list above. Fill out the form below to submit
-                    your request.</p>
-            </div>
-
-            <!-- Contact Form -->
-            <form id="contact-form" class="space-y-3 flex-1 flex flex-col">
-                <div class="flex-1 space-y-3 overflow-y-auto pr-2">
-                    <!-- Form Message Area -->
-                    <div id="form-message" class="hidden p-3 rounded-lg text-sm"></div>
-
-                    <!-- Form Fields -->
-                    <div>
-                        <label for="full-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
-                        <input type="text" id="full-name" name="full-name" required
-                            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone*</label>
-                        <input type="tel" id="phone" name="phone" required
-                            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label for="position" class="block text-sm font-medium text-gray-700 mb-1">Position*</label>
-                        <input type="text" id="position" name="position" required
-                            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company*</label>
-                        <input type="text" id="company" name="company" required
-                            class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="pt-3 border-t">
-                    <button type="submit" id="submit-button"
-                        class="w-full bg-blue-600 text-white p-3 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed">
-                        Submit Matchmaking Request
-                    </button>
-                </div>
-            </form>
+        <div class="w-1/3">
+            <input type="text" id="searchInput" placeholder="Search Exhibitors..."
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
-    </div>
+    </header>
 
-    <!-- III. Modal for "More Info" (Read-Only) -->
-    <div id="info-modal"
-        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 opacity-0">
-        <div class="bg-white p-6 rounded-2xl shadow-xl max-w-lg w-full max-h-[80vh] flex flex-col">
-            <!-- Modal Header -->
-            <div class="flex justify-between items-center pb-3 border-b">
-                <h3 id="info-modal-title" class="text-2xl font-bold">Exhibitor Details</h3>
-                <button type="button" id="close-info-modal-btn"
-                    class="text-gray-400 hover:text-gray-700 text-3xl">&times;</button>
+    <!-- Main Canvas Area -->
+    <main class="flex-grow container mx-auto p-4 flex justify-center items-center">
+        <div id="canvas-wrapper" class="relative w-full max-w-6xl bg-white shadow-lg rounded-lg border border-gray-200">
+            <div class="absolute top-4 right-4 z-10 flex gap-2">
+                <!-- Floor Switcher Buttons -->
+                <button data-floor="-1"
+                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">-1</button>
+                <button data-floor="0"
+                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">0</button>
+                <button data-floor="1"
+                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">1</button>
+                <button data-floor="2"
+                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">2</button>
             </div>
-            <!-- Modal Content (Read-Only) -->
-            <div class="py-4 space-y-4 overflow-y-auto">
-                <img id="info-logo" src="" alt="Company Logo" class="w-24 h-24 bg-gray-200 rounded-lg object-cover mb-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-500 mb-1">Sector</label>
-                    <p id="info-sector" class="w-full p-2 text-gray-800 font-medium"></p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-500 mb-1">Country</label>
-                    <p id="info-country" class="w-full p-2 text-gray-800 font-medium"></p>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-500 mb-1">Description</label>
-                    <p id="info-description" class="w-full p-2 text-gray-700 whitespace-pre-wrap"></p>
-                </div>
+            <canvas id="floorPlanCanvas"></canvas>
+        </div>
+    </main>
+
+    <!-- Control Panel -->
+    <footer class="bg-white p-3 flex justify-center items-center gap-4 border-t border-gray-200">
+        <!-- Only Load JSON button remains -->
+         <label id="loadJsonLabelViewer" for="loadJsonInput" class="control-btn cursor-pointer">
+            Load Floor Plan Data
+             <input type="file" id="loadJsonInput" class="hidden" accept=".json">
+        </label>
+    </footer>
+
+    <!-- Exhibitor Info Modal (Read-Only) -->
+    <div id="detailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <h3 class="text-xl font-semibold mb-4">Exhibitor Details</h3>
+            <!-- Display information, not input fields -->
+            <div class="space-y-3 mb-6">
+                 <div class="flex items-center gap-3">
+                     <img id="modal-logo" src="" alt="logo" class="w-16 h-16 object-contain rounded border border-gray-200 flex-shrink-0">
+                     <div>
+                         <p><span class="font-medium text-gray-700">Exhibitor:</span> <span id="modalExhibitorName" class="text-gray-900 font-semibold"></span></p>
+                         <p><span class="font-medium text-gray-700">Sector:</span> <span id="modalSector" class="text-gray-800"></span></p>
+                         <p><span class="font-medium text-gray-700">Booth ID:</span> <span id="modalBoothId" class="text-gray-800"></span></p>
+                     </div>
+                 </div>
+                 <!-- You could add more display fields here later if needed -->
             </div>
-            <!-- Modal Footer -->
-            <div class="pt-3 border-t text-right">
-                <button type="button" id="close-info-modal-btn-footer"
-                    class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700">Close</button>
+            <!-- Only Close button in viewer mode -->
+            <div id="modal-footer-viewer" class="flex justify-end">
+                <button id="closeModalBtn"
+                        class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">Close</button>
             </div>
         </div>
     </div>
 
-    <!-- IV. Confirmation Screen (Unchanged) -->
-    <div id="confirmation-screen" class="hidden fixed inset-0 bg-gray-700 flex items-center justify-center p-4">
-        <div id="confirmation-message" class="bg-white rounded-xl shadow-2xl p-8 sm:p-12 text-center max-w-lg w-full">
-            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
-                <svg class="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-            </div>
-            <h2 class="text-3xl font-bold text-gray-800">Registration Confirmed!</h2>
-            <p id="response-text" class="mt-3 text-lg text-gray-600">Your registration has been received. You have
-                requested meetings with the following companies:</p>
-            <div id="session-list" class="mt-6 text-left max-w-md mx-auto space-y-2">
-                <!-- Selected companies will be listed here by JS -->
+    <!-- Tooltip for Hover Info -->
+    <div id="tooltip"
+         class="hidden absolute z-50 bg-white border border-gray-300 rounded-md shadow-lg p-2 max-w-xs pointer-events-none">
+        <div class="flex items-center gap-3">
+            <img id="tooltip-logo" src="" alt="logo" class="w-10 h-10 object-contain rounded flex-shrink-0">
+            <div>
+                <span id="tooltip-name" class="font-bold text-gray-800 block"></span>
+                <span id="tooltip-sector" class="text-sm text-gray-600 block"></span>
             </div>
         </div>
     </div>
 
-
-    <!-- JavaScript Application Logic (Viewer Mode) -->
     <script>
-        // --- CONSTANTS (for dropdowns, can be overridden by JSON) ---
-        const MOCK_SECTORS = ['Energy & Infrastructure', 'Food & Agriculture', 'Tourism & Culture', 'Services', 'Education & Innovation'];
-        const MOCK_COUNTRIES = ['Albania', 'Austria', 'Italy', 'Serbia', 'Turkey', 'North Macedonia', 'United Kingdom', 'USA', 'Montenegro', 'Sweden', 'Slovenia', 'Greece', 'Bulgaria', 'Croatia', 'Czechia', 'Switherland'];
-
-        // --- APPLICATION STATE ---
-        let exhibitorsData = []; // This will be loaded from exhibitors.json
-        const selectedExhibitors = new Set();
-        let currentFilters = {
-            searchTerm: '',
-            sector: 'all',
-            country: 'all',
-            sort: 'az'
-        };
-
-        // --- DOM REFERENCES ---
-        let exhibitorList, selectionSummary, submitButton, searchBar, sectorFilter, countryFilter, sortFilter, contactForm, formMessage, requiredFields;
-        let mainAppContainer, confirmationScreen, sessionList;
-        let infoModal, closeInfoModalBtn, closeInfoModalBtnFooter, infoModalTitle, infoLogo, infoSector, infoCountry, infoDescription;
-        let loadingSkeletons;
-
-        // --- CORE FUNCTIONS ---
-
-        /**
-         * Populates all dropdowns (filters)
-         */
-        function populateFilters() {
-            // Use Sets to get unique values from the loaded data, plus the defaults
-            const allSectors = new Set([...MOCK_SECTORS, ...exhibitorsData.map(ex => ex.sector)]);
-            const allCountries = new Set([...MOCK_COUNTRIES, ...exhibitorsData.map(ex => ex.country)]);
-
-            // Clear existing options
-            sectorFilter.innerHTML = '<option value="all">All Sectors</option>';
-            countryFilter.innerHTML = '<option value="all">All Countries</option>';
-            
-            allSectors.forEach(sector => {
-                sectorFilter.add(new Option(sector, sector));
-            });
-            allCountries.forEach(country => {
-                countryFilter.add(new Option(country, country));
-            });
-        }
-
-        /**
-         * Renders the list of exhibitors based on current filters and selections
-         */
-        function renderExhibitors() {
-            // Hide loading skeletons
-            loadingSkeletons.forEach(el => el.classList.add('hidden'));
-
-            // 1. Filter and Sort the data
-            let filteredData = [...exhibitorsData]
-                .filter(ex => ex.name.toLowerCase().includes(currentFilters.searchTerm.toLowerCase()))
-                .filter(ex => currentFilters.sector === 'all' || ex.sector === currentFilters.sector)
-                .filter(ex => currentFilters.country === 'all' || ex.country === currentFilters.country);
-
-            // 2. Sort the data
-            filteredData.sort((a, b) => {
-                if (currentFilters.sort === 'az') {
-                    return a.name.localeCompare(b.name);
-                } else {
-                    return b.name.localeCompare(a.name);
-                }
-            });
-
-            // 3. Generate HTML
-            if (filteredData.length === 0) {
-                exhibitorList.innerHTML = `<div class="text-center text-gray-500 p-6">No exhibitors match your criteria.</div>`;
-                return;
-            }
-
-            exhibitorList.innerHTML = filteredData.map(ex => {
-                const isSelected = selectedExhibitors.has(ex.id);
-                const logo = ex.logoUrl || `https://placehold.co/100x100/E2E8F0/4A5568?text=${encodeURIComponent(ex.name.substring(0, 3))}`;
-                
-                return `
-                    <div class="exhibitor-card bg-white p-3 border rounded-lg flex items-center space-x-3 cursor-pointer transition-all duration-200 hover:shadow-md ${isSelected ? 'card-selected' : 'border-gray-200'}" data-id="${ex.id}">
-                        <img src="${logo}" alt="${ex.name} Logo" class="w-12 h-12 bg-gray-200 rounded-lg flex-shrink-0 object-cover" onerror="this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=Logo';">
-                        
-                        <div class="flex-1 min-w-0">
-                            <p class="font-semibold text-gray-800 truncate">${ex.name}</p>
-                            <p class="text-sm text-gray-500">${ex.sector} | ${ex.country}</p>
-                        </div>
-                        
-                        <button class="info-button text-sm font-medium text-blue-600 hover:underline flex-shrink-0 px-2 py-1" data-id="${ex.id}">
-                            More Info
-                        </button>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        /**
-         * Updates the summary text and submit button state
-         */
-        function updateSelectionSummary() {
-            const count = selectedExhibitors.size;
-            if (count === 0) {
-                selectionSummary.textContent = '0 Companies Selected';
-            } else if (count === 1) {
-                selectionSummary.textContent = '1 Company Selected';
-            } else {
-                selectionSummary.textContent = `${count} Companies Selected`;
-            }
-            // Enable/disable submit button
-            submitButton.disabled = count === 0;
-        }
-
-        /**
-         * Shows the modal with details for a specific exhibitor
-         */
-        function showInfoModal(exhibitorId) {
-            const exhibitor = exhibitorsData.find(ex => ex.id === exhibitorId);
-            if (!exhibitor) return;
-
-            // Pre-fill the modal
-            infoModalTitle.textContent = exhibitor.name;
-            infoLogo.src = exhibitor.logoUrl || `https://placehold.co/100x100/E2E8F0/4A5568?text=${encodeURIComponent(exhibitor.name.substring(0, 3))}`;
-            infoLogo.alt = `${exhibitor.name} Logo`;
-            infoSector.textContent = exhibitor.sector;
-            infoCountry.textContent = exhibitor.country;
-            infoDescription.textContent = exhibitor.description || "No description provided.";
-
-            infoModal.classList.remove('hidden');
-            setTimeout(() => infoModal.classList.remove('opacity-0'), 10); // Start fade-in
-        }
-
-        /**
-         * Hides the info modal
-         */
-        function closeInfoModal() {
-            infoModal.classList.add('opacity-0');
-            setTimeout(() => infoModal.classList.add('hidden'), 300); // Wait for fade-out
-        }
-
-
-        /**
-         * Shows a message (error or success) in the form
-         */
-        function showFormMessage(message, isError = true) {
-            formMessage.textContent = message;
-            formMessage.classList.remove('hidden');
-            if (isError) {
-                formMessage.classList.add('bg-red-100', 'text-red-700');
-                formMessage.classList.remove('bg-green-100', 'text-green-700');
-            } else {
-                formMessage.classList.remove('bg-red-100', 'text-red-700');
-                formMessage.classList.add('bg-green-100', 'text-green-700');
-            }
-        }
-
-
-        // --- EVENT HANDLERS ---
-
-        /**
-         * Handles clicks within the exhibitor list for selection or info
-         */
-        function handleListClick(event) {
-            const infoButton = event.target.closest('.info-button');
-            const card = event.target.closest('.exhibitor-card');
-
-            if (infoButton) {
-                // "More Info" button was clicked
-                showInfoModal(infoButton.dataset.id);
-            } else if (card) {
-                // The card itself was clicked
-                const id = card.dataset.id;
-                if (selectedExhibitors.has(id)) {
-                    selectedExhibitors.delete(id);
-                    card.classList.remove('card-selected');
-                } else {
-                    selectedExhibitors.add(id);
-                    card.classList.add('card-selected');
-                }
-                updateSelectionSummary();
-            }
-        }
-
-        /**
-         * Handles changes in any filter input
-         */
-        function handleFilterChange() {
-            currentFilters.searchTerm = searchBar.value;
-            currentFilters.sector = sectorFilter.value;
-            currentFilters.country = countryFilter.value;
-            currentFilters.sort = sortFilter.value;
-            renderExhibitors();
-        }
-
-        /**
-         * Handles the contact form submission
-         */
-        async function handleFormSubmit(event) {
-            event.preventDefault();
-            formMessage.classList.add('hidden'); // Hide old messages
-
-            // 1. Validate required fields
-            let allValid = true;
-            requiredFields.forEach(field => {
-                if (field.value.trim() === '') {
-                    allValid = false;
-                    field.classList.add('border-red-500', 'ring-red-500');
-                } else {
-                    field.classList.remove('border-red-500', 'ring-red-500');
-                }
-            });
-
-            if (!allValid) {
-                showFormMessage('Please fill in all the required fields marked with (MUST FILL IN).', true);
-                return;
-            }
-
-            // 2. Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
-
-            // --- YOUR GOOGLE SCRIPT URL ---
-            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw99LVA_rzjwLHFtigVMdC3b0d3u2euuWpVA_xI3AcoDhHGxSehMsYGnauNx70iXCXm/exec";
-
-            // 3. Prepare data for submission
-            const formData = new FormData(contactForm);
-            const submissionData = {
-                contactInfo: Object.fromEntries(formData.entries()),
-                selectedCompanyIds: Array.from(selectedExhibitors)
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Global Configuration ---
+            const sectorColors = { // Keep colors for visual differentiation
+                'Unassigned': { color: 'rgba(156, 163, 175, 0.5)', stroke: '#6b7280' }, 'Energy': { color: 'rgba(250, 204, 21, 0.5)', stroke: '#d97706' },
+                'Manufacturing': { color: 'rgba(59, 130, 246, 0.5)', stroke: '#1d4ed8' }, 'Construction': { color: 'rgba(249, 115, 22, 0.5)', stroke: '#c2410c' },
+                'Technology': { color: 'rgba(16, 185, 129, 0.5)', stroke: '#047857' }, 'Automotive': { color: 'rgba(239, 68, 68, 0.5)', stroke: '#b91c1c' },
+                'Finance': { color: 'rgba(139, 92, 246, 0.5)', stroke: '#6d28d9' },
             };
 
-            // 4. --- REAL FETCH CALL ---
-            console.log("--- SUBMISSION DATA ---");
-            console.log(JSON.stringify(submissionData, null, 2));
+            // --- DOM Element References ---
+            const canvasWrapper = document.getElementById('canvas-wrapper');
+            const canvasEl = document.getElementById('floorPlanCanvas');
+            const floorSwitchers = document.querySelectorAll('.floor-switcher');
+            const searchInput = document.getElementById('searchInput');
+            const appModeSubtitle = document.getElementById('app-mode-subtitle'); // Still useful to show mode
+            const loadJsonLabelViewer = document.getElementById('loadJsonLabelViewer');
+            const loadJsonInput = document.getElementById('loadJsonInput');
+            const detailsModal = document.getElementById('detailsModal');
+            // Modal display elements
+            const modalLogo = document.getElementById('modal-logo');
+            const modalExhibitorName = document.getElementById('modalExhibitorName');
+            const modalSector = document.getElementById('modalSector');
+            const modalBoothId = document.getElementById('modalBoothId');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const tooltip = document.getElementById('tooltip');
+            const tooltipLogo = document.getElementById('tooltip-logo');
+            const tooltipName = document.getElementById('tooltip-name');
+            const tooltipSector = document.getElementById('tooltip-sector');
 
-            try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // Google Scripts often require 'no-cors'
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(submissionData)
+            // --- Application State ---
+            let appState = {
+                activeFloor: 0,
+                // Default structure, expects floor images named correctly
+                floors: {
+                    '-1': { backgroundURL: 'floor-1.jpg', objects: [] },
+                    '0': { backgroundURL: 'floor0.jpg', objects: [] },
+                    '1': { backgroundURL: 'floor1.jpg', objects: [] },
+                    '2': { backgroundURL: 'floor2.jpg', objects: [] }
+                }
+            };
+            const currentMode = 'viewer'; // Hardcoded to viewer mode
+            let activeModalObject = null;
+            const customProperties = ['exhibitorName', 'logoUrl', 'sector', 'id']; // Keep for loading data
+
+            // --- Canvas Initialization ---
+            const canvas = new fabric.Canvas(canvasEl, {
+                width: canvasWrapper.clientWidth,
+                height: (canvasWrapper.clientWidth * 2) / 3, // Maintain aspect ratio
+                backgroundColor: '#f9f9f9'
+            });
+            window.addEventListener('resize', () => {
+                canvas.setWidth(canvasWrapper.clientWidth);
+                canvas.setHeight((canvasWrapper.clientWidth * 2) / 3);
+                canvas.renderAll();
+            });
+
+            // --- Core Functions ---
+            const switchFloor = (floorNumber) => {
+                appState.activeFloor = floorNumber;
+                canvas.clear(); // Clear previous floor objects
+                const newFloorData = appState.floors[floorNumber];
+
+                if (!newFloorData) {
+                    console.error(`Floor data for floor ${floorNumber} not found.`);
+                    return; // Stop if floor data doesn't exist
+                }
+
+                // Set Background Image
+                fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
+                    if (img) {
+                       canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                           scaleX: canvas.width / img.width,
+                           scaleY: canvas.height / img.height
+                       });
+                    } else {
+                        console.error(`Background image ${newFloorData.backgroundURL} could not be loaded.`);
+                        canvas.setBackgroundImage(null, canvas.renderAll.bind(canvas)); // Clear background if image fails
+                    }
+                }, { crossOrigin: 'anonymous' }); // Added crossOrigin for potential CORS issues
+
+                // Load Objects from JSON data
+                canvas.loadFromJSON({ objects: newFloorData.objects }, () => {
+                    canvas.renderAll();
+                    updateCanvasInteractivity(); // Set objects to non-selectable
                 });
 
-                // NOTE: With 'no-cors', we can't read the response. 
-                // We will assume success if the fetch call itself doesn't throw an error.
+                // Update floor switcher button styles
+                floorSwitchers.forEach(btn => {
+                    btn.classList.toggle('active-floor', parseInt(btn.dataset.floor, 10) === floorNumber);
+                });
+            };
 
-                // 5. Populate confirmation screen
-                sessionList.innerHTML = ''; // Clear previous
-                selectedExhibitors.forEach(id => {
-                    const exhibitor = exhibitorsData.find(ex => ex.id === id);
-                    if (exhibitor) {
-                        const li = document.createElement('li');
-                        li.className = 'p-2 bg-gray-50 rounded-lg text-gray-700 font-medium';
-                        li.textContent = exhibitor.name;
-                        sessionList.appendChild(li);
+            const updateCanvasInteractivity = () => {
+                canvas.discardActiveObject();
+                canvas.selection = false; // Disable multi-selection
+                canvas.defaultCursor = 'default'; // Always default cursor
+
+                canvas.forEachObject(obj => {
+                    const sector = obj.get('sector') || 'Unassigned';
+                    const colors = sectorColors[sector] || sectorColors['Unassigned'];
+                    // Make all objects non-selectable, but allow events (hover, click)
+                    obj.set({
+                        selectable: false,
+                        evented: true, // Keep event handling
+                        stroke: colors.stroke,
+                        strokeWidth: 2,
+                        opacity: 1,
+                        hoverCursor: obj.exhibitorName && obj.exhibitorName !== 'Unnamed Booth' ? 'pointer' : 'default' // Pointer only if booked
+                    });
+                });
+                canvas.renderAll();
+            };
+
+            const showModal = (targetObject) => {
+                if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') return; // Only show for booked booths
+                activeModalObject = targetObject;
+
+                // Populate modal with read-only data
+                modalLogo.src = targetObject.get('logoUrl') || 'https://placehold.co/64x64/cccccc/969696?text=Logo';
+                modalExhibitorName.textContent = targetObject.get('exhibitorName');
+                modalSector.textContent = targetObject.get('sector') || 'Unassigned';
+                modalBoothId.textContent = targetObject.get('id') || 'N/A'; // Assuming objects have an 'id'
+
+                detailsModal.classList.remove('hidden');
+            };
+
+            const hideModal = () => {
+                activeModalObject = null;
+                detailsModal.classList.add('hidden');
+            };
+
+            const showTooltip = (targetObject) => {
+                // Show tooltip only if it has a valid exhibitor name
+                if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') {
+                    hideTooltip();
+                    return;
+                }
+                const exhibitorSector = targetObject.get('sector');
+                const bounds = targetObject.getBoundingRect();
+                const canvasRect = canvas.getElement().getBoundingClientRect();
+
+                tooltipName.textContent = targetObject.exhibitorName;
+                tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
+                tooltipSector.textContent = exhibitorSector || '';
+                tooltipSector.classList.toggle('hidden', !exhibitorSector); // Hide if no sector
+
+                // Position tooltip above the booth
+                tooltip.style.left = `${canvasRect.left + bounds.left}px`;
+                tooltip.style.top = `${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px`; // 5px offset above
+                tooltip.classList.remove('hidden');
+            };
+
+            const hideTooltip = () => {
+                tooltip.classList.add('hidden');
+            };
+
+             // --- Search Functionality ---
+            const searchExhibitor = () => {
+                const query = searchInput.value.toLowerCase().trim();
+                canvas.forEachObject(obj => { // Reset previous highlights/opacity
+                     const sector = obj.get('sector') || 'Unassigned';
+                     const colors = sectorColors[sector] || sectorColors['Unassigned'];
+                     obj.set({
+                         opacity: 1,
+                         stroke: colors.stroke,
+                         strokeWidth: 2
+                     });
+                 });
+
+                 if (!query) {
+                     canvas.renderAll();
+                     return; // If query is empty, just reset and exit
+                 }
+
+                let found = false;
+                canvas.forEachObject(obj => {
+                    const name = obj.get('exhibitorName');
+                    if (name && name.toLowerCase().includes(query)) {
+                        obj.set({
+                            stroke: '#e11d48', // Highlight color (e.g., bright red)
+                            strokeWidth: 4,
+                            opacity: 1
+                        });
+                        found = true;
+                    } else {
+                        obj.set({ opacity: 0.3 }); // Dim non-matching booths
                     }
                 });
 
-                // 6. Hide app, show confirmation
-                mainAppContainer.classList.add('hidden');
-                confirmationScreen.classList.remove('hidden');
+                if (!found) {
+                    alert('No exhibitor found matching that name.');
+                    // Reset opacity if nothing found
+                     canvas.forEachObject(obj => obj.set({ opacity: 1 }));
+                }
+                canvas.renderAll();
+            };
 
-                // 7. Reset form and selections (for good measure, though they are hidden)
-                contactForm.reset();
-                selectedExhibitors.clear();
-                renderExhibitors(); // Re-render to remove 'selected' styles
-                updateSelectionSummary(); // Resets counter
-                
-            } catch (error) {
-                console.error("Form submission error:", error);
-                showFormMessage(`An error occurred during submission: ${error.message}. Please try again.`, true);
-            } finally {
-                // 8. Always re-enable the button
-                submitButton.textContent = 'Submit Matchmaking Request';
-                submitButton.disabled = false; // Re-enable
-            }
-        }
-
-        // --- INITIALIZE APPLICATION ---
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- ASSIGN DOM REFERENCES ---
-            // Main UI
-            exhibitorList = document.getElementById('exhibitor-list');
-            selectionSummary = document.getElementById('selection-summary');
-            submitButton = document.getElementById('submit-button');
-            searchBar = document.getElementById('search-bar');
-            sectorFilter = document.getElementById('sector-filter');
-            countryFilter = document.getElementById('country-filter');
-            sortFilter = document.getElementById('sort-filter');
-            contactForm = document.getElementById('contact-form');
-            formMessage = document.getElementById('form-message');
-            requiredFields = contactForm.querySelectorAll('[required]');
-            mainAppContainer = document.getElementById('main-app-container');
-            confirmationScreen = document.getElementById('confirmation-screen');
-            sessionList = document.getElementById('session-list');
-            loadingSkeletons = document.querySelectorAll('.loading-skeleton');
-
-            // "Info" Modal
-            infoModal = document.getElementById('info-modal');
-            closeInfoModalBtn = document.getElementById('close-info-modal-btn');
-            closeInfoModalBtnFooter = document.getElementById('close-info-modal-btn-footer');
-            infoModalTitle = document.getElementById('info-modal-title');
-            infoLogo = document.getElementById('info-logo');
-            infoSector = document.getElementById('info-sector');
-            infoCountry = document.getElementById('info-country');
-            infoDescription = document.getElementById('info-description');
-
-
-            // --- LOAD DATA FROM JSON ---
-            fetch('exhibitors.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+            // --- Event Listeners ---
+            floorSwitchers.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Check if floor exists before switching
+                    const floorIndex = parseInt(btn.dataset.floor, 10);
+                    if (appState.floors[floorIndex]) {
+                         switchFloor(floorIndex);
+                    } else {
+                        console.warn(`Floor ${floorIndex} does not exist in the data.`);
                     }
-                    return response.json();
-                })
-                .then(data => {
-                    exhibitorsData = data; // Load data from JSON
-                    
-                    // 2. Set up filters
-                    populateFilters();
-
-                    // 3. Initial render
-                    renderExhibitors();
-                    updateSelectionSummary();
-                })
-                .catch(error => {
-                    console.error("Error loading exhibitors.json:", error);
-                    exhibitorList.innerHTML = `<div class="text-center text-red-600 font-medium p-6">Failed to load exhibitor list. Please make sure 'exhibitors.json' is present.</div>`;
-                    loadingSkeletons.forEach(el => el.classList.add('hidden'));
                 });
+            });
 
-
-            // --- ATTACH EVENT LISTENERS ---
-            // Main List
-            exhibitorList.addEventListener('click', handleListClick);
-
-            // Filter listeners
-            searchBar.addEventListener('input', handleFilterChange);
-            sectorFilter.addEventListener('change', handleFilterChange);
-            countryFilter.addEventListener('change', handleFilterChange);
-            sortFilter.addEventListener('change', handleFilterChange);
-
-            // Contact Form
-            contactForm.addEventListener('submit', handleFormSubmit);
-
-            // "Info" Modal listeners
-            closeInfoModalBtn.addEventListener('click', closeInfoModal);
-            closeInfoModalBtnFooter.addEventListener('click', closeInfoModal);
-            infoModal.addEventListener('click', (e) => {
-                if (e.target === infoModal) {
-                    closeInfoModal();
+            // Double click to open modal in viewer mode
+            canvas.on('mouse:dblclick', (options) => {
+                if (options.target) {
+                    showModal(options.target);
                 }
             });
-        });
 
+            // Hover effects for tooltip and highlight
+            canvas.on('mouse:over', (e) => {
+                if (e.target) {
+                    showTooltip(e.target);
+                    // Only highlight if it's a booked booth
+                    if (e.target.exhibitorName && e.target.exhibitorName !== 'Unnamed Booth') {
+                        e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
+                        canvas.renderAll();
+                    }
+                }
+            });
+            canvas.on('mouse:out', (e) => {
+                if (e.target) {
+                    hideTooltip();
+                    const sector = e.target.get('sector') || 'Unassigned';
+                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
+                    // Reset stroke only if it wasn't highlighted by search
+                    if(e.target.stroke !== '#e11d48') {
+                       e.target.set({ stroke: originalStroke, strokeWidth: 2 });
+                       canvas.renderAll();
+                    }
+                }
+            });
+
+            // Modal close button
+            closeModalBtn.addEventListener('click', hideModal);
+
+            // Search input listener
+            searchInput.addEventListener('input', searchExhibitor); // Search as user types
+
+            // --- JSON Load Functionality ---
+            const handleJsonLoad = (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const loadedData = JSON.parse(e.target.result);
+                        // Basic validation: Check if essential structure exists
+                        if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
+                            appState = loadedData; // Replace current state
+                            switchFloor(appState.activeFloor); // Load the active floor from the file
+                            alert('Floor plan data loaded successfully!');
+                        } else {
+                            throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
+                        }
+                    } catch (error) {
+                        alert(`Error loading file: ${error.message}`);
+                        console.error("JSON Loading Error:", error);
+                    } finally {
+                        loadJsonInput.value = ''; // Reset file input
+                    }
+                };
+                reader.onerror = (e) => { // Handle file reading errors
+                     alert(`Error reading file: ${e.target.error}`);
+                     console.error("File Reading Error:", e.target.error);
+                     loadJsonInput.value = ''; // Reset file input
+                };
+                reader.readAsText(file);
+            };
+            loadJsonInput.addEventListener('change', handleJsonLoad);
+
+            // --- Initial Application Load ---
+            appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle
+            // Attempt to load floor 0 initially, assuming it exists.
+            if (appState.floors[0]) {
+                 switchFloor(0);
+            } else {
+                console.error("Initial floor data (floor 0) is missing. Please load a JSON file.");
+                // Optionally display a message to the user on the canvas or elsewhere
+            }
+        });
     </script>
 </body>
-
 </html>
