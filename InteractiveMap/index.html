@@ -57,21 +57,30 @@
     <!-- Control Panel Removed -->
 
     <!-- Exhibitor Info Modal -->
-    <div id="detailsModal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center p-4">
-        <!-- MODIFIED: New Polished Modal Card -->
-        <div class="bg-white rounded-2xl shadow-xl w-full max-w-sm relative transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
-            <button id="closeModalBtn" class="absolute -top-3 -right-3 text-gray-600 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-lg hover:bg-gray-100 hover:text-gray-900 transition-all text-3xl font-light">&times;</button>
-            
-            <div class="p-8 text-center">
-                <!-- Logo -->
-                <img id="modal-logo" src="https://placehold.co/100x100/cccccc/969696?text=No+Logo" alt="Exhibitor Logo" 
-                     class="w-28 h-28 object-contain rounded-full mx-auto mb-5 border-4 border-gray-100 shadow-md">
-                
-                <!-- Name -->
-                <h3 id="modal-name" class="text-3xl font-bold text-gray-800 mb-2">Exhibitor Name</h3>
-                
-                <!-- Sector -->
-                <p id="modal-sector" class="text-lg text-blue-600 font-semibold bg-blue-50 rounded-full px-4 py-1 inline-block">Sector</p>
+    <div id="detailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <h3 class="text-xl font-semibold mb-4">Exhibitor Details</h3>
+            <div class="space-y-4">
+                <div><label for="exhibitorName" class="block text-sm font-medium text-gray-700">Exhibitor
+                        Name</label><input type="text" id="exhibitorName"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        disabled>
+                </div>
+                <div><label for="logoUrl" class="block text-sm font-medium text-gray-700">Logo URL</label><input
+                        type="text" id="logoUrl"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        disabled>
+                </div>
+                <div><label for="sector" class="block text-sm font-medium text-gray-700">Sector</label><select
+                        id="sector"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        disabled></select>
+                </div>
+            </div>
+            <!-- Editor Footer Removed -->
+            <div id="modal-footer-viewer" class="mt-6 flex justify-end">
+                <button id="closeModalBtn"
+                    class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">Close</button>
             </div>
         </div>
     </div>
@@ -102,8 +111,9 @@
             const canvasWrapper = document.getElementById('canvas-wrapper'); const canvasEl = document.getElementById('floorPlanCanvas');
             const floorSwitchers = document.querySelectorAll('.floor-switcher'); const searchInput = document.getElementById('searchInput');
             // Removed Editor/Mode DOM elements
-            const detailsModal = document.getElementById('detailsModal'); 
-            // MODIFIED: Removed input/select element references
+            const detailsModal = document.getElementById('detailsModal'); const exhibitorNameInput = document.getElementById('exhibitorName');
+            const logoUrlInput = document.getElementById('logoUrl'); const sectorInput = document.getElementById('sector');
+            const modalFooterViewer = document.getElementById('modal-footer-viewer');
             const closeModalBtn = document.getElementById('closeModalBtn');
             const tooltip = document.getElementById('tooltip'); const tooltipLogo = document.getElementById('tooltip-logo');
             const tooltipName = document.getElementById('tooltip-name'); const tooltipSector = document.getElementById('tooltip-sector');
@@ -127,7 +137,7 @@
                 appState.activeFloor = floorNumber; canvas.clear();
                 const newFloorData = appState.floors[floorNumber];
                 if (!newFloorData) {
-                    console.error(`Floor data for floor ${floorNumber} not found.`);
+                    console.error(Floor data for floor ${floorNumber} not found.);
                     return;
                 }
                 fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
@@ -151,44 +161,30 @@
                     // Always set viewer properties
                     obj.set({ selectable: false, evented: true, stroke: originalStroke, strokeWidth: 2, opacity: 1 });
                 });
-                // ADDED: Re-apply search highlight after full canvas update
-                handleSearch();
+                canvas.renderAll();
             };
 
             // Removed setAppMode, enterDrawingMode, exitDrawingMode, finalizeShape
 
-            // MODIFIED: Updated showModal to populate the new modal elements
             const showModal = (targetObject) => {
                 if (!targetObject) return;
                 activeModalObject = targetObject;
-                
-                // Populate new elements
-                const logoUrl = targetObject.get('logoUrl') || 'https://placehold.co/100x100/cccccc/969696?text=No+Logo';
-                document.getElementById('modal-logo').src = logoUrl;
-                document.getElementById('modal-name').textContent = targetObject.get('exhibitorName') || 'Unnamed Booth';
-                
-                const sector = targetObject.get('sector') || 'Unassigned';
-                const sectorEl = document.getElementById('modal-sector');
-                sectorEl.textContent = sector;
-                sectorEl.classList.toggle('hidden', sector === 'Unassigned');
-
-                // Show modal with effect
+                modalFooterViewer.style.display = 'flex'; // Always show viewer footer
+                // Always disable inputs
+                exhibitorNameInput.disabled = true; logoUrlInput.disabled = true; sectorInput.disabled = true;
+                exhibitorNameInput.value = targetObject.get('exhibitorName') || '';
+                logoUrlInput.value = targetObject.get('logoUrl') || '';
+                sectorInput.innerHTML = '';
+                Object.keys(sectorColors).forEach(sectorName => {
+                    const option = document.createElement('option');
+                    option.value = sectorName; option.textContent = sectorName;
+                    sectorInput.appendChild(option);
+                });
+                sectorInput.value = targetObject.get('sector') || 'Unassigned';
                 detailsModal.classList.remove('hidden');
-                setTimeout(() => { // Allow display:flex to apply before transitioning
-                    document.getElementById('modal-content').classList.remove('scale-95', 'opacity-0');
-                }, 10); 
             };
 
-            // MODIFIED: Updated hideModal to use the new animation classes
-            const hideModal = () => {
-                const modalContent = document.getElementById('modal-content');
-                modalContent.classList.add('scale-95', 'opacity-0');
-                
-                setTimeout(() => { // Wait for transition to finish
-                    detailsModal.classList.add('hidden');
-                    activeModalObject = null;
-                }, 300); // Match CSS transition duration
-            };
+            const hideModal = () => { activeModalObject = null; detailsModal.classList.add('hidden'); };
 
             const showTooltip = (targetObject) => {
                 if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') { hideTooltip(); return; }
@@ -199,8 +195,8 @@
                 tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
                 tooltipSector.textContent = exhibitorSector || '';
                 tooltipSector.classList.toggle('hidden', !exhibitorSector);
-                tooltip.style.left = `${canvasRect.left + bounds.left}px`;
-                tooltip.style.top = `${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px`;
+                tooltip.style.left = ${canvasRect.left + bounds.left}px;
+                tooltip.style.top = ${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px;
                 tooltip.classList.remove('hidden');
             };
 
@@ -208,9 +204,6 @@
 
             // --- Event Listeners ---
             floorSwitchers.forEach(btn => btn.addEventListener('click', () => switchFloor(parseInt(btn.dataset.floor, 10))));
-
-            // ADDED: Search input listener
-            searchInput.addEventListener('input', handleSearch);
 
             // Removed all editor/drawing event listeners
 
@@ -233,19 +226,9 @@
             canvas.on('mouse:out', (e) => {
                 if (e.target) { // currentMode check removed (always viewer)
                     hideTooltip();
-                    // MODIFIED: Check if object should remain highlighted by search
-                    const query = searchInput.value.toLowerCase().trim();
-                    const name = (e.target.get('exhibitorName') || '').toLowerCase();
-                    
-                    if (query && name.includes(query)) {
-                        // It should stay search-highlighted
-                        e.target.set({ stroke: '#facc15', strokeWidth: 5 }); // Bright yellow highlight
-                    } else {
-                        // Reset to default
-                        const sector = e.target.get('sector') || 'Unassigned';
-                        const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                        e.target.set({ stroke: originalStroke, strokeWidth: 2 });
-                    }
+                    const sector = e.target.get('sector') || 'Unassigned';
+                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
+                    e.target.set({ stroke: originalStroke, strokeWidth: 2 });
                     canvas.renderAll();
                 }
             });
@@ -255,25 +238,6 @@
             // Removed editor-specific modal button listeners
 
             // Removed Helper Functions for loading/saving
-
-            // ADDED: handleSearch function
-            function handleSearch() {
-                const query = searchInput.value.toLowerCase().trim();
-                canvas.forEachObject(obj => {
-                    const name = (obj.get('exhibitorName') || '').toLowerCase();
-                    const sector = obj.get('sector') || 'Unassigned';
-                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                    
-                    if (query && name.includes(query)) {
-                        // Highlight
-                        obj.set({ stroke: '#facc15', strokeWidth: 5 }); // Bright yellow highlight
-                    } else {
-                        // Reset to default
-                        obj.set({ stroke: originalStroke, strokeWidth: 2 });
-                    }
-                });
-                canvas.renderAll();
-            };
 
             // Auto-load function for GitHub Pages (Viewer Mode)
             const autoLoadData = async () => {
@@ -304,5 +268,3 @@
     </script>
 </body>
 </html>
-
-
