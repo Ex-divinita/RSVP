@@ -1,0 +1,602 @@
+[
+  {
+    "id": "ex_1761481772648",
+    "name": "Bonomi",
+    "logoUrl": "https://www.gruppo-bonomi.com/wp-content/uploads/2021/05/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for Bonomi."
+  },
+  {
+    "id": "ex_1761481821571",
+    "name": "Belmet MI",
+    "logoUrl": "https://belmet.si/content/uploads/2021/09/BELMET-MI-logo-2017-color_web.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Slovenia",
+    "description": "Details for Belmet MI."
+  },
+  {
+    "id": "ex_1761481854226",
+    "name": "SolEnergy Solutions",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Sol",
+    "sector": "Energy & Infrastructure",
+    "country": "USA",
+    "description": "Details for SolEnergy Solutions."
+  },
+  {
+    "id": "ex_1761482106656",
+    "name": "Elcowire",
+    "logoUrl": "https://ebas.lt/wp-content/uploads/2019/09/Elcowire-logo-e1621427420866.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Sweden",
+    "description": "Details for Elcowire."
+  },
+  {
+    "id": "ex_1761482208278",
+    "name": "Mont-Ele",
+    "logoUrl": "https://www.copadata.com/hs-fs/hubfs/Images%20Website/Reference%20Logos_480x300px/Partner%20Reference%20Logos/MontEle_GoldPartner_logo_280x300px.jpg?width=620&height=387&name=MontEle_GoldPartner_logo_280x300px.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Czechia",
+    "description": "Details for Mont-Ele."
+  },
+  {
+    "id": "ex_1761482271588",
+    "name": "Arthur Flury",
+    "logoUrl": "https://media.jobs.ch/images/cd7270fa-79f6-4222-9a8b-31fe7b9765c0/profile-400x400.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Switherland",
+    "description": "Details for Arthur Flury."
+  },
+  {
+    "id": "ex_1761482366486",
+    "name": "OSHEE",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Operatori_i_Shp%C3%ABrndarjes_s%C3%AB_Energjis%C3%AB_Elektrike_logo.svg/2560px-Operatori_i_Shp%C3%ABrndarjes_s%C3%AB_Energjis%C3%AB_Elektrike_logo.svg.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for OSHEE."
+  },
+  {
+    "id": "ex_1761482406128",
+    "name": "Abito Holz",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFEfAGUPDmHdMquD1TwNDqb_ovpTHTQKvAA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for Abito Holz."
+  },
+  {
+    "id": "ex_1761482442533",
+    "name": "The Port of Durres",
+    "logoUrl": "https://www.iaphworldports.org/n-iaph/wp-content/uploads/mp/europe/Durres-Port-Authority.jpeg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for The Port of Durres."
+  },
+  {
+    "id": "ex_1761482498309",
+    "name": "Mosdorfer",
+    "logoUrl": "https://www.mosdorfer.com/wp-content/uploads/2018/10/L-Mosdorfer-300dpi.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "Details for Mosdorfer."
+  },
+  {
+    "id": "ex_1761482517794",
+    "name": "KLAR",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZXXkERqHq-qQZRB-jNSFihpWl7qJzBuRNQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for KLAR."
+  },
+  {
+    "id": "ex_1761482548636",
+    "name": "Deo Light",
+    "logoUrl": "https://deol-light.com/wp-content/uploads/2022/06/deol-done-OR-1-NEW.pdf-3.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Deo Light."
+  },
+  {
+    "id": "ex_1761482591396",
+    "name": "Albturk Grup",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Alb",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Albturk Grup."
+  },
+  {
+    "id": "ex_1761482640577",
+    "name": "Stone Design",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5OSKX5ouJtj4mTCxJbFSrZDgJ3WEY9mKxZw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "North Macedonia",
+    "description": "Details for Stone Design."
+  },
+  {
+    "id": "ex_1761482684747",
+    "name": "EIS Construction",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=EIS",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for EIS Construction."
+  },
+  {
+    "id": "ex_1761482726158",
+    "name": "Hekurudha Shqiptare (HSH)",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Hekurudha_Shqiptare.svg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Hekurudha Shqiptare (HSH)."
+  },
+  {
+    "id": "ex_1761482752754",
+    "name": "TreZeta",
+    "logoUrl": "https://www.trezetaitaly.com/wp-content/uploads/2025/04/trezeta-logo-300.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for TreZeta."
+  },
+  {
+    "id": "ex_1761482771462",
+    "name": "OST",
+    "logoUrl": "https://ost.al/wp-content/uploads/2022/01/ost-logo-top.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for OST."
+  },
+  {
+    "id": "ex_1761482802211",
+    "name": "EuroElektra",
+    "logoUrl": "https://img.favpng.com/15/4/0/euroelektra-sh-p-k-exhibition-labor-convention-center-dekor-italy-png-favpng-9uG40f5SgqWNDX41htUVA2KUQ.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for EuroElektra."
+  },
+  {
+    "id": "ex_1761482847860",
+    "name": "LGM",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=LGM",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for LGM."
+  },
+  {
+    "id": "ex_1761482881910",
+    "name": "Sika",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Sik",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for Sika."
+  },
+  {
+    "id": "ex_1761482916181",
+    "name": "Weitzer Parkett",
+    "logoUrl": "https://lh3.googleusercontent.com/-J3MhNbaUvyA/YnufCkzR8II/AAAAAAAAAa4/k4ExdSEKJQsem5yH58J3Qe3rWVTg5s19ACNcBGAsYHQ/s960/www.weitzer-parkett.com.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "Details for Weitzer Parkett."
+  },
+  {
+    "id": "ex_1761482941928",
+    "name": "Algeco",
+    "logoUrl": "https://www.iheem.org.uk/wp-content/uploads/2023/12/Algeco.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Algeco."
+  },
+  {
+    "id": "ex_1761482978749",
+    "name": "Railway transport of Montenegro",
+    "logoUrl": "https://cdn.aiidatapro.net/media/1d/8d/69/t780x490/1d8d69b174461ce7028082f8623823e8.webp",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "Details for Railway transport of Montenegro."
+  },
+  {
+    "id": "ex_1761483079401",
+    "name": "DR Ferroviaria Italia (DRFI)",
+    "logoUrl": "https://www.drferroviaria.it/wp-content/uploads/2025/06/Logo_2023-no-padd-scaled.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for DR Ferroviaria Italia (DRFI)."
+  },
+  {
+    "id": "ex_1761483156464",
+    "name": "Aluminox",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDid-5T4V3eVfU9KZQ7_84NePR9pp8jLXZNTrTchJ-D6mQap4oXjUtzrWXK4HYZuApig&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for Aluminox."
+  },
+  {
+    "id": "ex_1761483186446",
+    "name": "VM Group",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtg6c013TCt6NDJnnFQ7JLRnA32DM7qav6A&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for VM Group."
+  },
+  {
+    "id": "ex_1761483235172",
+    "name": "Klevi Fire Protection",
+    "logoUrl": "https://klevifireprotection.com/wp-content/uploads/2024/01/Klevi-Fire-Protection-Logo-1.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Klevi Fire Protection."
+  },
+  {
+    "id": "ex_1761483293232",
+    "name": "Tehnogama",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8r0KEmbZ2GJEVqsRAyfQctg47-YLaYTiC6Q&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Details for Tehnogama."
+  },
+  {
+    "id": "ex_1761483324097",
+    "name": "ICAT",
+    "logoUrl": "https://www.icat.it/user/themes/icat/img/logo@2x.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for ICAT."
+  },
+  {
+    "id": "ex_1761483355277",
+    "name": "Schunk",
+    "logoUrl": "https://easyfairsassets.com/sites/309/2022/12/SCHUNK_Typenschild_RGB_2022.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "Details for Schunk."
+  },
+  {
+    "id": "ex_1761483491013",
+    "name": "Decom",
+    "logoUrl": "https://www.decom.me/img/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "Details for Decom."
+  },
+  {
+    "id": "ex_1761483531834",
+    "name": "Tehnomarket",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGCM9MQjJzU6yvObBnjQnR8mS1yGFwy8u16g&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Details for Tehnomarket."
+  },
+  {
+    "id": "ex_1761483582610",
+    "name": "Hydro Home",
+    "logoUrl": "https://i.ebayimg.com/images/g/WhAAAOSwm5NdvwrE/s-l300.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Details for Hydro Home."
+  },
+  {
+    "id": "ex_1761483609905",
+    "name": "Europlast",
+    "logoUrl": "https://www.europlast.at/fileadmin/template01/img/header/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "Details for Europlast."
+  },
+  {
+    "id": "ex_1761483650779",
+    "name": "BEAM Europe",
+    "logoUrl": "https://amcham.rs/wp-content/uploads/2024/03/beam-logo-color-and-black-large-576x375-2.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Details for BEAM Europe."
+  },
+  {
+    "id": "ex_1761483682729",
+    "name": "AON",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBjnX-jlyHrcTSiScunmkwGpk5hYw5rD_Aw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for AON."
+  },
+  {
+    "id": "ex_1761483725026",
+    "name": "L'atre",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2Yv7jDSqzJD73RKQpUYRMuiv0vzYZXdrGA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for L'atre."
+  },
+  {
+    "id": "ex_1761483833690",
+    "name": "Jomapex",
+    "logoUrl": "https://jomapeks.com/wp-content/uploads/2022/04/jomapeks-logo-002.png",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "Details for Jomapex."
+  },
+  {
+    "id": "ex_1761483876583",
+    "name": "Plantaze",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQHvReNW6ug8TQ/company-logo_200_200/company-logo_200_200/0/1630566064338?e=1762992000&v=beta&t=0Tn-B6VnspkfPIhkV0FUnlnZTjDR83JDHISi18SWT0I",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Plantaze."
+  },
+  {
+    "id": "ex_1761483954094",
+    "name": "Vytal",
+    "logoUrl": "https://cdn.prod.website-files.com/678e1d6e1199b32897776eab/67a32914e877fbf6f8f8ac6f_Vytal-Logo-RGB.png",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "German?"
+  },
+  {
+    "id": "ex_1761484128149",
+    "name": "Lubing",
+    "logoUrl": "https://www.lubing.de/wp-content/uploads/2023/01/Lubing-Logo.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Lubing."
+  },
+  {
+    "id": "ex_1761484201106",
+    "name": "Cooperative Italiana Catering",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzTCfUw3-RT5DPFcFmKDwxp2FY35kSI2mXA&s",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "Details for Cooperative Italiana Catering."
+  },
+  {
+    "id": "ex_1761484233187",
+    "name": "Franca",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTai6DEKAg8zLUQNcvuz_5FCUYjHLwciyKkcw&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Franca."
+  },
+  {
+    "id": "ex_1761484264215",
+    "name": "Crateo",
+    "logoUrl": "https://crateo.it/wp-content/uploads/2024/10/logo_crateo_w.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Crateo."
+  },
+  {
+    "id": "ex_1761484301208",
+    "name": "Enoreum",
+    "logoUrl": "https://optim.tildacdn.net/tild3462-6633-4164-b232-313737363931/-/resize/332x/-/format/webp/Gold_House_Building_.png.webp",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Enoreum."
+  },
+  {
+    "id": "ex_1761484379853",
+    "name": "H&S Fruits",
+    "logoUrl": "https://hsfruits.rs/wp-content/uploads/2022/03/HS-fruits-logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Details for H&S Fruits."
+  },
+  {
+    "id": "ex_1761484430537",
+    "name": "Llucka Organic",
+    "logoUrl": "https://worldolivecenter.com/wp-content/uploads/2023/04/lucka-logo-7e866f191d86661c01559c3ee26b721e.jpg",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Llucka Organic."
+  },
+  {
+    "id": "ex_1761484461184",
+    "name": "Intermizoo",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVBjXuEVUKdT64b03N0WBLIKqLWG-FYEFt0A&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Details for Intermizoo."
+  },
+  {
+    "id": "ex_1761484493165",
+    "name": "Molini Certosa",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc8Mlm8W3qkHLYNkB0Iux_eawH4DSK1BTGyg&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Molini Certosa."
+  },
+  {
+    "id": "ex_1761484520311",
+    "name": "Belonina",
+    "logoUrl": "https://static.tildacdn.net/tild6662-3362-4931-b534-346334323861/sommelier_7.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Belonina."
+  },
+  {
+    "id": "ex_1761484572291",
+    "name": "Destilerija Zekic",
+    "logoUrl": "https://rakijashop.de/wp-content/uploads/2023/01/zekic-logo-web-retina-1.png",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "Details for Destilerija Zekic."
+  },
+  {
+    "id": "ex_1761484626304",
+    "name": "Crnagoracoop",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYaouYuZgkVlNoAM7EdaDXyYW16pvHnZVjw&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Crnagoracoop."
+  },
+  {
+    "id": "ex_1761484659062",
+    "name": "Antica Drogheria del Castello",
+    "logoUrl": "https://anticadrogheria.it/wp-content/uploads/2025/04/cropped-Screenshot-2025-04-24-alle-12.34.46-1.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Antica Drogheria del Castello."
+  },
+  {
+    "id": "ex_1761484693884",
+    "name": "Mamo Pizza",
+    "logoUrl": "https://mamopizza.it/wp-content/uploads/2023/03/Logo-Mamo-Pizza_Colori.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Details for Mamo Pizza."
+  },
+  {
+    "id": "ex_1761484721361",
+    "name": "Tortilla Mexicana",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpzBU-aM2mR9G6-wefuSCUP3FQUt2nlPxdQ&s",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "Details for Tortilla Mexicana."
+  },
+  {
+    "id": "ex_1761484803734",
+    "name": "Veterinum",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Vet",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Veterinum."
+  },
+  {
+    "id": "ex_1761486975300",
+    "name": "Skijakista",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREDyeF3n-lqwsZAzwvhMjEHzk9y3q_DgUrQw&s",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Skijakista."
+  },
+  {
+    "id": "ex_1761487014808",
+    "name": "Himare",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Himare_Flag.png",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Himare."
+  },
+  {
+    "id": "ex_1761487042632",
+    "name": "Green Coast",
+    "logoUrl": "https://greencoast.al/wp-content/uploads/2024/05/Green-coast-logo.png",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Green Coast."
+  },
+  {
+    "id": "ex_1761487070677",
+    "name": "Celebic Group",
+    "logoUrl": "https://immgroup.com/wp-content/uploads/2022/04/logo-Celebic-Group.png",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Celebic Group."
+  },
+  {
+    "id": "ex_1761487111538",
+    "name": "Velo Experience",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI5arKNQLrpsd9MxXX_BcZN9MgKGOYI0NM3A&s",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Velo Experience."
+  },
+  {
+    "id": "ex_1761487152130",
+    "name": "Radisson Collection Morina",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3MYH_orO5qMyHG13_nhaxU23f5KsWF8XlXA&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Radisson Collection Morina."
+  },
+  {
+    "id": "ex_1761487183496",
+    "name": "Morina Palace",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3G2Lnmxevo4tudGslv6KePaAcsrgIAbGN-w&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Morina Palace."
+  },
+  {
+    "id": "ex_1761487234997",
+    "name": "AVK",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0sSN40GK1wNI9lzZOI7T9InmHIDUsvfWEA&s",
+    "sector": "Tourism & Culture",
+    "country": "Austria",
+    "description": "Details for AVK."
+  },
+  {
+    "id": "ex_1761487275308",
+    "name": "Stara Carsija Hotel & SPA",
+    "logoUrl": "https://app.otasync.me/images/property_logo_1186.png",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Stara Carsija Hotel & SPA."
+  },
+  {
+    "id": "ex_1761487313591",
+    "name": "Ulcinj Travel",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6GBbsdC2v84QrafF1m52g8q2LJwYpT_WLQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "Details for Ulcinj Travel."
+  },
+  {
+    "id": "ex_1761487374286",
+    "name": "Kolasin",
+    "logoUrl": "https://img.gothru.org/6882/166795012904816945/overlay/assets/20250905035926.i1dAWn.jpg?save=optimize",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Kolasin."
+  },
+  {
+    "id": "ex_1761487404806",
+    "name": "Bashkia Librazhd",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPovVjOjk8-i27mth3WKeZ1iktNJTyhTGlIw&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Bashkia Librazhd."
+  },
+  {
+    "id": "ex_1761487448550",
+    "name": "Theatre of Opera & Ballet",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Teatri_Komb%C3%ABtar_i_Operas_dhe_Baletit.svg/1084px-Teatri_Komb%C3%ABtar_i_Operas_dhe_Baletit.svg.png",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Theatre of Opera & Ballet."
+  },
+  {
+    "id": "ex_1761487477778",
+    "name": "Dajti Paradise",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREj-a6xadeQjDyN7YSsPyvNN9fpKb_AHeHhQ&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Dajti Paradise."
+  },
+  {
+    "id": "ex_1761487508461",
+    "name": "Arkiva",
+    "logoUrl": "https://inspektimi.arkiva.gov.al/assets/images/arkiva-logo-login.svg",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Arkiva."
+  },
+  {
+    "id": "ex_1761487556114",
+    "name": "Fondacioni Kulturor Dritero Agolli",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C4E03AQGeqIum74GCPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1661440332227?e=2147483647&v=beta&t=LWqR2tliajvSm1DLOrTcrGoBl23ZHao7Y6UWZZ9YY48",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Fondacioni Kulturor Dritero Agolli."
+  },
+  {
+    "id": "ex_1761487589549",
+    "name": "The National Film Center of Albania",
+    "logoUrl": "https://erafilm-albania.com/wp-content/uploads/2023/08/qkk-1.jpg",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for The National Film Center of Albania."
+  },
+  {
+    "id": "ex_1761487617129",
+    "name": "Gaia Clinic",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1fDPtCK4jGO1urHRTBNUVyFWsGP9cIU3Bg&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Gaia Clinic."
+  }
+]
