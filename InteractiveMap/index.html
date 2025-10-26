@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Floor Plan - Viewer</title>
+    <title>Interactive Map of 31st Tirana International Fair </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
     <style>
@@ -12,17 +12,24 @@
             background-color: #f0f2f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         .active-floor {
             background-color: #1d4ed8 !important;
             color: white !important;
             border-color: #1d4ed8 !important;
         }
-        .control-btn { /* Basic style needed for Load button */
+
+        .control-btn {
             @apply px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all;
         }
-        /* Custom styles for disabled look in viewer */
-        .fabric-canvas-container { cursor: default !important; }
-        .canvas-container { cursor: default !important; }
+
+        .tool-btn-active {
+            @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+        }
+
+        .mode-btn-viewer {
+            @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+        }
     </style>
 </head>
 
@@ -32,11 +39,11 @@
     <header class="bg-white shadow-md p-4 flex justify-between items-center">
         <div>
             <h1 class="text-2xl font-bold text-gray-800">Palace of Congresses - Interactive Floor Plan</h1>
-            <h2 id="app-mode-subtitle" class="text-md text-gray-600">Viewer Mode</h2> <!-- Always Viewer -->
+            <h2 id="app-mode-subtitle" class="text-md text-gray-600">Editor Mode</h2>
         </div>
         <div class="w-1/3">
             <input type="text" id="searchInput" placeholder="Search Exhibitors..."
-                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
     </header>
 
@@ -44,58 +51,52 @@
     <main class="flex-grow container mx-auto p-4 flex justify-center items-center">
         <div id="canvas-wrapper" class="relative w-full max-w-6xl bg-white shadow-lg rounded-lg border border-gray-200">
             <div class="absolute top-4 right-4 z-10 flex gap-2">
-                <!-- Floor Switcher Buttons -->
                 <button data-floor="-1"
-                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">-1</button>
+                    class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">-1</button>
                 <button data-floor="0"
-                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">0</button>
+                    class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">0</button>
                 <button data-floor="1"
-                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">1</button>
+                    class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">1</button>
                 <button data-floor="2"
-                        class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">2</button>
+                    class="floor-switcher w-10 h-10 rounded-full bg-white border-2 border-gray-300 font-bold text-gray-700 flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">2</button>
             </div>
             <canvas id="floorPlanCanvas"></canvas>
         </div>
     </main>
 
-    <!-- Control Panel - Removed Load Button -->
-    <footer class="bg-white p-3 flex justify-center items-center gap-4 border-t border-gray-200">
-        <!-- Footer content can be added here if needed later -->
-        <span class="text-sm text-gray-500">Interactive Map Viewer</span>
-    </footer>
 
-    <!-- Exhibitor Info Modal (Read-Only) -->
+    <!-- Exhibitor Info Modal -->
     <div id="detailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
         <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
             <h3 class="text-xl font-semibold mb-4">Exhibitor Details</h3>
-            <!-- Display information, not input fields -->
-            <div class="space-y-3 mb-6">
-                 <div class="flex items-center gap-3">
-                     <img id="modal-logo" src="" alt="logo" class="w-16 h-16 object-contain rounded border border-gray-200 flex-shrink-0">
-                     <div>
-                         <p><span class="font-medium text-gray-700">Exhibitor:</span> <span id="modalExhibitorName" class="text-gray-900 font-semibold"></span></p>
-                         <p><span class="font-medium text-gray-700">Sector:</span> <span id="modalSector" class="text-gray-800"></span></p>
-                         <p><span class="font-medium text-gray-700">Booth ID:</span> <span id="modalBoothId" class="text-gray-800"></span></p>
-                     </div>
-                 </div>
-                 <!-- You could add more display fields here later if needed -->
+            <div class="space-y-4">
+                <div><label for="exhibitorName" class="block text-sm font-medium text-gray-700">Exhibitor
+                        Name</label><input type="text" id="exhibitorName"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div><label for="logoUrl" class="block text-sm font-medium text-gray-700">Logo URL</label><input
+                        type="text" id="logoUrl"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div><label for="sector" class="block text-sm font-medium text-gray-700">Sector</label><select
+                        id="sector"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></select>
+                </div>
             </div>
-            <!-- Only Close button in viewer mode -->
-            <div id="modal-footer-viewer" class="flex justify-end">
+            <div id="modal-footer-editor" class="mt-6 flex justify-between">
+                <button id="deleteBoothBtn"
+                    class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Delete
+                    Booth</button>
+                <div>
+                    <button id="cancelModalBtn"
+                        class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mr-2">Cancel</button>
+                    <button id="saveModalBtn"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Save</button>
+                </div>
+            </div>
+            <div id="modal-footer-viewer" class="mt-6 flex justify-end">
                 <button id="closeModalBtn"
-                        class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tooltip for Hover Info -->
-    <div id="tooltip"
-         class="hidden absolute z-50 bg-white border border-gray-300 rounded-md shadow-lg p-2 max-w-xs pointer-events-none">
-        <div class="flex items-center gap-3">
-            <img id="tooltip-logo" src="" alt="logo" class="w-10 h-10 object-contain rounded flex-shrink-0">
-            <div>
-                <span id="tooltip-name" class="font-bold text-gray-800 block"></span>
-                <span id="tooltip-sector" class="text-sm text-gray-600 block"></span>
+                    class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">Close</button>
             </div>
         </div>
     </div>
@@ -103,7 +104,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Global Configuration ---
-            const sectorColors = { // Keep colors for visual differentiation
+            const sectorColors = {
                 'Unassigned': { color: 'rgba(156, 163, 175, 0.5)', stroke: '#6b7280' }, 'Energy': { color: 'rgba(250, 204, 21, 0.5)', stroke: '#d97706' },
                 'Manufacturing': { color: 'rgba(59, 130, 246, 0.5)', stroke: '#1d4ed8' }, 'Construction': { color: 'rgba(249, 115, 22, 0.5)', stroke: '#c2410c' },
                 'Technology': { color: 'rgba(16, 185, 129, 0.5)', stroke: '#047857' }, 'Automotive': { color: 'rgba(239, 68, 68, 0.5)', stroke: '#b91c1c' },
@@ -111,358 +112,294 @@
             };
 
             // --- DOM Element References ---
-            const canvasWrapper = document.getElementById('canvas-wrapper');
-            const canvasEl = document.getElementById('floorPlanCanvas');
-            const floorSwitchers = document.querySelectorAll('.floor-switcher');
-            const searchInput = document.getElementById('searchInput');
-            const appModeSubtitle = document.getElementById('app-mode-subtitle'); // Still useful to show mode
-            // Removed loadJsonLabelViewer and loadJsonInput references
-            const detailsModal = document.getElementById('detailsModal');
-            // Modal display elements
-            const modalLogo = document.getElementById('modal-logo');
-            const modalExhibitorName = document.getElementById('modalExhibitorName');
-            const modalSector = document.getElementById('modalSector');
-            const modalBoothId = document.getElementById('modalBoothId');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const tooltip = document.getElementById('tooltip');
-            const tooltipLogo = document.getElementById('tooltip-logo');
-            const tooltipName = document.getElementById('tooltip-name');
-            const tooltipSector = document.getElementById('tooltip-sector');
+            const canvasWrapper = document.getElementById('canvas-wrapper'); const canvasEl = document.getElementById('floorPlanCanvas');
+            const floorSwitchers = document.querySelectorAll('.floor-switcher'); const searchInput = document.getElementById('searchInput');
+            const modeToggleBtn = document.getElementById('modeToggleBtn'); const appModeSubtitle = document.getElementById('app-mode-subtitle');
+            const editorTools = document.getElementById('editor-tools');
+            const drawRectangleBtn = document.getElementById('drawRectangleBtn'); const drawPolygonBtn = document.getElementById('drawPolygonBtn');
+            const exitDrawingBtn = document.getElementById('exitDrawingBtn');
+            const saveJsonBtn = document.getElementById('saveJsonBtn');
+            const loadJsonLabel = document.getElementById('loadJsonLabel'); const loadJsonLabelViewer = document.getElementById('loadJsonLabelViewer');
+            const loadJsonInput = document.getElementById('loadJsonInput');
+            const detailsModal = document.getElementById('detailsModal'); const exhibitorNameInput = document.getElementById('exhibitorName');
+            const logoUrlInput = document.getElementById('logoUrl'); const sectorInput = document.getElementById('sector');
+            const modalFooterEditor = document.getElementById('modal-footer-editor'); const modalFooterViewer = document.getElementById('modal-footer-viewer');
+            const saveModalBtn = document.getElementById('saveModalBtn'); const cancelModalBtn = document.getElementById('cancelModalBtn');
+            const deleteBoothBtn = document.getElementById('deleteBoothBtn'); const closeModalBtn = document.getElementById('closeModalBtn');
+            const tooltip = document.getElementById('tooltip'); const tooltipLogo = document.getElementById('tooltip-logo');
+            const tooltipName = document.getElementById('tooltip-name'); const tooltipSector = document.getElementById('tooltip-sector');
 
             // --- Application State ---
-            let appState = { // Initialize with empty state until JSON is loaded
+            let appState = {
                 activeFloor: 0,
-                floors: {}
+                floors: { '-1': { backgroundURL: 'floor-1.jpg', objects: [] }, '0': { backgroundURL: 'floor0.jpg', objects: [] }, '1': { backgroundURL: 'floor1.jpg', objects: [] }, '2': { backgroundURL: 'floor2.jpg', objects: [] } }
             };
-            const currentMode = 'viewer'; // Hardcoded to viewer mode
-            let activeModalObject = null;
-            const customProperties = ['exhibitorName', 'logoUrl', 'sector', 'id']; // Keep for loading data
+            let currentMode = 'editor';
+            let activeDrawingTool = null; let isDrawing = false;
+            let rectOrigin = { x: 0, y: 0 }; let tempRect = null;
+            let polygonPoints = []; let activeModalObject = null;
+            const customProperties = ['exhibitorName', 'logoUrl', 'sector', 'id'];
 
             // --- Canvas Initialization ---
-            const canvas = new fabric.Canvas(canvasEl, {
-                width: canvasWrapper.clientWidth,
-                height: (canvasWrapper.clientWidth * 2) / 3, // Maintain aspect ratio
-                backgroundColor: '#f9f9f9'
-            });
-            window.addEventListener('resize', () => {
-                canvas.setWidth(canvasWrapper.clientWidth);
-                canvas.setHeight((canvasWrapper.clientWidth * 2) / 3);
-                // Re-apply background image on resize to maintain scale
-                 const floorData = appState.floors[appState.activeFloor];
-                 if(floorData && floorData.backgroundURL) {
-                     fabric.Image.fromURL(floorData.backgroundURL, (img) => {
-                         if (img) {
-                             canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
-                                 scaleX: canvas.width / img.width,
-                                 scaleY: canvas.height / img.height
-                             });
-                         }
-                     }, { crossOrigin: 'anonymous' });
-                 } else {
-                    canvas.renderAll(); // Render even if no background
-                 }
-            });
+            const canvas = new fabric.Canvas(canvasEl, { width: canvasWrapper.clientWidth, height: (canvasWrapper.clientWidth * 2) / 3, backgroundColor: '#f9f9f9' });
+            window.addEventListener('resize', () => { canvas.setWidth(canvasWrapper.clientWidth); canvas.setHeight((canvasWrapper.clientWidth * 2) / 3); canvas.renderAll(); });
 
             // --- Core Functions ---
-             const switchFloor = (floorNumber) => {
-                // Ensure floor data exists before proceeding
-                if (!appState.floors || !appState.floors[floorNumber]) {
-                    console.error(`Floor data for floor ${floorNumber} not found.`);
-                    displayErrorMessage(`Floor data for floor ${floorNumber} not found in the loaded JSON.`);
-                    updateFloorSwitcherStyles(floorNumber); // Update buttons even if floor fails
-                    return;
+            const switchFloor = (floorNumber, isLoading = false) => {
+                if (!isLoading && currentMode === 'editor') {
+                    if (canvas) appState.floors[appState.activeFloor].objects = canvas.toJSON(customProperties).objects;
                 }
-
-                appState.activeFloor = floorNumber;
-                canvas.clear(); // Clear previous floor objects
+                appState.activeFloor = floorNumber; canvas.clear();
                 const newFloorData = appState.floors[floorNumber];
-
-                // Set Background Image
-                if (newFloorData.backgroundURL) {
-                    fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
-                        if (img && img.width && img.height) { // Check if image loaded correctly
-                           canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
-                               scaleX: canvas.width / img.width,
-                               scaleY: canvas.height / img.height
-                           });
-                           // Load Objects *after* background is set (or attempted)
-                           loadFloorObjects(newFloorData);
-                        } else {
-                            console.error(`Background image ${newFloorData.backgroundURL} could not be loaded or has invalid dimensions.`);
-                            displayErrorMessage(`Background image ${newFloorData.backgroundURL} missing or invalid.`);
-                             // Still try to load objects even if background fails
-                            loadFloorObjects(newFloorData);
-                        }
-                    }, { crossOrigin: 'anonymous' });
-                } else {
-                     console.warn(`No backgroundURL specified for floor ${floorNumber}.`);
-                     canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Clear background
-                      // Still try to load objects
-                     loadFloorObjects(newFloorData);
-                }
-
-
-                updateFloorSwitcherStyles(floorNumber);
-            };
-
-            const loadFloorObjects = (floorData) => {
-                 // Ensure objects array exists, even if empty
-                const objectsToLoad = floorData.objects || [];
-                canvas.loadFromJSON({ objects: objectsToLoad }, () => {
+                fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
+                    canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), { scaleX: canvas.width / img.width, scaleY: canvas.height / img.height });
+                }, { crossOrigin: 'anonymous' });
+                canvas.loadFromJSON({ objects: newFloorData.objects }, () => {
                     canvas.renderAll();
-                    updateCanvasInteractivity(); // Set objects to non-selectable
+                    updateCanvasInteractivity();
                 });
-            }
-
-            // Helper to display error messages on the canvas
-            const displayErrorMessage = (message) => {
-                 canvas.clear(); // Clear previous content
-                 canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas));
-                 const text = new fabric.Text(message, {
-                     left: canvas.width / 2,
-                     top: canvas.height / 2,
-                     originX: 'center',
-                     originY: 'center',
-                     fontSize: 18,
-                     fill: 'red',
-                     textAlign: 'center'
-                 });
-                 canvas.add(text);
-                 canvas.renderAll();
-            }
-
-
-             // Helper to update button styles
-             const updateFloorSwitcherStyles = (floorNumber) => {
-                 floorSwitchers.forEach(btn => {
-                    btn.classList.toggle('active-floor', parseInt(btn.dataset.floor, 10) === floorNumber);
-                });
-             }
-
+                floorSwitchers.forEach(btn => btn.classList.toggle('active-floor', parseInt(btn.dataset.floor, 10) === floorNumber));
+            };
 
             const updateCanvasInteractivity = () => {
                 canvas.discardActiveObject();
-                canvas.selection = false; // Disable multi-selection
-                canvas.defaultCursor = 'default'; // Always default cursor
+                const isEditorMode = currentMode === 'editor';
+                const isDrawingActive = isEditorMode && activeDrawingTool !== null;
+
+                canvas.selection = isEditorMode && !isDrawingActive;
+                canvas.defaultCursor = isDrawingActive ? 'crosshair' : 'default';
 
                 canvas.forEachObject(obj => {
                     const sector = obj.get('sector') || 'Unassigned';
-                    const colors = sectorColors[sector] || sectorColors['Unassigned'];
-                    const isBooked = obj.exhibitorName && obj.exhibitorName !== 'Unnamed Booth';
-                    // Make all objects non-selectable, but allow events (hover, click)
-                    obj.set({
-                        selectable: false,
-                        evented: true, // Keep event handling
-                        fill: colors.color, // Apply fill color based on sector
-                        stroke: colors.stroke,
-                        strokeWidth: 2,
-                        opacity: 1,
-                        hoverCursor: isBooked ? 'pointer' : 'default' // Pointer only if booked
-                    });
+                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
+                    if (currentMode === 'viewer') {
+                        obj.set({ selectable: false, evented: true, stroke: originalStroke, strokeWidth: 2, opacity: 1 });
+                    } else { // Editor mode
+                        obj.set({
+                            selectable: !isDrawingActive, evented: true,
+                            lockMovementX: isDrawingActive, lockMovementY: isDrawingActive,
+                            stroke: originalStroke, strokeWidth: 2, opacity: 1
+                        });
+                    }
                 });
                 canvas.renderAll();
+            };
+
+            const setAppMode = (newMode) => {
+                currentMode = newMode;
+                if (currentMode === 'viewer') {
+                    if (activeDrawingTool) exitDrawingMode();
+                    appModeSubtitle.textContent = 'Viewer Mode';
+                    modeToggleBtn.textContent = 'Switch to Editor Mode';
+                    modeToggleBtn.classList.remove('mode-btn-viewer');
+                    editorTools.classList.add('hidden');
+                    loadJsonLabelViewer.classList.remove('hidden');
+                } else {
+                    appModeSubtitle.textContent = 'Editor Mode';
+                    modeToggleBtn.textContent = 'Switch to Viewer Mode';
+                    modeToggleBtn.classList.add('mode-btn-viewer');
+                    editorTools.classList.remove('hidden');
+                    loadJsonLabelViewer.classList.add('hidden');
+                }
+                updateCanvasInteractivity();
+            };
+
+            const enterDrawingMode = (tool) => {
+                if (activeDrawingTool) exitDrawingMode();
+                activeDrawingTool = tool;
+                drawRectangleBtn.classList.toggle('tool-btn-active', tool === 'rectangle');
+                drawPolygonBtn.classList.toggle('tool-btn-active', tool === 'polygon');
+                exitDrawingBtn.classList.remove('hidden');
+                updateCanvasInteractivity();
+            };
+
+            const exitDrawingMode = () => {
+                activeDrawingTool = null; isDrawing = false;
+                tempRect = null; polygonPoints = [];
+                drawRectangleBtn.classList.remove('tool-btn-active');
+                drawPolygonBtn.classList.remove('tool-btn-active');
+                exitDrawingBtn.classList.add('hidden');
+                updateCanvasInteractivity();
+            };
+
+            const finalizeShape = (shape) => {
+                const defaultSector = 'Unassigned';
+                const colors = sectorColors[defaultSector];
+                shape.set({
+                    fill: colors.color, stroke: colors.stroke, strokeWidth: 2,
+                    borderColor: '#3b82f6', cornerColor: '#3b82f6', cornerSize: 8, transparentCorners: false,
+                    id: `booth_${new Date().getTime()}`, exhibitorName: 'Unnamed Booth', logoUrl: '', sector: defaultSector
+                });
+                canvas.add(shape); canvas.renderAll();
+                exitDrawingMode(); showModal(shape);
             };
 
             const showModal = (targetObject) => {
-                if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') return; // Only show for booked booths
+                if (!targetObject) return;
                 activeModalObject = targetObject;
-
-                // Populate modal with read-only data
-                modalLogo.src = targetObject.get('logoUrl') || 'https://placehold.co/64x64/cccccc/969696?text=Logo';
-                modalLogo.onerror = () => { modalLogo.src = 'https://placehold.co/64x64/cccccc/969696?text=Logo'; }; // Fallback image
-                modalExhibitorName.textContent = targetObject.get('exhibitorName');
-                modalSector.textContent = targetObject.get('sector') || 'Unassigned';
-                modalBoothId.textContent = targetObject.get('id') || 'N/A'; // Assuming objects have an 'id'
-
+                modalFooterEditor.style.display = currentMode === 'editor' ? 'flex' : 'none';
+                modalFooterViewer.style.display = currentMode === 'viewer' ? 'flex' : 'none';
+                const isEditor = currentMode === 'editor';
+                exhibitorNameInput.disabled = !isEditor; logoUrlInput.disabled = !isEditor; sectorInput.disabled = !isEditor;
+                exhibitorNameInput.value = targetObject.get('exhibitorName') || '';
+                logoUrlInput.value = targetObject.get('logoUrl') || '';
+                sectorInput.innerHTML = '';
+                Object.keys(sectorColors).forEach(sectorName => {
+                    const option = document.createElement('option');
+                    option.value = sectorName; option.textContent = sectorName;
+                    sectorInput.appendChild(option);
+                });
+                sectorInput.value = targetObject.get('sector') || 'Unassigned';
                 detailsModal.classList.remove('hidden');
             };
 
-            const hideModal = () => {
-                activeModalObject = null;
-                detailsModal.classList.add('hidden');
-            };
+            const hideModal = () => { activeModalObject = null; detailsModal.classList.add('hidden'); };
 
             const showTooltip = (targetObject) => {
-                // Show tooltip only if it has a valid exhibitor name
-                if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') {
-                    hideTooltip();
-                    return;
-                }
+                if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') { hideTooltip(); return; }
                 const exhibitorSector = targetObject.get('sector');
                 const bounds = targetObject.getBoundingRect();
                 const canvasRect = canvas.getElement().getBoundingClientRect();
-
                 tooltipName.textContent = targetObject.exhibitorName;
                 tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
-                tooltipLogo.onerror = () => { tooltipLogo.src = 'https://placehold.co/40x40/cccccc/969696?text=Logo'; }; // Fallback image
                 tooltipSector.textContent = exhibitorSector || '';
-                tooltipSector.classList.toggle('hidden', !exhibitorSector); // Hide if no sector
-
-                // Position tooltip above the booth, ensuring it stays within viewport
-                let topPos = canvasRect.top + window.scrollY + bounds.top - tooltip.offsetHeight - 5; // Added scrollY
-                let leftPos = canvasRect.left + window.scrollX + bounds.left; // Added scrollX
-
-                // Adjust if tooltip goes off-screen top
-                 if (topPos < window.scrollY) {
-                    topPos = canvasRect.top + window.scrollY + bounds.top + bounds.height + 5; // Move below
-                 }
-                 // Adjust if tooltip goes off-screen left
-                 if (leftPos < window.scrollX) {
-                    leftPos = window.scrollX + 5;
-                 }
-                 // Adjust if tooltip goes off-screen right
-                 if (leftPos + tooltip.offsetWidth > window.innerWidth + window.scrollX) {
-                     leftPos = window.innerWidth + window.scrollX - tooltip.offsetWidth - 5;
-                 }
-
-
-                tooltip.style.left = `${leftPos}px`;
-                tooltip.style.top = `${topPos}px`;
+                tooltipSector.classList.toggle('hidden', !exhibitorSector);
+                tooltip.style.left = `${canvasRect.left + bounds.left}px`;
+                tooltip.style.top = `${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px`;
                 tooltip.classList.remove('hidden');
             };
 
-            const hideTooltip = () => {
-                tooltip.classList.add('hidden');
-            };
-
-             // --- Search Functionality ---
-            const searchExhibitor = () => {
-                const query = searchInput.value.toLowerCase().trim();
-                let found = false; // Flag to check if any match is found
-
-                canvas.forEachObject(obj => { // Reset previous highlights/opacity first
-                     const sector = obj.get('sector') || 'Unassigned';
-                     const colors = sectorColors[sector] || sectorColors['Unassigned'];
-                     obj.set({
-                         opacity: 1,
-                         stroke: colors.stroke,
-                         strokeWidth: 2
-                     });
-
-                     // Then apply search effect
-                    const name = obj.get('exhibitorName');
-                    if (query && name && name.toLowerCase().includes(query)) {
-                        obj.set({
-                            stroke: '#e11d48', // Highlight color (e.g., bright red)
-                            strokeWidth: 4,
-                            opacity: 1 // Ensure matching booths are fully visible
-                        });
-                        found = true;
-                    } else if (query) { // Only dim if there is an active search query
-                        obj.set({ opacity: 0.3 }); // Dim non-matching booths
-                    }
-                 });
-
-
-                if (query && !found) { // Alert only if search was performed and nothing found
-                    // Optional: remove alert for a cleaner viewer experience
-                    // alert('No exhibitor found matching that name.');
-                    // Optionally reset opacity if nothing found, or leave dimmed
-                     canvas.forEachObject(obj => obj.set({ opacity: 1 }));
-                }
-                canvas.renderAll();
-            };
+            const hideTooltip = () => { tooltip.classList.add('hidden'); };
 
             // --- Event Listeners ---
-            floorSwitchers.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const floorIndex = parseInt(btn.dataset.floor, 10);
-                    // Check if floor exists in the loaded appState before switching
-                    if (appState.floors && appState.floors[floorIndex]) {
-                         switchFloor(floorIndex);
-                    } else {
-                        console.warn(`Attempted to switch to non-existent floor ${floorIndex}.`);
-                        // Optionally provide user feedback like an alert
-                        // alert(`Floor ${floorIndex} data is not available.`);
-                    }
-                });
+            modeToggleBtn.addEventListener('click', () => setAppMode(currentMode === 'editor' ? 'viewer' : 'editor'));
+            floorSwitchers.forEach(btn => btn.addEventListener('click', () => switchFloor(parseInt(btn.dataset.floor, 10))));
+            drawRectangleBtn.addEventListener('click', () => enterDrawingMode('rectangle'));
+            drawPolygonBtn.addEventListener('click', () => enterDrawingMode('polygon'));
+            exitDrawingBtn.addEventListener('click', exitDrawingMode);
+
+            canvas.on('mouse:down', (options) => {
+                if (!activeDrawingTool || !options.pointer) return;
+                const pointer = options.pointer;
+                if (activeDrawingTool === 'polygon') {
+                    polygonPoints.push({ x: pointer.x, y: pointer.y });
+                } else if (activeDrawingTool === 'rectangle') {
+                    isDrawing = true;
+                    rectOrigin = { x: pointer.x, y: pointer.y };
+                    tempRect = new fabric.Rect({ left: rectOrigin.x, top: rectOrigin.y, width: 0, height: 0, fill: 'rgba(100, 100, 255, 0.3)', stroke: 'blue', strokeWidth: 1 });
+                    canvas.add(tempRect);
+                }
             });
 
+            canvas.on('mouse:move', (options) => {
+                if (activeDrawingTool === 'rectangle' && isDrawing && tempRect && options.pointer) {
+                    const pointer = options.pointer;
+                    let width = pointer.x - rectOrigin.x; let height = pointer.y - rectOrigin.y;
+                    tempRect.set({ left: width > 0 ? rectOrigin.x : pointer.x, top: height > 0 ? rectOrigin.y : pointer.y, width: Math.abs(width), height: Math.abs(height) });
+                    canvas.renderAll();
+                }
+            });
 
-            // Double click to open modal in viewer mode
+            canvas.on('mouse:up', () => {
+                if (activeDrawingTool === 'rectangle' && isDrawing && tempRect) {
+                    isDrawing = false;
+                    canvas.remove(tempRect);
+                    const finalRect = new fabric.Rect({ left: tempRect.left, top: tempRect.top, width: tempRect.width, height: tempRect.height });
+                    finalizeShape(finalRect);
+                    tempRect = null;
+                }
+            });
+
             canvas.on('mouse:dblclick', (options) => {
                 if (options.target) {
                     showModal(options.target);
+                } else if (activeDrawingTool === 'polygon') {
+                    if (polygonPoints.length < 3) { exitDrawingMode(); return; }
+                    const finalPolygon = new fabric.Polygon(polygonPoints);
+                    finalizeShape(finalPolygon);
                 }
             });
 
-            // Hover effects for tooltip and highlight
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && activeDrawingTool === 'polygon' && polygonPoints.length > 2) {
+                    const finalPolygon = new fabric.Polygon(polygonPoints);
+                    finalizeShape(finalPolygon);
+                }
+            });
+
+            // **MODIFIED**: Viewer Mode Hover Effects
             canvas.on('mouse:over', (e) => {
-                if (e.target) {
+                if (currentMode === 'viewer' && e.target) {
                     showTooltip(e.target);
-                    // Only highlight visually if it's a booked booth
-                    if (e.target.exhibitorName && e.target.exhibitorName !== 'Unnamed Booth') {
-                        // Avoid overwriting search highlight
-                        if (e.target.stroke !== '#e11d48') {
-                            e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
-                            canvas.renderAll();
-                        }
-                    }
+                    e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
+                    canvas.renderAll();
                 }
             });
             canvas.on('mouse:out', (e) => {
-                if (e.target) {
+                if (currentMode === 'viewer' && e.target) {
                     hideTooltip();
-                    const sector = e.get('sector') || 'Unassigned';
+                    const sector = e.target.get('sector') || 'Unassigned';
                     const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                    // Reset stroke only if it wasn't highlighted by search
-                    if(e.target.stroke !== '#e11d48') {
-                       e.target.set({ stroke: originalStroke, strokeWidth: 2 });
-                       canvas.renderAll();
-                    }
+                    e.target.set({ stroke: originalStroke, strokeWidth: 2 });
+                    canvas.renderAll();
                 }
             });
 
-
-            // Modal close button
+            // Modal button listeners
+            cancelModalBtn.addEventListener('click', hideModal);
             closeModalBtn.addEventListener('click', hideModal);
+            deleteBoothBtn.addEventListener('click', () => { if (activeModalObject) canvas.remove(activeModalObject); hideModal(); });
 
-            // Search input listener
-            searchInput.addEventListener('input', searchExhibitor); // Search as user types
+            // --- Helper Functions to keep code clean and unchanged ---
+            const handleJsonLoad = (event) => {
+                const file = event.target.files[0]; if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const loadedData = JSON.parse(e.target.result);
+                        if (loadedData.activeFloor !== undefined && loadedData.floors) {
+                            appState = loadedData; switchFloor(appState.activeFloor, true); alert('Floor plan loaded successfully!');
+                        } else { throw new Error('Invalid JSON structure.'); }
+                    } catch (error) { alert(`Error loading file: ${error.message}`); }
+                    finally { loadJsonInput.value = ''; }
+                };
+                reader.readAsText(file);
+            };
+            loadJsonInput.addEventListener('change', handleJsonLoad);
 
-            // --- JSON Load Functionality (AUTOMATIC) ---
-            const loadInitialData = async () => {
-                 try {
-                     const response = await fetch('interactivemap.json'); // Fetch the specific file
-                     if (!response.ok) {
-                         throw new Error(`Could not load interactivemap.json: ${response.statusText}`);
-                     }
-                     const loadedData = await response.json();
-                     // Basic validation
-                     if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
-                         appState = loadedData; // Replace initial state
-                         const initialFloor = appState.activeFloor !== undefined ? appState.activeFloor : 0; // Default to 0 if undefined
-                         // Ensure the initial floor exists before trying to switch
-                         if (appState.floors[initialFloor]) {
-                             switchFloor(initialFloor);
-                         } else {
-                              console.warn(`Initial floor ${initialFloor} specified in JSON does not exist. Defaulting to first available floor.`);
-                              // Find the first available floor key and switch to it
-                              const firstFloorKey = Object.keys(appState.floors)[0];
-                              if(firstFloorKey !== undefined) {
-                                switchFloor(parseInt(firstFloorKey, 10));
-                              } else {
-                                  throw new Error("JSON file contains no valid floor data.");
-                              }
-                         }
-                         console.log('Floor plan data loaded successfully!');
-                     } else {
-                         throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
-                     }
-                 } catch (error) {
-                     alert(`Error loading floor plan data: ${error.message}`);
-                     console.error("JSON Loading Error:", error);
-                     displayErrorMessage(`Error: Could not load or parse 'interactivemap.json'.\nPlease ensure the file exists and is valid.`);
-                 }
-             };
+            const originalSaveModal = () => {
+                if (activeModalObject) {
+                    const selectedSector = sectorInput.value;
+                    const colors = sectorColors[selectedSector] || sectorColors['Unassigned'];
+                    activeModalObject.set({
+                        exhibitorName: exhibitorNameInput.value, logoUrl: logoUrlInput.value, sector: selectedSector,
+                        fill: colors.color, stroke: colors.stroke
+                    });
+                    canvas.renderAll();
+                }
+                hideModal();
+            };
+            saveModalBtn.onclick = originalSaveModal;
 
+            const originalSaveJson = () => {
+                if (currentMode !== 'editor') return;
+                appState.floors[appState.activeFloor].objects = canvas.toJSON(customProperties).objects;
+                const stateToSave = JSON.parse(JSON.stringify(appState));
+                stateToSave.floors['-1'].backgroundURL = 'floor-1.jpg'; stateToSave.floors['0'].backgroundURL = 'floor0.jpg';
+                stateToSave.floors['1'].backgroundURL = 'floor1.jpg'; stateToSave.floors['2'].backgroundURL = 'floor2.jpg';
+                const jsonString = JSON.stringify(stateToSave, null, 2);
+                const blob = new Blob([jsonString], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a'); a.href = url; a.download = 'floor-plan-data.json';
+                document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+            };
+            saveJsonBtn.onclick = originalSaveJson;
 
             // --- Initial Application Load ---
-            appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle
-            loadInitialData(); // **CHANGE**: Call the automatic load function
-
+            setAppMode('editor');
+            switchFloor(0);
         });
     </script>
 </body>
-</html>
 
+</html>
