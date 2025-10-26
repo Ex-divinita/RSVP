@@ -124,69 +124,69 @@
         const modalName = document.getElementById('modal-name');
         const modalSector = document.getElementById('modal-sector');
         const legendItems = document.getElementById('legend-items');
-        const mapContainer = document.getElementById('map-container');
+        const mapContainer = document.getElementById('map-container'); // **ADDED**
 
         // --- Application State ---
         let appData = null; 
         let activeFloor = 0;
 
-        // --- Data Loading ---
-        // **MODIFIED**: Data is embedded directly to avoid fetch errors
-        const loadData = () => {
+        // --- Embedded Data ---
+        // **ADDED**: This data is now embedded to avoid fetch errors and use your local images.
+        const EMBEDDED_DATA = {
+            "activeFloor": 0,
+            "floors": {
+                "-1": {
+                    "backgroundURL": "./floor-1.jpg",
+                    "objects": [
+                        { "points": [{ "x": 100, "y": 600 }, { "x": 300, "y": 600 }, { "x": 300, "y": 750 }, { "x": 100, "y": 750 }], "exhibitorName": "Basement Storage", "sector": "Unassigned", "logoUrl": "" },
+                        { "points": [{ "x": 350, "y": 600 }, { "x": 550, "y": 600 }, { "x": 550, "y": 750 }, { "x": 350, "y": 750 }], "exhibitorName": "Utilities", "sector": "Unassigned", "logoUrl": "" }
+                    ]
+                },
+                "0": {
+                    "backgroundURL": "./floor0.jpg",
+                    "objects": [
+                        { "points": [{ "x": 50, "y": 50 }, { "x": 250, "y": 50 }, { "x": 250, "y": 200 }, { "x": 50, "y": 200 }], "exhibitorName": "Energy Solutions Ltd.", "sector": "Energy", "logoUrl": "https://placehold.co/100x100/facc15/451a0e?text=Energy" },
+                        { "points": [{ "x": 270, "y": 50 }, { "x": 470, "y": 50 }, { "x": 470, "y": 200 }, { "x": 270, "y": 200 }], "exhibitorName": "Future Tech Inc.", "sector": "Technology", "logoUrl": "https://placehold.co/100x100/10b981/04433b?text=Tech" },
+                        { "points": [{ "x": 50, "y": 220 }, { "x": 150, "y": 220 }, { "x": 150, "y": 320 }, { "x": 50, "y": 320 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" },
+                        { "points": [{ "x": 170, "y": 220 }, { "x": 270, "y": 220 }, { "x": 270, "y": 320 }, { "x": 170, "y": 320 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" },
+                        { "points": [{ "x": 700, "y": 400 }, { "x": 900, "y": 400 }, { "x": 900, "y": 550 }, { "x": 700, "y": 550 }], "exhibitorName": "Global Motors", "sector": "Automotive", "logoUrl": "https://placehold.co/100x100/ef4444/7f1d1d?text=Auto" }
+                    ]
+                },
+                "1": {
+                    "backgroundURL": "./floor1.jpg",
+                    "objects": [
+                        { "points": [{ "x": 100, "y": 100 }, { "x": 400, "y": 100 }, { "x": 400, "y": 300 }, { "x": 100, "y": 300 }], "exhibitorName": "BuildRight Corp.", "sector": "Construction", "logoUrl": "https://placehold.co/100x100/f97316/7c2d12?text=Build" },
+                        { "points": [{ "x": 100, "y": 320 }, { "x": 400, "y": 320 }, { "x": 400, "y": 520 }, { "x": 100, "y": 520 }], "exhibitorName": "SecureBank", "sector": "Finance", "logoUrl": "https://placehold.co/100x100/8b5cf6/4c1d95?text=Bank" },
+                        { "points": [{ "x": 420, "y": 100 }, { "x": 620, "y": 100 }, { "x": 620, "y": 200 }, { "x": 420, "y": 200 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" }
+                    ]
+                },
+                "2": {
+                    "backgroundURL": "./floor2.jpg",
+                    "objects": [
+                        { "points": [{ "x": 50, "y": 50 }, { "x": 350, "y": 50 }, { "x": 350, "y": 250 }, { "x": 50, "y": 250 }], "exhibitorName": "SteelWorks Ltd.", "sector": "Manufacturing", "logoUrl": "https://placehold.co/100x100/3b82f6/1e3a8a?text=Steel" }
+                    ]
+                }
+            }
+        };
+
+        const loadData = () => { // **MODIFIED**: Removed async
             try {
-                appData = {
-                    "activeFloor": 0,
-                    "floors": {
-                        "-1": {
-                            "backgroundURL": "https://placehold.co/1200x800/E2E8F0/4A5568?text=Floor+-1+Layout",
-                            "objects": [
-                                { "points": [{ "x": 100, "y": 600 }, { "x": 300, "y": 600 }, { "x": 300, "y": 750 }, { "x": 100, "y": 750 }], "exhibitorName": "Basement Storage", "sector": "Unassigned", "logoUrl": "" },
-                                { "points": [{ "x": 350, "y": 600 }, { "x": 550, "y": 600 }, { "x": 550, "y": 750 }, { "x": 350, "y": 750 }], "exhibitorName": "Utilities", "sector": "Unassigned", "logoUrl": "" }
-                            ]
-                        },
-                        "0": {
-                            "backgroundURL": "https://placehold.co/1200x800/CBD5E1/2D3748?text=Floor+0+Layout+(Main)",
-                            "objects": [
-                                { "points": [{ "x": 50, "y": 50 }, { "x": 250, "y": 50 }, { "x": 250, "y": 200 }, { "x": 50, "y": 200 }], "exhibitorName": "Energy Solutions Ltd.", "sector": "Energy", "logoUrl": "https://placehold.co/100x100/facc15/451a0e?text=Energy" },
-                                { "points": [{ "x": 270, "y": 50 }, { "x": 470, "y": 50 }, { "x": 470, "y": 200 }, { "x": 270, "y": 200 }], "exhibitorName": "Future Tech Inc.", "sector": "Technology", "logoUrl": "https://placehold.co/100x100/10b981/04433b?text=Tech" },
-                                { "points": [{ "x": 50, "y": 220 }, { "x": 150, "y": 220 }, { "x": 150, "y": 320 }, { "x": 50, "y": 320 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" },
-                                { "points": [{ "x": 170, "y": 220 }, { "x": 270, "y": 220 }, { "x": 270, "y": 320 }, { "x": 170, "y": 320 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" },
-                                { "points": [{ "x": 700, "y": 400 }, { "x": 900, "y": 400 }, { "x": 900, "y": 550 }, { "x": 700, "y": 550 }], "exhibitorName": "Global Motors", "sector": "Automotive", "logoUrl": "https://placehold.co/100x100/ef4444/7f1d1d?text=Auto" }
-                            ]
-                        },
-                        "1": {
-                            "backgroundURL": "https://placehold.co/1200x800/94A3B8/1E293B?text=Floor+1+Layout",
-                            "objects": [
-                                { "points": [{ "x": 100, "y": 100 }, { "x": 400, "y": 100 }, { "x": 400, "y": 300 }, { "x": 100, "y": 300 }], "exhibitorName": "BuildRight Corp.", "sector": "Construction", "logoUrl": "https://placehold.co/100x100/f97316/7c2d12?text=Build" },
-                                { "points": [{ "x": 100, "y": 320 }, { "x": 400, "y": 320 }, { "x": 400, "y": 520 }, { "x": 100, "y": 520 }], "exhibitorName": "SecureBank", "sector": "Finance", "logoUrl": "https://placehold.co/100x100/8b5cf6/4c1d95?text=Bank" },
-                                { "points": [{ "x": 420, "y": 100 }, { "x": 620, "y": 100 }, { "x": 620, "y": 200 }, { "x": 420, "y": 200 }], "exhibitorName": "Unnamed Booth", "sector": "Unassigned", "logoUrl": "" }
-                            ]
-                        },
-                        "2": {
-                            "backgroundURL": "https://placehold.co/1200x800/64748B/0F172A?text=Floor+2+Layout",
-                            "objects": [
-                                { "points": [{ "x": 50, "y": 50 }, { "x": 350, "y": 50 }, { "x": 350, "y": 250 }, { "x": 50, "y": 250 }], "exhibitorName": "SteelWorks Ltd.", "sector": "Manufacturing", "logoUrl": "https://placehold.co/100x100/3b82f6/1e3a8a?text=Steel" }
-                            ]
-                        }
-                    }
-                };
-
-                if (!appData) throw new Error('Data is null or undefined.');
-                
+                // **MODIFIED**: Removed fetch, use embedded data
+                appData = EMBEDDED_DATA;
+                if (!appData) throw new Error('Embedded data is missing or invalid.');
                 switchFloor(appData.activeFloor || 0);
-
-            } catch (error) {
-                // **MODIFIED**: Replaced alert() with console.error and a visual message
-                console.error("Error loading data:", error.message);
+            } catch (error) { 
+                // **MODIFIED**: Replaced alert() with a console error and visual message
+                console.error(error.message);
                 mapContainer.innerHTML = `<div class="flex items-center justify-center h-full text-red-600 font-bold p-10 text-center">Error: Could not load map data. ${error.message}</div>`;
             }
         };
 
-        // --- Rendering Functions ---
         const renderFloor = (floorNumber) => {
             if (!appData) return;
             const floorData = appData.floors[floorNumber];
             if (!floorData) {
+                // **ADDED**: Handle missing floor data gracefully
                 console.warn(`No data found for floor: ${floorNumber}`);
                 floorPlanBg.src = 'https://placehold.co/1200x800/f87171/7f1d1d?text=Error:+Floor+Not+Found';
                 boothOverlay.innerHTML = '';
@@ -226,12 +226,12 @@
         const renderLegend = () => {
             legendItems.innerHTML = '';
             for(const sector in sectorColors) {
-                // Don't show "Unassigned" in the legend
-                if (sector === 'Unassigned') continue; 
-                
+                // **ADDED**: Don't show "Unassigned" in the legend
+                if (sector === 'Unassigned') continue;
+
                 const item = document.createElement('div');
                 item.className = 'legend-item';
-                item.innerHTML = `<div class="legend-color-box" style="background-color: ${sectorColors[sector].color}; border-color: ${sectorColors[sector].stroke};"></div><span>${sector}</span>`;
+                item.innerHTML = `<div class="legend-color-box" style="background-color: ${sectorColors[sector].color}; border-color: ${sectorColors[sector].stroke};"></div><span>${sector}</span>`; // **MODIFIED**: Added border color
                 legendItems.appendChild(item);
             }
         };
@@ -290,3 +290,4 @@
     </script>
 </body>
 </html>
+
