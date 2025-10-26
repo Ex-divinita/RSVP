@@ -223,13 +223,13 @@
                     modeToggleBtn.textContent = 'Switch to Editor Mode';
                     modeToggleBtn.classList.remove('mode-btn-viewer');
                     editorTools.classList.add('hidden');
-                    loadJsonLabelViewer.classList.remove('hidden');
+                    loadJsonLabelViewer.classList.add('hidden'); // **MODIFIED**: Hide this, since we are auto-loading
                 } else {
                     appModeSubtitle.textContent = 'Editor Mode';
                     modeToggleBtn.textContent = 'Switch to Viewer Mode';
                     modeToggleBtn.classList.add('mode-btn-viewer');
                     editorTools.classList.remove('hidden');
-                    loadJsonLabelViewer.classList.add('hidden');
+                    loadJsonLabelViewer.classList.add('hidden'); // **MODIFIED**: Hide this in editor mode too (it's confusing)
                 }
                 updateCanvasInteractivity();
             };
@@ -388,9 +388,15 @@
                     try {
                         const loadedData = JSON.parse(e.target.result);
                         if (loadedData.activeFloor !== undefined && loadedData.floors) {
-                            appState = loadedData; switchFloor(appState.activeFloor, true); alert('Floor plan loaded successfully!');
+                            appState = loadedData; 
+                            switchFloor(appState.activeFloor, true); 
+                            // **NEW**: alert is problematic, use console.log
+                            console.log('Floor plan loaded successfully!');
                         } else { throw new Error('Invalid JSON structure.'); }
-                    } catch (error) { alert(`Error loading file: ${error.message}`); }
+                    } catch (error) { 
+                        // **NEW**: alert is problematic, use console.error
+                        console.error(`Error loading file: ${error.message}`); 
+                    }
                     finally { loadJsonInput.value = ''; }
                 };
                 reader.readAsText(file);
@@ -425,11 +431,38 @@
             };
             saveJsonBtn.onclick = originalSaveJson;
 
+            // **NEW**: Auto-load function for GitHub Pages (Viewer Mode)
+            const autoLoadData = async () => {
+                try {
+                    const response = await fetch('./floor-plan-data.json');
+                    if (!response.ok) {
+                        throw new Error('floor-plan-data.json not found or failed to load. Defaulting to Editor Mode.');
+                    }
+                    const loadedData = await response.json();
+                    if (loadedData.activeFloor !== undefined && loadedData.floors) {
+                        appState = loadedData;
+                        switchFloor(appState.activeFloor, true);
+                        setAppMode('viewer'); // Default to VIETooltipER mode on success
+                    } else {
+                        throw new Error('Invalid JSON structure. Defaulting to Editor Mode.');
+                    }
+                } catch (error) {
+                    console.warn(error.message);
+                    // Fallback to default empty editor
+                    switchFloor(0);
+                    setAppMode('viewer'); // **MODIFIED**: Default to viewer mode even on error
+                }
+            };
+ 
+                }
+            };
+
             // --- Initial Application Load ---
-            setAppMode('editor');
-            switchFloor(0);
+            // **MODIFIED**: Call the new auto-load function instead of the old defaults
+            autoLoadData();
         });
     </script>
 </body>
-
 </html>
+
+
