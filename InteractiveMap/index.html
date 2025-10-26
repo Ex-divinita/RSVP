@@ -163,6 +163,12 @@
             boothOverlay.innerHTML = ''; 
 
             floorData.objects.forEach(obj => {
+                // **ADDED CHECK**: Ensure the object and its points are valid before processing
+                if (!obj || !obj.points || !Array.isArray(obj.points) || obj.points.length === 0) {
+                    console.warn('Skipping invalid map object (missing or empty points):', obj);
+                    return; // Skip this object and continue to the next one
+                }
+
                 const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
                 const pointsString = obj.points.map(p => `${p.x},${p.y}`).join(' ');
                 polygon.setAttribute('points', pointsString);
@@ -256,5 +262,6 @@
     </script>
 </body>
 </html>
+
 
 
