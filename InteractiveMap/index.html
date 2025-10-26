@@ -157,7 +157,20 @@
             window.addEventListener('resize', () => {
                 canvas.setWidth(canvasWrapper.clientWidth);
                 canvas.setHeight((canvasWrapper.clientWidth * 2) / 3);
-                canvas.renderAll();
+                // Re-apply background image on resize to maintain scale
+                 const floorData = appState.floors[appState.activeFloor];
+                 if(floorData && floorData.backgroundURL) {
+                     fabric.Image.fromURL(floorData.backgroundURL, (img) => {
+                         if (img) {
+                             canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
+                                 scaleX: canvas.width / img.width,
+                                 scaleY: canvas.height / img.height
+                             });
+                         }
+                     }, { crossOrigin: 'anonymous' });
+                 } else {
+                    canvas.renderAll(); // Render even if no background
+                 }
             });
 
             // --- Core Functions ---
@@ -168,33 +181,63 @@
 
                 if (!newFloorData) {
                     console.error(`Floor data for floor ${floorNumber} not found.`);
+                    // Display error message on canvas
+                    canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Reset background color
+                    const text = new fabric.Text(`Floor data for floor ${floorNumber} not found in JSON.`, {
+                        left: canvas.width / 2,
+                        top: canvas.height / 2,
+                        originX: 'center',
+                        originY: 'center',
+                        fontSize: 20,
+                        fill: 'red'
+                    });
+                    canvas.add(text);
+                    canvas.renderAll();
+                    updateFloorSwitcherStyles(floorNumber); // Still update buttons
                     return; // Stop if floor data doesn't exist
                 }
 
                 // Set Background Image
                 fabric.Image.fromURL(newFloorData.backgroundURL, (img) => {
-                    if (img) {
+                    if (img && img.width && img.height) { // Check if image loaded correctly
                        canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
                            scaleX: canvas.width / img.width,
                            scaleY: canvas.height / img.height
                        });
                     } else {
-                        console.error(`Background image ${newFloorData.backgroundURL} could not be loaded.`);
-                        canvas.setBackgroundImage(null, canvas.renderAll.bind(canvas)); // Clear background if image fails
+                        console.error(`Background image ${newFloorData.backgroundURL} could not be loaded or has invalid dimensions.`);
+                        canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas)); // Clear background if image fails
+                        const text = new fabric.Text(`Background image ${newFloorData.backgroundURL} missing or invalid.`, {
+                            left: canvas.width / 2,
+                            top: canvas.height / 2,
+                            originX: 'center',
+                            originY: 'center',
+                            fontSize: 16,
+                            fill: 'orange'
+                        });
+                        canvas.add(text);
+                        canvas.renderAll();
                     }
-                }, { crossOrigin: 'anonymous' }); // Added crossOrigin for potential CORS issues
+                }, { crossOrigin: 'anonymous' });
 
                 // Load Objects from JSON data
-                canvas.loadFromJSON({ objects: newFloorData.objects }, () => {
+                // Ensure objects array exists, even if empty
+                const objectsToLoad = newFloorData.objects || [];
+                canvas.loadFromJSON({ objects: objectsToLoad }, () => {
                     canvas.renderAll();
                     updateCanvasInteractivity(); // Set objects to non-selectable
                 });
 
-                // Update floor switcher button styles
-                floorSwitchers.forEach(btn => {
+                updateFloorSwitcherStyles(floorNumber);
+            };
+
+             // Helper to update button styles
+             const updateFloorSwitcherStyles = (floorNumber) => {
+                 floorSwitchers.forEach(btn => {
                     btn.classList.toggle('active-floor', parseInt(btn.dataset.floor, 10) === floorNumber);
                 });
-            };
+             }
+
 
             const updateCanvasInteractivity = () => {
                 canvas.discardActiveObject();
@@ -204,14 +247,16 @@
                 canvas.forEachObject(obj => {
                     const sector = obj.get('sector') || 'Unassigned';
                     const colors = sectorColors[sector] || sectorColors['Unassigned'];
+                    const isBooked = obj.exhibitorName && obj.exhibitorName !== 'Unnamed Booth';
                     // Make all objects non-selectable, but allow events (hover, click)
                     obj.set({
                         selectable: false,
                         evented: true, // Keep event handling
+                        fill: colors.color, // Apply fill color based on sector
                         stroke: colors.stroke,
                         strokeWidth: 2,
                         opacity: 1,
-                        hoverCursor: obj.exhibitorName && obj.exhibitorName !== 'Unnamed Booth' ? 'pointer' : 'default' // Pointer only if booked
+                        hoverCursor: isBooked ? 'pointer' : 'default' // Pointer only if booked
                     });
                 });
                 canvas.renderAll();
@@ -223,6 +268,7 @@
 
                 // Populate modal with read-only data
                 modalLogo.src = targetObject.get('logoUrl') || 'https://placehold.co/64x64/cccccc/969696?text=Logo';
+                modalLogo.onerror = () => { modalLogo.src = 'https://placehold.co/64x64/cccccc/969696?text=Logo'; }; // Fallback image
                 modalExhibitorName.textContent = targetObject.get('exhibitorName');
                 modalSector.textContent = targetObject.get('sector') || 'Unassigned';
                 modalBoothId.textContent = targetObject.get('id') || 'N/A'; // Assuming objects have an 'id'
@@ -247,12 +293,30 @@
 
                 tooltipName.textContent = targetObject.exhibitorName;
                 tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
+                tooltipLogo.onerror = () => { tooltipLogo.src = 'https://placehold.co/40x40/cccccc/969696?text=Logo'; }; // Fallback image
                 tooltipSector.textContent = exhibitorSector || '';
                 tooltipSector.classList.toggle('hidden', !exhibitorSector); // Hide if no sector
 
-                // Position tooltip above the booth
-                tooltip.style.left = `${canvasRect.left + bounds.left}px`;
-                tooltip.style.top = `${canvasRect.top + bounds.top - tooltip.offsetHeight - 5}px`; // 5px offset above
+                // Position tooltip above the booth, ensuring it stays within viewport
+                let topPos = canvasRect.top + bounds.top - tooltip.offsetHeight - 5; // 5px offset above
+                let leftPos = canvasRect.left + bounds.left;
+
+                // Adjust if tooltip goes off-screen top
+                 if (topPos < window.scrollY) {
+                    topPos = canvasRect.top + bounds.top + bounds.height + 5; // Move below
+                 }
+                 // Adjust if tooltip goes off-screen left
+                 if (leftPos < window.scrollX) {
+                    leftPos = window.scrollX + 5;
+                 }
+                 // Adjust if tooltip goes off-screen right
+                 if (leftPos + tooltip.offsetWidth > window.innerWidth + window.scrollX) {
+                     leftPos = window.innerWidth + window.scrollX - tooltip.offsetWidth - 5;
+                 }
+
+
+                tooltip.style.left = `${leftPos}px`;
+                tooltip.style.top = `${topPos}px`;
                 tooltip.classList.remove('hidden');
             };
 
@@ -263,7 +327,9 @@
              // --- Search Functionality ---
             const searchExhibitor = () => {
                 const query = searchInput.value.toLowerCase().trim();
-                canvas.forEachObject(obj => { // Reset previous highlights/opacity
+                let found = false; // Flag to check if any match is found
+
+                canvas.forEachObject(obj => { // Reset previous highlights/opacity first
                      const sector = obj.get('sector') || 'Unassigned';
                      const colors = sectorColors[sector] || sectorColors['Unassigned'];
                      obj.set({
@@ -271,32 +337,26 @@
                          stroke: colors.stroke,
                          strokeWidth: 2
                      });
-                 });
 
-                 if (!query) {
-                     canvas.renderAll();
-                     return; // If query is empty, just reset and exit
-                 }
-
-                let found = false;
-                canvas.forEachObject(obj => {
+                     // Then apply search effect
                     const name = obj.get('exhibitorName');
-                    if (name && name.toLowerCase().includes(query)) {
+                    if (query && name && name.toLowerCase().includes(query)) {
                         obj.set({
                             stroke: '#e11d48', // Highlight color (e.g., bright red)
                             strokeWidth: 4,
-                            opacity: 1
+                            opacity: 1 // Ensure matching booths are fully visible
                         });
                         found = true;
-                    } else {
+                    } else if (query) { // Only dim if there is an active search query
                         obj.set({ opacity: 0.3 }); // Dim non-matching booths
                     }
-                });
+                 });
 
-                if (!found) {
+
+                if (query && !found) { // Alert only if search was performed and nothing found
                     alert('No exhibitor found matching that name.');
-                    // Reset opacity if nothing found
-                     canvas.forEachObject(obj => obj.set({ opacity: 1 }));
+                    // Optionally reset opacity if nothing found, or leave dimmed
+                     // canvas.forEachObject(obj => obj.set({ opacity: 1 }));
                 }
                 canvas.renderAll();
             };
@@ -304,12 +364,13 @@
             // --- Event Listeners ---
             floorSwitchers.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Check if floor exists before switching
                     const floorIndex = parseInt(btn.dataset.floor, 10);
-                    if (appState.floors[floorIndex]) {
+                    // Check if floor exists in the loaded appState
+                    if (appState.floors && appState.floors[floorIndex]) {
                          switchFloor(floorIndex);
                     } else {
-                        console.warn(`Floor ${floorIndex} does not exist in the data.`);
+                        console.warn(`Floor ${floorIndex} does not exist in the loaded data.`);
+                        alert(`Floor ${floorIndex} data is not available. Please ensure it exists in the loaded JSON.`);
                     }
                 });
             });
@@ -325,10 +386,13 @@
             canvas.on('mouse:over', (e) => {
                 if (e.target) {
                     showTooltip(e.target);
-                    // Only highlight if it's a booked booth
+                    // Only highlight visually if it's a booked booth
                     if (e.target.exhibitorName && e.target.exhibitorName !== 'Unnamed Booth') {
-                        e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
-                        canvas.renderAll();
+                        // Avoid overwriting search highlight
+                        if (e.target.stroke !== '#e11d48') {
+                            e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
+                            canvas.renderAll();
+                        }
                     }
                 }
             });
@@ -354,7 +418,17 @@
             // --- JSON Load Functionality ---
             const handleJsonLoad = (event) => {
                 const file = event.target.files[0];
-                if (!file) return;
+                if (!file) {
+                    console.log("No file selected.");
+                    return;
+                }
+                 // **CHANGE**: Ensure the filename matches
+                 if (file.name !== 'interactivemap.json') {
+                    alert(`Incorrect file selected. Please upload 'interactivemap.json'.`);
+                    loadJsonInput.value = ''; // Reset file input
+                    return;
+                }
+
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     try {
@@ -362,7 +436,9 @@
                         // Basic validation: Check if essential structure exists
                         if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
                             appState = loadedData; // Replace current state
-                            switchFloor(appState.activeFloor); // Load the active floor from the file
+                            // Load the floor specified in the JSON file's activeFloor property
+                            const initialFloor = appState.activeFloor !== undefined ? appState.activeFloor : 0; // Default to 0 if undefined
+                            switchFloor(initialFloor);
                             alert('Floor plan data loaded successfully!');
                         } else {
                             throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
@@ -385,14 +461,24 @@
 
             // --- Initial Application Load ---
             appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle
-            // Attempt to load floor 0 initially, assuming it exists.
-            if (appState.floors[0]) {
-                 switchFloor(0);
-            } else {
-                console.error("Initial floor data (floor 0) is missing. Please load a JSON file.");
-                // Optionally display a message to the user on the canvas or elsewhere
-            }
+            // **CHANGE**: Do not switch floor initially, wait for user to load JSON.
+            // Display a prompt or message to load the JSON file.
+            const initialText = new fabric.Text('Please load the interactivemap.json file.', {
+                left: canvas.width / 2,
+                top: canvas.height / 2,
+                originX: 'center',
+                originY: 'center',
+                fontSize: 22,
+                fill: '#555'
+            });
+            canvas.add(initialText);
+            canvas.renderAll();
+             // Activate floor 0 button visually by default, even if data isn't loaded yet
+             updateFloorSwitcherStyles(0);
+
+
         });
     </script>
 </body>
 </html>
+
