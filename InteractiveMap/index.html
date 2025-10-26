@@ -114,6 +114,8 @@
                 'Technology': { color: 'rgba(16, 185, 129, 0.5)', stroke: '#047857' }, 'Automotive': { color: 'rgba(239, 68, 68, 0.5)', stroke: '#b91c1c' },
                 'Finance': { color: 'rgba(139, 92, 246, 0.5)', stroke: '#6d28d9' },
             };
+            const PLACEHOLDER_LOGO_40 = 'https://placehold.co/40x40/cccccc/969696?text=Logo'; // Smaller for tooltip
+            const PLACEHOLDER_LOGO_64 = 'https://placehold.co/64x64/cccccc/969696?text=Logo'; // Larger for modal
 
             // --- DOM Element References ---
             const canvasWrapper = document.getElementById('canvas-wrapper');
@@ -150,8 +152,11 @@
             });
             window.addEventListener('resize', () => { // Keep resize logic
                 console.log("Resizing canvas..."); // DEBUG
-                canvas.setWidth(canvasWrapper.clientWidth);
-                canvas.setHeight((canvasWrapper.clientWidth * 2) / 3);
+                const newWidth = canvasWrapper.clientWidth;
+                const newHeight = (newWidth * 2) / 3;
+                canvas.setWidth(newWidth);
+                canvas.setHeight(newHeight);
+
                  const floorData = appState.floors[appState.activeFloor];
                  if(floorData && floorData.backgroundURL) {
                     console.log(`Resize: Attempting to reload background: ${floorData.backgroundURL}`); // DEBUG
@@ -183,7 +188,7 @@
                 }
 
                 appState.activeFloor = floorNumber;
-                canvas.clear();
+                canvas.clear(); // Clear canvas objects
                 const newFloorData = appState.floors[floorNumber];
 
                 if (newFloorData.backgroundURL) {
@@ -195,10 +200,11 @@
                                scaleX: canvas.width / img.width,
                                scaleY: canvas.height / img.height
                            });
-                           loadFloorObjects(newFloorData);
+                           loadFloorObjects(newFloorData); // Load objects AFTER background is set
                         } else {
                             console.error(`Error loading background image ${newFloorData.backgroundURL}. IsError: ${isError}`); // DEBUG
                             displayErrorMessage(`Background image ${newFloorData.backgroundURL} missing or invalid.`);
+                            canvas.setBackgroundColor('#dddddd', canvas.renderAll.bind(canvas)); // Set a fallback color
                             loadFloorObjects(newFloorData); // Still try to load objects
                         }
                     }, { crossOrigin: 'anonymous' });
@@ -213,21 +219,31 @@
             const loadFloorObjects = (floorData) => {
                 const objectsToLoad = floorData.objects || [];
                 console.log(`Loading ${objectsToLoad.length} objects for floor ${appState.activeFloor}`); // DEBUG
-                // Use a callback to ensure objects are fully loaded before setting interactivity
+                // Use loadFromJSON's callback
                 canvas.loadFromJSON({ objects: objectsToLoad }, () => {
                     console.log(`Objects loaded for floor ${appState.activeFloor}. Updating interactivity.`); // DEBUG
                     updateCanvasInteractivity(); // Set objects to non-selectable *after* loading
-                    canvas.renderAll(); // Render after setting interactivity
+                    canvas.renderAll(); // Render only once after setting interactivity
                 });
             }
 
             const displayErrorMessage = (message) => {
                  console.error("Displaying Error on Canvas:", message); // DEBUG
+                 // Clear previous content and background
                  canvas.clear();
                  canvas.setBackgroundColor('#f9f9f9', canvas.renderAll.bind(canvas));
+                 canvas.setBackgroundImage(null, canvas.renderAll.bind(canvas));
+
                  const text = new fabric.Text(message, {
-                     left: canvas.width / 2, top: canvas.height / 2, originX: 'center', originY: 'center',
-                     fontSize: 18, fill: 'red', textAlign: 'center'
+                     left: canvas.width / 2,
+                     top: canvas.height / 2,
+                     originX: 'center',
+                     originY: 'center',
+                     fontSize: 18,
+                     fill: 'red',
+                     textAlign: 'center',
+                     selectable: false, // Make error message non-interactive
+                     evented: false
                  });
                  canvas.add(text);
                  canvas.renderAll();
@@ -241,83 +257,92 @@
 
             // Set objects to be non-selectable in viewer mode
             const updateCanvasInteractivity = () => {
-                canvas.discardActiveObject();
-                canvas.selection = false;
-                canvas.defaultCursor = 'default';
+                canvas.discardActiveObject(); // Clear any potential selection state
+                canvas.selection = false;     // Disable group selection
+                canvas.defaultCursor = 'default'; // Set default cursor
+                canvas.hoverCursor = 'default';   // Set hover cursor
+
                 canvas.forEachObject(obj => {
                     const sector = obj.get('sector') || 'Unassigned';
                     const colors = sectorColors[sector] || sectorColors['Unassigned'];
                     const isBooked = obj.exhibitorName && obj.exhibitorName !== 'Unnamed Booth';
+
                     obj.set({
-                        selectable: false, // Not selectable
-                        evented: true,    // Still trigger events like hover, click
-                        fill: colors.color, // Keep color coding
+                        selectable: false, // Make absolutely sure it's not selectable
+                        evented: true,    // Keep events enabled for hover/click
+                        fill: colors.color, // Apply color based on sector
                         stroke: colors.stroke,
                         strokeWidth: 2,
                         opacity: 1,
-                        hoverCursor: isBooked ? 'pointer' : 'default' // Only pointer if booked
+                        hoverCursor: isBooked ? 'pointer' : 'default' // Only show pointer cursor if booked
                     });
                 });
-                // No need to render here, it's called after loadFloorObjects
+                 // No need to render here, called after loadFloorObjects completes
                 // canvas.renderAll();
             };
 
             // Show modal with read-only details
             const showModal = (targetObject) => {
+                // Only show modal if the object represents a booked booth
                 if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') return;
+
                 activeModalObject = targetObject;
-                modalLogo.src = targetObject.get('logoUrl') || 'https://placehold.co/64x64/cccccc/969696?text=Logo';
-                modalLogo.onerror = () => { modalLogo.src = 'https://placehold.co/64x64/cccccc/969696?text=Logo'; };
+                // Set logo, provide fallback via onerror
+                modalLogo.src = targetObject.get('logoUrl') || PLACEHOLDER_LOGO_64;
+                modalLogo.onerror = () => { modalLogo.src = PLACEHOLDER_LOGO_64; };
                 modalExhibitorName.textContent = targetObject.get('exhibitorName');
                 modalSector.textContent = targetObject.get('sector') || 'Unassigned';
                 modalBoothId.textContent = targetObject.get('id') || 'N/A';
-                detailsModal.classList.remove('hidden');
+                detailsModal.classList.remove('hidden'); // Show the modal
             };
 
             const hideModal = () => {
                 activeModalObject = null;
-                detailsModal.classList.add('hidden');
+                detailsModal.classList.add('hidden'); // Hide the modal
             };
 
             // Show tooltip on hover
             const showTooltip = (targetObject) => {
+                // Only show tooltip if it's a booked booth
                 if (!targetObject || !targetObject.exhibitorName || targetObject.exhibitorName === 'Unnamed Booth') {
                     hideTooltip();
                     return;
                 }
+
                 const exhibitorSector = targetObject.get('sector');
-                const bounds = targetObject.getBoundingRect();
+                const bounds = targetObject.getBoundingRect(true); // Get absolute bounds
                 const canvasRect = canvas.getElement().getBoundingClientRect();
 
                 tooltipName.textContent = targetObject.exhibitorName;
-                tooltipLogo.src = targetObject.logoUrl || 'https://placehold.co/40x40/cccccc/969696?text=Logo';
-                tooltipLogo.onerror = () => { tooltipLogo.src = 'https://placehold.co/40x40/cccccc/969696?text=Logo'; };
+                // Set tooltip logo, provide fallback via onerror
+                tooltipLogo.src = targetObject.logoUrl || PLACEHOLDER_LOGO_40;
+                tooltipLogo.onerror = () => { tooltipLogo.src = PLACEHOLDER_LOGO_40; };
                 tooltipSector.textContent = exhibitorSector || '';
-                tooltipSector.classList.toggle('hidden', !exhibitorSector);
+                tooltipSector.classList.toggle('hidden', !exhibitorSector); // Hide if no sector
 
-                // Adjust positioning calculations
-                let topPos = canvasRect.top + window.scrollY + bounds.top - tooltip.offsetHeight - 10; // Increased offset
-                let leftPos = canvasRect.left + window.scrollX + bounds.left + (bounds.width / 2) - (tooltip.offsetWidth / 2); // Center horizontally
+                // Improved positioning logic
+                const tooltipRect = tooltip.getBoundingClientRect();
+                let topPos = canvasRect.top + window.scrollY + bounds.top - tooltipRect.height - 10; // Position above, 10px margin
+                let leftPos = canvasRect.left + window.scrollX + bounds.left + (bounds.width / 2) - (tooltipRect.width / 2); // Center horizontally
 
-                // Boundary checks
-                if (topPos < window.scrollY + 5) { // Check against top viewport edge + margin
-                    topPos = canvasRect.top + window.scrollY + bounds.top + bounds.height + 10; // Move below + offset
-                 }
-                 if (leftPos < window.scrollX + 5) { // Check against left viewport edge + margin
+                // Adjust if tooltip goes off-screen
+                if (topPos < window.scrollY + 5) { // Too close to top
+                    topPos = canvasRect.top + window.scrollY + bounds.top + bounds.height + 10; // Position below
+                }
+                if (leftPos < window.scrollX + 5) { // Too close to left
                     leftPos = window.scrollX + 5;
-                 }
-                 if (leftPos + tooltip.offsetWidth > window.innerWidth + window.scrollX - 5) { // Check against right viewport edge + margin
-                     leftPos = window.innerWidth + window.scrollX - tooltip.offsetWidth - 5;
-                 }
-
+                }
+                if (leftPos + tooltipRect.width > document.documentElement.clientWidth + window.scrollX - 5) { // Too close to right
+                    leftPos = document.documentElement.clientWidth + window.scrollX - tooltipRect.width - 5;
+                }
 
                 tooltip.style.left = `${leftPos}px`;
                 tooltip.style.top = `${topPos}px`;
-                tooltip.classList.remove('hidden');
+                tooltip.classList.remove('hidden'); // Show the tooltip
             };
 
             const hideTooltip = () => {
-                tooltip.classList.add('hidden');
+                tooltip.classList.add('hidden'); // Hide the tooltip
             };
 
              // --- Search Functionality ---
@@ -328,70 +353,71 @@
                 canvas.forEachObject(obj => {
                      const sector = obj.get('sector') || 'Unassigned';
                      const colors = sectorColors[sector] || sectorColors['Unassigned'];
-                     obj.set({ // Reset style first
+                     // Reset style first (stroke, opacity)
+                     obj.set({
                          opacity: 1,
                          stroke: colors.stroke,
                          strokeWidth: 2
                      });
 
                     const name = obj.get('exhibitorName');
+                    // Check if a query exists and the object has a name matching the query
                     if (query && name && name.toLowerCase().includes(query)) {
+                        // Highlight matching objects
                         obj.set({ stroke: '#e11d48', strokeWidth: 4, opacity: 1 });
                         found = true;
                     } else if (query) {
+                        // Dim non-matching objects if a search query exists
                         obj.set({ opacity: 0.3 });
                     }
                  });
 
                 if (query && !found) {
-                     console.log('No exhibitor found matching that name.'); // Console log instead of alert
+                     console.log('No exhibitor found matching that name.'); // Log to console if no match
                 }
-                canvas.renderAll();
+                canvas.renderAll(); // Re-render canvas to show changes
             };
 
             // --- Event Listeners ---
             floorSwitchers.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const floorIndex = parseInt(btn.dataset.floor, 10);
+                     // Check if data is loaded before allowing switch
                     if (appState.floors && appState.floors[floorIndex]) {
                          switchFloor(floorIndex);
                     } else {
                         console.warn(`Attempted to switch to non-existent floor ${floorIndex}. Data might not be loaded yet or is missing.`);
-                         // Display feedback to user if needed
-                         // displayErrorMessage(`Floor ${floorIndex} data is not available.`);
                     }
                 });
             });
 
 
-            // Double click to open modal
+            // Double click to open modal (only for booked booths)
             canvas.on('mouse:dblclick', (options) => {
-                if (options.target) {
+                if (options.target && options.target.exhibitorName && options.target.exhibitorName !== 'Unnamed Booth') {
                     showModal(options.target);
                 }
             });
 
-            // Hover effects
+            // Hover effects (mouse:over and mouse:out)
             canvas.on('mouse:over', (e) => {
                 if (e.target) {
-                    showTooltip(e.target);
-                    if (e.target.exhibitorName && e.target.exhibitorName !== 'Unnamed Booth') {
-                        const currentStroke = e.target.get('stroke');
-                        if (currentStroke !== '#e11d48') {
-                            e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 });
-                            canvas.renderAll();
-                        }
+                    showTooltip(e.target); // Show tooltip if applicable
+                    // Highlight effect only if it's booked and not already highlighted by search
+                    if (e.target.exhibitorName && e.target.exhibitorName !== 'Unnamed Booth' && e.target.get('stroke') !== '#e11d48') {
+                        e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Apply blue hover stroke
+                        canvas.renderAll();
                     }
                 }
             });
              canvas.on('mouse:out', (e) => {
                 if (e.target) {
-                    hideTooltip();
-                    const currentStroke = e.target.get('stroke');
-                    if (currentStroke === '#0ea5e9') { // Only reset if it's the blue hover stroke
+                    hideTooltip(); // Hide tooltip
+                    // Reset stroke only if it was the blue hover stroke
+                    if (e.target.get('stroke') === '#0ea5e9') {
                         const sector = e.target.get('sector') || 'Unassigned';
                         const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                        e.target.set({ stroke: originalStroke, strokeWidth: 2 });
+                        e.target.set({ stroke: originalStroke, strokeWidth: 2 }); // Reset to original sector stroke
                         canvas.renderAll();
                     }
                 }
@@ -401,55 +427,46 @@
             // Modal close button
             closeModalBtn.addEventListener('click', hideModal);
 
-            // Search input listener
+            // Search input listener (triggers search on input change)
             searchInput.addEventListener('input', searchExhibitor);
 
             // --- JSON Load Functionality (AUTOMATIC) ---
-             const loadInitialData = () => { // Changed to non-async for XMLHttpRequest
+             const loadInitialData = async () => {
                 console.log("Attempting to load initial data from interactivemap.json..."); // DEBUG
                  try {
-                     // **FIX**: Use XMLHttpRequest for better compatibility with file:///
-                     const request = new XMLHttpRequest();
-                     request.open("GET", "interactivemap.json", false); // Synchronous request for simplicity on load
-                     request.send(null);
+                     const response = await fetch('interactivemap.json'); // Standard fetch
+                     if (!response.ok) {
+                         throw new Error(`Could not load interactivemap.json: ${response.status} ${response.statusText}. Ensure the file is in the same folder.`);
+                     }
+                     const loadedData = await response.json();
+                     console.log("JSON data fetched successfully:", loadedData); // DEBUG
 
-                     if (request.status === 200 || (request.status === 0 && request.responseText)) { // Status 0 for local file success
-                         console.log("JSON data fetched successfully via XHR:", request.responseText); // DEBUG
-                         const loadedData = JSON.parse(request.responseText);
+                     // Basic validation of loaded data structure
+                     if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object' && Object.keys(loadedData.floors).length > 0) {
+                         appState = loadedData;
+                         // Determine initial floor: use activeFloor if valid, else first available floor
+                         let initialFloorKey = appState.floors.hasOwnProperty(appState.activeFloor) ? String(appState.activeFloor) : Object.keys(appState.floors)[0];
+                         console.log(`Initial floor determined: ${initialFloorKey}`); // DEBUG
 
-                         if (loadedData.activeFloor !== undefined && loadedData.floors && typeof loadedData.floors === 'object') {
-                             appState = loadedData;
-                             const initialFloor = appState.activeFloor !== undefined ? appState.activeFloor : 0;
-                             console.log(`Initial floor from JSON: ${initialFloor}`); // DEBUG
-
-                             if (appState.floors[initialFloor]) {
-                                 switchFloor(initialFloor);
-                             } else {
-                                  console.warn(`Initial floor ${initialFloor} specified in JSON does not exist. Defaulting to first available floor.`);
-                                  const floorKeys = Object.keys(appState.floors);
-                                  const firstFloorKey = floorKeys.length > 0 ? floorKeys[0] : undefined;
-                                  if(firstFloorKey !== undefined) {
-                                    console.log(`Defaulting to first available floor key: ${firstFloorKey}`); // DEBUG
-                                    switchFloor(parseInt(firstFloorKey, 10));
-                                  } else {
-                                      throw new Error("JSON file contains no valid floor data in the 'floors' object.");
-                                  }
-                             }
-                             console.log('Floor plan data processed and loaded successfully!');
+                         if (initialFloorKey !== undefined && appState.floors[initialFloorKey]) {
+                             switchFloor(parseInt(initialFloorKey, 10)); // Switch to the determined initial floor
                          } else {
-                             throw new Error('Invalid JSON structure. Missing activeFloor or floors data.');
+                              // This should not happen if the validation above passed, but added as safeguard
+                             throw new Error("JSON file contains no valid floor data.");
                          }
+                         console.log('Floor plan data processed and loaded successfully!');
                      } else {
-                         throw new Error(`Could not load interactivemap.json: Status ${request.status}. Ensure the file is in the same folder as this HTML file.`);
+                         throw new Error('Invalid JSON structure. Missing activeFloor, floors data, or floors object is empty.');
                      }
                  } catch (error) {
                      console.error("JSON Loading Error:", error); // Log the full error
-                     displayErrorMessage(`Error: Could not load or parse 'interactivemap.json'.\n${error.message}\nPlease ensure the file exists and is valid JSON.`);
+                     // Display error message on the canvas
+                     displayErrorMessage(`Error loading map data:\n${error.message}\nPlease check 'interactivemap.json'.`);
                  }
              };
 
             // --- Initial Application Load ---
-            appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle
+            appModeSubtitle.textContent = 'Viewer Mode'; // Set subtitle correctly
             loadInitialData(); // Call the automatic load function
 
         });
