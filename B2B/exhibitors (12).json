@@ -1,0 +1,1194 @@
+[
+  {
+    "id": "ex_1761481772648",
+    "name": "Bonomi",
+    "logoUrl": "https://www.gruppo-bonomi.com/wp-content/uploads/2021/05/cropped-logo-square.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Established in 1928, the Bonomi Group is a leading provider of engineered solutions for electrical conductivity and insulation. Serving the railway, energy, and custom industrial sectors, the group leverages extensive in-house testing and manufacturing capabilities to deliver high-performance components and systems."
+  },
+  {
+    "id": "ex_1761481821571",
+    "name": "Belmet SI",
+    "logoUrl": "https://belmet.si/content/uploads/2021/09/BELMET-MI-logo-2017-color_web.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Slovenia",
+    "description": "BELMET SI is a Slovenian distributor specializing in measurement and soldering technology. The company provides advanced equipment alongside value-added services, including accredited calibration and maintenance, as well as professional training programs for industry users."
+  },
+  {
+    "id": "ex_1761481854226",
+    "name": "SolEnergy Solutions",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Sol",
+    "sector": "Energy & Infrastructure",
+    "country": "USA",
+    "description": "Sol Energy Solutions, based in America, empowers businesses and communities to harness the sun, delivering high-impact solar systems that drive sustainability, savings, and progress. \n\nTheir expertise in clean-energy transitions makes them a vital partner in shaping a greener future."
+  },
+  {
+    "id": "ex_1761482106656",
+    "name": "Elcowire AB",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkqlQQcIZVkHmECfS8AbkQuX0PowRFUSNLCA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Sweden",
+    "description": "ELCOWIRE AB is a manufacturer specializing in conductive materials. The company produces high-quality copper and aluminium rods and wires, along with specialized conductors designed for railway applications, serving critical needs in the electrical and transportation infrastructure sectors."
+  },
+  {
+    "id": "ex_1761482208278",
+    "name": "Mont-Ele",
+    "logoUrl": "https://www.copadata.com/hs-fs/hubfs/Images%20Website/Reference%20Logos_480x300px/Partner%20Reference%20Logos/MontEle_GoldPartner_logo_280x300px.jpg?width=620&height=387&name=MontEle_GoldPartner_logo_280x300px.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Czechia",
+    "description": "MONT-ELE S.r.l., located in Grugliasco, Italy, specializes in the design and manufacture of electrical panels and industrial automation systems. The company provides comprehensive solutions and related services for automating and controlling industrial processes."
+  },
+  {
+    "id": "ex_1761482271588",
+    "name": "Arthur Flury",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQGotQNiIZjeeQ/company-logo_200_200/company-logo_200_200/0/1663673938063/arthur_flury_ag_logo?e=2147483647&v=beta&t=-pePklIo7GvzKNoh0ZbxQIAJepMNwcYKyHVX-5IklbY",
+    "sector": "Energy & Infrastructure",
+    "country": "Switherland",
+    "description": "Arthur Flury AG is a distinguished Swiss manufacturer specializing in high-quality components and systems for electrical infrastructure. The company is a leading provider of railway overhead contact line components, robust earthing and lightning protection solutions, and certified fall-protection systems engineered for safety and reliability."
+  },
+  {
+    "id": "ex_1761482366486",
+    "name": "OSHEE - Operatori i Shpërndarjes së Energjisë Elektrike",
+    "logoUrl": "https://eridamersuli.com/wp-content/uploads/2021/11/oshee-logo-eridamersuli.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Operatori i Shpërndarjes së Energjisë Elektrike (OSSH) is the national electricity distribution system operator (DSO) in Albania. OSSH is responsible for managing, maintaining, and developing the low and medium-voltage electricity distribution network across the country."
+  },
+  {
+    "id": "ex_1761482406128",
+    "name": "Abito Holz",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFEfAGUPDmHdMquD1TwNDqb_ovpTHTQKvAA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Abito Holz specializes in the design and construction of sustainable, high-performance buildings utilizing advanced structural timber technologies like cross-laminated timber (CLT/XLAM). The company offers tailored project delivery options ranging from core-and-shell structures to complete turnkey solutions, characterized by bespoke design and efficient project execution."
+  },
+  {
+    "id": "ex_1761482442533",
+    "name": "The Port of Durres",
+    "logoUrl": "https://www.iaphworldports.org/n-iaph/wp-content/uploads/mp/europe/Durres-Port-Authority.jpeg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Port of Durres serves as Albania's maritime gateway to the Adriatic and beyond, facilitating trade, industry, and connectivity on a national scale. Its strategic location and growing capacity place it at the heart of regional logistics and commerce. \n\nThis port is where Albania's ambition meets global reach."
+  },
+  {
+    "id": "ex_1761482498309",
+    "name": "Mosdorfer",
+    "logoUrl": "https://www.mosdorfer.com/wp-content/uploads/2018/10/L-Mosdorfer-300dpi.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "MOSDORFER GmbH, part of the Knill Group, is an Austrian manufacturer established in 1949, specializing in components for overhead transmission lines and railway infrastructure. The company produces high-quality fittings, damping systems, and catenary components for power grids and rail networks globally."
+  },
+  {
+    "id": "ex_1761482517794",
+    "name": "KLAR",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZXXkERqHq-qQZRB-jNSFihpWl7qJzBuRNQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "KLAR shpk is a manufacturer specializing in architectural aluminium systems. The company produces high-quality windows, doors, and façade elements, providing durable and aesthetically pleasing solutions for residential and commercial construction projects."
+  },
+  {
+    "id": "ex_1761482548636",
+    "name": "Deol Light",
+    "logoUrl": "https://deol-light.com/wp-content/uploads/2022/06/deol-done-OR-1-NEW.pdf-3.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "DEOL Light provides comprehensive professional lighting solutions. The company offers end-to-end services including expert lighting design, supply of high-quality fixtures, professional installation, and ongoing maintenance support for diverse architectural and commercial applications."
+  },
+  {
+    "id": "ex_1761482591396",
+    "name": "ALBTURK GRUP",
+    "logoUrl": "https://albturkgrup.com/wp-content/uploads/2023/01/atgrup-new-logo222.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "ALB TURK GRUP is a dynamic construction company headquartered in Tirana. Responding effectively to the demands of Albania's rapidly developing market, the company has swiftly expanded its operational scope to encompass projects throughout Albania. ALB TURK GRUP specializes in a comprehensive range of construction services, including civil, industrial, and infrastructure projects, demonstrating significant growth and capability within the national construction sector."
+  },
+  {
+    "id": "ex_1761482640577",
+    "name": "Stone Design",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5OSKX5ouJtj4mTCxJbFSrZDgJ3WEY9mKxZw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "North Macedonia",
+    "description": "STONE DESIGN specializes in the application and supply of decorative stone materials. The company provides solutions for interior design elements and exterior building façades, utilizing natural or engineered stone to create distinctive architectural finishes."
+  },
+  {
+    "id": "ex_1761482684747",
+    "name": "EIS – Engineering Innovation Solutions",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFQ5eP3dNZkGw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728566799209?e=2147483647&v=beta&t=iAhJ9ueOqytmFKpd3DsUNENwzYZhPrjxoAAJU0ARdtM",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "EIS – Engineering Innovation Solutions offers a broad spectrum of professional engineering services. The firm provides expertise across diverse sectors, including mechanical systems design, water treatment processes, machinery engineering, construction project support, and agricultural technology solutions."
+  },
+  {
+    "id": "ex_1761482726158",
+    "name": "Hekurudha Shqiptare (HSH)",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJdreWtaSgvHqSv7BWuvm-bomZg5fH2RXJQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Hekurudha Shqiptare (HSH) is the state-owned railway company of Albania, responsible for operating and managing the national rail network. Headquartered in Durrës, HSH is currently undertaking significant infrastructure rehabilitation and modernization programs aimed at improving railway services and connectivity across the country."
+  },
+  {
+    "id": "ex_1761482752754",
+    "name": "TREZETA Soc. Cooperativa",
+    "logoUrl": "https://www.trezetaitaly.com/wp-content/uploads/2025/04/trezeta-logo-300.png",
+    "sector": "Services",
+    "country": "Italy",
+    "description": "TREZETA Società Cooperativa is an Italian cooperative specializing in providing event support services and logistics. The organization offers planning, management, and operational support for various types of events."
+  },
+  {
+    "id": "ex_1761482771462",
+    "name": "OST – Operatori i Sistemit të Transmetimit",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq1tZirYffR-XGpb-P0UCz0y8qOT7zc29QY5dZZIcuhS8e-M7I5smjflQt6R7FDg20qYs&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Operatori i Sistemit të Transmetimit (OST) is the national electricity transmission system operator (TSO) of Albania. OST manages and operates the high-voltage electricity grid, ensuring the secure and reliable transmission of power throughout the country and coordinating cross-border interconnections."
+  },
+  {
+    "id": "ex_1761482802211",
+    "name": "EuroElektra",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnLvFpotA9ciSZDqDMl2L4QvmfLu_3-HdLg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "EuroElektra introduces advanced lighting, electrical, and\nrenewable-energy technologies into the Albanian market,\nturning smart ambitions into tangible results.\n\nTheir curated portfolio and technical acumen help\nbusinesses upscale, modernize, and lead."
+  },
+  {
+    "id": "ex_1761482847860",
+    "name": "LGM Surfaces – Shot & Sandblasting",
+    "logoUrl": "https://cdn.prod.website-files.com/670d582c1b48435c505b28fd/670d5953ea7c39947f09942d_Risorsa%201%404x-p-800.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "LGM Surfaces, located in Olgiate Olona, Italy, designs and manufactures industrial surface treatment plants, specializing in blasting and shot-peening technology. Operating with ISO 9001 certification, the company has an established international presence in over 35 countries."
+  },
+  {
+    "id": "ex_1761482916181",
+    "name": "Weitzer Parkett",
+    "logoUrl": "https://lh3.googleusercontent.com/-J3MhNbaUvyA/YnufCkzR8II/AAAAAAAAAa4/k4ExdSEKJQsem5yH58J3Qe3rWVTg5s19ACNcBGAsYHQ/s960/www.weitzer-parkett.com.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "WEITZER PARKETT is a leading Austrian manufacturer of premium parquet flooring, founded in 1831. Renowned for innovation, the company offers high-quality wooden floors, including intelligent solutions for acoustics and rapid installation systems, catering to sophisticated residential and commercial projects globally."
+  },
+  {
+    "id": "ex_1761482941928",
+    "name": "Algeco",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs96YPnIypXS8PWEwVSVjn05ARDtpZqPk_og&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Part of the Modulaire Group and tracing its origins to 1955, Algeco S.p.A. is a European leader in providing modular space solutions. The company offers flexible, high-quality temporary and permanent buildings for rent and sale, serving diverse sectors such as construction, industry, education, healthcare, and general workspace needs."
+  },
+  {
+    "id": "ex_1761482978749",
+    "name": "Railway Transport of Montenegro",
+    "logoUrl": "https://cdn.aiidatapro.net/media/1d/8d/69/t780x490/1d8d69b174461ce7028082f8623823e8.webp",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "Railway Transport of Montenegro (ŽPCG AD) is the state-owned passenger rail operator established in 2008. ŽPCG manages passenger services and rolling stock operations across Montenegro's national railway network, connecting key domestic and international destinations."
+  },
+  {
+    "id": "ex_1761483079401",
+    "name": "DR Ferroviaria Italia",
+    "logoUrl": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/logo/exh-f233d7c2-a727-4de4-8046-021665f9384c/desktop-small/6ce78a02-888c-47a6-ae72-c4e27eb1ea8e.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "DR FERROVIARIA ITALIA is a specialized company focused on the railway sector. Its core activities include railway track construction works and ongoing maintenance services, ensuring the safety and operational integrity of rail infrastructure."
+  },
+  {
+    "id": "ex_1761483156464",
+    "name": "Aluminox",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDid-5T4V3eVfU9KZQ7_84NePR9pp8jLXZNTrTchJ-D6mQap4oXjUtzrWXK4HYZuApig&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Founded in 1984 and headquartered in Cesenatico (FC), Italy, ALUMINOX S.R.L. is a manufacturer specializing in professional air extraction and treatment systems for commercial kitchens. The company designs and produces high-performance ventilation hoods and related equipment essential for maintaining air quality and safety standards in the HoReCa sector."
+  },
+  {
+    "id": "ex_1761483186446",
+    "name": "VM Group",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtg6c013TCt6NDJnnFQ7JLRnA32DM7qav6A&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "VM GROUP S.r.l. offers specialized services within the industrial and/or building sectors. The company likely provides technical support, maintenance, installation, or project management related to industrial facilities or construction projects."
+  },
+  {
+    "id": "ex_1761483235172",
+    "name": "Klevi Fire Protection",
+    "logoUrl": "https://klevifireprotection.com/wp-content/uploads/2024/01/Klevi-Fire-Protection-Logo-1.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "KLEVI FIRE PROTECTION serves as the exclusive representative for TRIDENT CSL's innovative fire suppression solutions throughout the Balkan region. Based in Durrës, the company supplies TRIDENT's bio-based, environmentally friendly extinguishing agent through dedicated product lines for both residential and industrial applications."
+  },
+  {
+    "id": "ex_1761483293232",
+    "name": "Tehnogama",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8r0KEmbZ2GJEVqsRAyfQctg47-YLaYTiC6Q&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Tehnogama stands among the region's leaders in compressed air and vacuum technology, providing advanced compressors, dryers, vacuum pumps, and turnkey industrial solutions. With decades of expertise, the company ensures reliability, efficiency, and energy optimization across diverse industries."
+  },
+  {
+    "id": "ex_1761483324097",
+    "name": "ICAT",
+    "logoUrl": "https://www.icat.it/user/themes/icat/img/logo@2x.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "ICAT srl is an Italian manufacturer of industrial adhesives, with a strong focus on eco-innovation. The company develops and produces specialized adhesive solutions, including bio-based and hot-melt formulations, catering to various industrial bonding requirements while prioritizing environmental sustainability."
+  },
+  {
+    "id": "ex_1761483491013",
+    "name": "Decom",
+    "logoUrl": "https://www.decom.me/img/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "DECOM Montenegro is a professional firm offering specialized services in architectural design and project supervision. The company focuses on delivering high-quality design solutions and ensuring meticulous oversight for both residential and commercial building projects."
+  },
+  {
+    "id": "ex_1761483531834",
+    "name": "Tehnomarket",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGCM9MQjJzU6yvObBnjQnR8mS1yGFwy8u16g&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": ""
+  },
+  {
+    "id": "ex_1761483582610",
+    "name": "Hydro Home",
+    "logoUrl": "https://i.ebayimg.com/images/g/WhAAAOSwm5NdvwrE/s-l300.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "HYDRO HOME srl operates as an online retailer specializing in plumbing and heating supplies. Based in Ladispoli, Italy, the company provides customers with convenient digital access to a wide range of products for residential and commercial heating and water systems."
+  },
+  {
+    "id": "ex_1761483609905",
+    "name": "Europlast",
+    "logoUrl": "https://www.europlast.at/fileadmin/template01/img/header/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "EUROPLAST is a manufacturer of durable plastic containers and pallets made from High-Density Polyethylene (HDPE). The company provides robust material handling and storage solutions tailored for demanding applications in the waste management, agricultural, and industrial sectors."
+  },
+  {
+    "id": "ex_1761483650779",
+    "name": "BEAM Europe",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsN6-6rvQk_944CeyrqGwjeFA7KZGtwVKpKB-UNyhsGATEm8VrQeKRbG4u2iblB0zFbpg&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "BEAM Europe provides innovative, sustainable infrastructure solutions powered by solar energy. The company specializes in products such as the EV ARC™, an off-grid electric vehicle (EV) charging platform integrating a photovoltaic (PV) array, onboard energy storage, and EV chargers into a rapidly deployable unit."
+  },
+  {
+    "id": "ex_1761483682729",
+    "name": "AON - Gjeneratorë & Forklifte",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBjnX-jlyHrcTSiScunmkwGpk5hYw5rD_Aw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "AON is a specialized provider of power generation systems (generators) and serves as the official Albanian distributor for Toyota Material Handling equipment. The company offers comprehensive solutions including sales, rental, and service support for a wide range of forklifts and material handling machinery, alongside its generator offerings."
+  },
+  {
+    "id": "ex_1761483725026",
+    "name": "L'atre",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2Yv7jDSqzJD73RKQpUYRMuiv0vzYZXdrGA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "L’ATRE is a brand concept centered around the themes of fire and ambiance. The company offers products or experiences designed to enhance atmosphere and evoke warmth, likely related to hearths, fireplaces, or decorative elements."
+  },
+  {
+    "id": "ex_1761483833690",
+    "name": "Jomapeks",
+    "logoUrl": "https://jomapeks.com/wp-content/uploads/2022/04/jomapeks-logo-002.png",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "OMAPEKS Ltd is a Serbian company specializing in the design, manufacture, and installation of comprehensive equipment solutions for poultry and livestock farms. The company provides systems for automatic feeding and drinking, feed distribution (conveyors/augers), and environmental control (ventilation, cooling, heating), offering complete, tailored solutions for modern, efficient farming operations under the principle \"Complete farm equipment in one hand.\""
+  },
+  {
+    "id": "ex_1761483876583",
+    "name": "Plantaze",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQHvReNW6ug8TQ/company-logo_200_200/company-logo_200_200/0/1630566064338?e=1762992000&v=beta&t=0Tn-B6VnspkfPIhkV0FUnlnZTjDR83JDHISi18SWT0I",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Details for Plantaze."
+  },
+  {
+    "id": "ex_1761483954094",
+    "name": "Vytaly",
+    "logoUrl": "https://www.vitalydesign.eu/cdn/shop/files/logo_and_wordmark.png?height=628&pad_color=fff&v=1647983089&width=1200",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "VYTALY is a company focused on the intersection of health, wellness, and technology, potentially specializing in nutrition technology. It likely offers innovative products or digital solutions aimed at improving personal health and well-being."
+  },
+  {
+    "id": "ex_1761484128149",
+    "name": "Lubing",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQGs-P5OEbuq6A/company-logo_200_200/B4EZXRa6ZdHcAI-/0/1742975248312/lubing_logo?e=2147483647&v=beta&t=FnlAPoa36AWG5pTJCs7unsyJfUZQGIMtB9dYfvvT3LA",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "LUBING SYSTEM S.r.l. provides advanced automated systems for modern poultry and swine farming. Their product range includes efficient nipple drinking systems, automated egg collection and transport solutions, climate control systems (cooling), and air purification technologies for optimal livestock environments"
+  },
+  {
+    "id": "ex_1761484201106",
+    "name": "Cooperative Italiana Catering",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzTCfUw3-RT5DPFcFmKDwxp2FY35kSI2mXA&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Cooperazione Italiana Catering (CIC) operates as a cooperative consortium within the Qualitaly network, dedicated to serving the HoReCa (Hotel/Restaurant/Café) and foodservice sectors. CIC provides members with integrated solutions for sourcing, branding, and distribution, enhancing competitiveness and market access for Italian food and beverage producers."
+  },
+  {
+    "id": "ex_1761484264215",
+    "name": "Crateo",
+    "logoUrl": "https://crateo.it/wp-content/uploads/2024/10/logo_crateo_w-1024x293.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "CRATEO srl, based in Bari, Italy, specializes in the design and production of functional food products, with a particular focus on protein and energy bars. The company offers expertise in private-label development and contract manufacturing services for brands seeking high-quality nutritional bars."
+  },
+  {
+    "id": "ex_1761484301208",
+    "name": "Enoreum",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6reRjrOhYTUbeyNTxEEFonEeP1HDCgYjLM7g6HgtVvU_V7_meXwo3i6ZkN0_ugJ9uR88&usqp=CAU",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Based in Rome, ENOREUM srl provides innovative technological solutions for the wine industry. The company specializes in anti-counterfeiting measures and utilizes Near Field Communication (NFC) technology to enable enhanced product storytelling and consumer engagement for wine brands."
+  },
+  {
+    "id": "ex_1761484379853",
+    "name": "H&S Fruits",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C560BAQHVmentEIV9bQ/company-logo_200_200/company-logo_200_200/0/1657380310169/hs_fruits_logo?e=2147483647&v=beta&t=LXzxCRtdzF0OrA7HE7wiDr8yY6NydxqK96UaUBWP1Wg",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "Established in 2022, H&S Fruits is a joint venture based in Arilje, Serbia, specializing in the cultivation and production of high-quality berries. The company focuses on modern agricultural practices to supply premium berry products to domestic and international markets."
+  },
+  {
+    "id": "ex_1761484461184",
+    "name": "Intermizoo",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVBjXuEVUKdT64b03N0WBLIKqLWG-FYEFt0A&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "INTERMIZOO S.p.A., located in Padova, Italy, is a leading company in the field of livestock genetics. It specializes in bovine (cattle) and water buffalo genetics, operating an advanced Artificial Insemination (AI) station and focusing on high-quality semen production for the improvement of dairy and meat breeds."
+  },
+  {
+    "id": "ex_1761484572291",
+    "name": "Destilerija Zekic",
+    "logoUrl": "https://rakijashop.de/wp-content/uploads/2023/01/zekic-logo-web-retina-1.png",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "DESTILERIJA ZEKIČ is a craft distillery dedicated to producing high-quality artisanal spirits. The distillery specializes in traditional regional beverages, including premium rakija (fruit brandy) and various handcrafted liqueurs, emphasizing quality ingredients and small-batch production methods."
+  },
+  {
+    "id": "ex_1761484626304",
+    "name": "Crnagoracoop",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYaouYuZgkVlNoAM7EdaDXyYW16pvHnZVjw&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "CRNAGORACOOP NB d.o.o. is a prominent company within Montenegro's food industry, operating from its production facilities in Danilovgrad. The company specializes in coffee roasting and packaging, as well as the manufacturing of various confectionery products, supported by integrated cold storage capabilities."
+  },
+  {
+    "id": "ex_1761484659062",
+    "name": "Antica Drogheria del Castello",
+    "logoUrl": "https://anticadrogheria.it/wp-content/uploads/2025/04/cropped-Screenshot-2025-04-24-alle-12.34.46-1.png",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "ANTICA DROGHERIA DEL CASTELLO specializes in high-quality spices, herbs, and dry food ingredients. The company offers a curated selection of seasonings, including convenient ready-to-use blends, catering to both retail consumers and professional kitchens seeking authentic flavors and culinary ingredients."
+  },
+  {
+    "id": "ex_1761484693884",
+    "name": "Mamo Pizza",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA1aANENsE8fNQSslKl3qoOOW5pJYx66b_jg&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "MAMOPIZZA is an artisan pizzeria located in Tirana, distinguished by its use of long-fermentation dough. The establishment offers a classic Italian menu, focusing on high-quality ingredients and traditional pizza-making techniques."
+  },
+  {
+    "id": "ex_1761484803734",
+    "name": "Veterinum",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Vet",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "VETERINUM operates in the animal health sector, providing veterinary products and/or diagnostic services. The company supplies essential goods or testing capabilities for the care and treatment of animals."
+  },
+  {
+    "id": "ex_1761486975300",
+    "name": "Skijakista - Ski Resort of Montenegro",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREDyeF3n-lqwsZAzwvhMjEHzk9y3q_DgUrQw&s",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Ski Resorts of Montenegro is the public company responsible for managing and developing state-owned ski centers, including the Kolašin 1600 and 1450 resorts. It provides essential services such as ski pass sales, ski school operations, and general visitor amenities to promote mountain tourism."
+  },
+  {
+    "id": "ex_1761487042632",
+    "name": "Green Coast",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOBnszmAF2cJEZrVMAPO8qoLioOCSqfnjOCA&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Green Coast."
+  },
+  {
+    "id": "ex_1761487111538",
+    "name": "Velexpo / Velo",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI5arKNQLrpsd9MxXX_BcZN9MgKGOYI0NM3A&s",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "VELEXPO / VELO d.o.o., based in Cetinje, Montenegro, specializes in trade fair organization and event logistics. The company provides services related to the planning, management, and execution of exhibitions and other large-scale events."
+  },
+  {
+    "id": "ex_1761487152130",
+    "name": "Radisson Collection Morina",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3MYH_orO5qMyHG13_nhaxU23f5KsWF8XlXA&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Radisson Collection Morina."
+  },
+  {
+    "id": "ex_1761487183496",
+    "name": "Morina Palace",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3G2Lnmxevo4tudGslv6KePaAcsrgIAbGN-w&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "MORINA – “Rinia ’04” specializes in providing logistics and support services for events and trade fairs. The company assists with the planning and execution of various organizational aspects related to large-scale gatherings."
+  },
+  {
+    "id": "ex_1761487234997",
+    "name": "AVK",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0sSN40GK1wNI9lzZOI7T9InmHIDUsvfWEA&s",
+    "sector": "Tourism & Culture",
+    "country": "Austria",
+    "description": "Details for AVK."
+  },
+  {
+    "id": "ex_1761487275308",
+    "name": "Stara Carsija Hotel & SPA",
+    "logoUrl": "https://app.otasync.me/images/property_logo_1186.png",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Stara Carsija Hotel & SPA."
+  },
+  {
+    "id": "ex_1761487313591",
+    "name": "Tourist Organization Ulcinj",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6GBbsdC2v84QrafF1m52g8q2LJwYpT_WLQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "The Tourist Organization of Ulcinj serves as the official entity for destination promotion for Ulcinj, Montenegro's southernmost coastal town. It offers tourist information services and promotes local attractions, with a particular emphasis on its extensive beaches and related tourism products."
+  },
+  {
+    "id": "ex_1761487374286",
+    "name": "Kolasin",
+    "logoUrl": "https://img.gothru.org/6882/166795012904816945/overlay/assets/20250905035926.i1dAWn.jpg?save=optimize",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Details for Kolasin."
+  },
+  {
+    "id": "ex_1761487404806",
+    "name": "Bashkia Librazhd",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPovVjOjk8-i27mth3WKeZ1iktNJTyhTGlIw&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "The Municipality of Librazhd focuses its strategic efforts on fostering local economic development, effectively leveraging EU-funded projects for infrastructure and community improvements, and ensuring the efficient delivery of essential local public services to its citizens."
+  },
+  {
+    "id": "ex_1761487477778",
+    "name": "Dajti Paradise",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREj-a6xadeQjDyN7YSsPyvNN9fpKb_AHeHhQ&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Details for Dajti Paradise."
+  },
+  {
+    "id": "ex_1761487508461",
+    "name": "Arkivi Qendror i Shtetit",
+    "logoUrl": "https://inspektimi.arkiva.gov.al/assets/images/arkiva-logo-login.svg",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "Established in 1949, the Central State Archive (AQSH) is the national archival institution of Albania. Its primary mission is the collection, preservation, administration, and public access provision for state documents and other materials of significant historical, cultural, and national importance, safeguarding Albania's documentary heritage."
+  },
+  {
+    "id": "ex_1761487617129",
+    "name": "GAIA Dental Clinic",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1fDPtCK4jGO1urHRTBNUVyFWsGP9cIU3Bg&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "GAIA Dental Clinic is a modern dental care facility located in Tirana. Spanning 650 m², the clinic features 8 advanced operating rooms and an in-house dental prosthetics laboratory. It is committed to providing technology-driven dental and surgical care with a focus on patient comfort and high-quality outcomes."
+  },
+  {
+    "id": "ex_1761583228192",
+    "name": "INM",
+    "logoUrl": "http://inm-arilje.com/wp-content/uploads/2018/06/inm-logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "INM, based in Arilje, Serbia, is an export-oriented manufacturer specializing in metal construction profiles. The company produces high-quality trapezoidal metal sheets primarily designed for roofing and facade applications in the construction industry."
+  },
+  {
+    "id": "ex_1761583380400",
+    "name": "Akvapan Inzenjering",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR93cbxUC9WbQTyitafuWilMGLVVREHrHjA0A&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "With over 30 years of market presence, AKVAPAN INŽENJERING is a prominent Serbian manufacturer of polyethylene (PE/PP/HDPE) pipe systems. The company specializes in producing durable piping solutions for critical infrastructure, including water supply, gas distribution, sewage networks, and cable protection applications."
+  },
+  {
+    "id": "ex_1761583983022",
+    "name": "Abissnet",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSnuSxcfI0S-6ijKOQV4xJGsdbQBTqc47Fg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Established in 1998, Abissnet is a leading Internet Service Provider (ISP) in Albania. The company operates an extensive nationwide fiber-optic network and provides a comprehensive suite of business services, including high-speed internet connectivity, advanced data hosting solutions (VPS, colocation), robust network security (DDoS protection), commercial telephony (VoIP), and television services."
+  },
+  {
+    "id": "ex_1761583996545",
+    "name": "Advantage Austria",
+    "logoUrl": "https://intellectual-property-helpdesk.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2020-12/Advantage%20Austria.png?itok=xkcI6Vun",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "ADVANTAGE AUSTRIA is the official foreign trade promotion organization of the Republic of Austria. It facilitates international market access and business development for companies by providing expert services, including market intelligence and partner identification, through its global network of over 100 offices across more than 70 countries. This network actively supports Austrian businesses in generating substantial annual export volumes."
+  },
+  {
+    "id": "ex_1761584008236",
+    "name": "AEE - Agjencia për Efiçiencë të Energjisë",
+    "logoUrl": "https://eficenca.gov.al/wp-content/themes/energo/assets/images/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Energy Efficiency Agency (AEE) is the Albanian governmental body operating under the Ministry of Infrastructure and Energy responsible for energy efficiency matters. Its primary mandate is the implementation, coordination, and monitoring of national policies and programs designed to achieve Albania's energy saving targets across all sectors of the economy."
+  },
+  {
+    "id": "ex_1761584024454",
+    "name": "ATSH - Agjencia Telegrafike Shqiptare",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStdxtbYnJfdcm9v7-6P290sATGpcBoMXQAUg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Established in 1912, the Albanian Telegraphic Agency (ATSH) is the official state multimedia news agency of the Republic of Albania. ATSH collaborates with numerous international news partners to produce and distribute comprehensive, verified news coverage in multiple languages, serving as the primary governmental source for national and international information."
+  },
+  {
+    "id": "ex_1761584041212",
+    "name": "Agricultural Household Macanovic",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnaRHzMOoDesEqlm8EYcAP5YlrmsAZafyzwQ&s",
+    "sector": "Food & Agriculture",
+    "country": "Serbia",
+    "description": "Agricultural Household Macanović is a family agricultural enterprise engaged in primary agricultural production. The household specializes in the cultivation and supply of fresh farm produce alongside the manufacture of distinctive regional specialty foods and traditional products, reflecting Montenegro's agricultural heritage."
+  },
+  {
+    "id": "ex_1761584108115",
+    "name": "AIDA - Agjencia Shqiptare e Zhvillimit të Investimeve",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgCEfy_TvHKfsE9NIwc0T13WtUqcxWDH1PUw&s",
+    "sector": "Services",
+    "country": "Albania",
+    "description": "Founded in 2010, the Albanian Investment Development Agency (AIDA) is the national agency responsible for promoting foreign direct investment, supporting Albanian exports, and fostering the development of Small and Medium Enterprises (SMEs). AIDA acts as a primary point of contact and support for investors and businesses seeking to operate or expand in Albania."
+  },
+  {
+    "id": "ex_1761599278284",
+    "name": "Agjencia e Industrisë Kreative",
+    "logoUrl": "https://i.pinimg.com/736x/3b/b8/fd/3bb8fdcdb3e7e68147ddca1839bfe4c0.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Creative Industry Agency is a municipal entity focused on fostering the development of the creative economy. It provides strategic support for entrepreneurship, cultural initiatives, and innovation programs within the creative sector, aiming to enhance its contribution to local economic growth and urban vitality."
+  },
+  {
+    "id": "ex_1761599552872",
+    "name": "AGRU Kunststofftechnik GmbH",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Y4oNl0XIOnO1gzsh4j223z640HWz7VLj4rwj2H1ihVSXHCzJ1dU9RRRKzNIsobaIPSM&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Established in 1948, AGRU Kunststofftechnik GmbH is a leading international manufacturer specializing in engineered plastic solutions. The company produces high-quality piping systems, semi-finished products, concrete protective liners, and geomembranes designed for demanding applications in construction, industry, energy, and critical infrastructure projects worldwide."
+  },
+  {
+    "id": "ex_1761599758465",
+    "name": "Alflexim Shpk",
+    "logoUrl": "https://alflexim.com/images/alflexim_logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Established in 2004, Alflexim Shpk is a specialized security systems integrator based in Albania. The company provides comprehensive solutions encompassing design, supply, installation, and maintenance of critical safety and security systems, including fire detection/suppression, intrusion alarms, access control, CCTV, and advanced video surveillance technology."
+  },
+  {
+    "id": "ex_1761600091812",
+    "name": "Ame Caffe",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Ama",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "AME CAFFÈ is an Italian coffee brand focused on delivering authentic espresso experiences. The company offers a range of carefully crafted espresso blends and complementary products specifically tailored for the HoReCa (Hotel/Restaurant/Café) market, ensuring quality and consistency for professional beverage service."
+  },
+  {
+    "id": "ex_1761600416840",
+    "name": "Argella Montenegro",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpKpQmm4G8pNPNxrmnM-SpkRreiGoZ4TCfA&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "Based in Bar, Montenegro, ARGELLA MONTENEGRO operates an agro-tourism enterprise focused on sustainable agriculture and local products. The farm specializes in olive-based goods and artisanal foods, providing visitors with an authentic rural experience through on-site facilities designed for hospitality and product showcases."
+  },
+  {
+    "id": "ex_1761600482206",
+    "name": "B2B D.O.O. Hotel Stara Čaršija",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2wIF9FFJTnycDVAhyTbx55eitInmPkG0FDQ&s",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Hotel Stara Čaršija is a boutique hotel and SPA located in the historic Old Town (Stari Bar) of Bar, Montenegro. Distinguished by its authentic Ottoman-style architecture, the hotel offers a unique hospitality experience featuring upscale accommodation, a traditional hammam, and signature dining options reflecting local and regional cuisine."
+  },
+  {
+    "id": "ex_1761600587298",
+    "name": "Bashkia Gramsh",
+    "logoUrl": "https://img.freepik.com/premium-vector/flag-gramsh-town-albania-vector-image_671352-981.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Municipality of Gramsh presents its strategic vision \"Gramsh 2030,\" focusing on comprehensive development initiatives. Key priorities include urban transformation, enhancing energy efficiency in public buildings, implementing integrated waste management, promoting sustainable mobility, and boosting culture and tourism, complemented by the expansion of public Wi-Fi infrastructure."
+  },
+  {
+    "id": "ex_1761600620790",
+    "name": "Bashkia Himare",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5SJFH-hbRCYy87M4NPTInLrV_hB5kTfsXg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Here are the professional descriptions for each entity, formatted for an official exhibitor catalogue:\n\nAON — Gjeneratorë & Forklifte (Toyota Material Handling)\nAON is a specialized provider of power generation systems (generators) and serves as the official Albanian distributor for Toyota Material Handling equipment. The company offers comprehensive solutions including sales, rental, and service support for a wide range of forklifts and material handling machinery, alongside its generator offerings.\n\nARGELLA MONTENEGRO (Bar)\nBased in Bar, Montenegro, ARGELLA MONTENEGRO operates an agro-tourism enterprise focused on sustainable agriculture and local products. The farm specializes in olive-based goods and artisanal foods, providing visitors with an authentic rural experience through on-site facilities designed for hospitality and product showcases.\n\nARTHUR FLURY\nArthur Flury AG is a distinguished Swiss manufacturer specializing in high-quality components and systems for electrical infrastructure. The company is a leading provider of railway overhead contact line components, robust earthing and lightning protection solutions, and certified fall-protection systems engineered for safety and reliability.\n\nB2B D.O.O. Hotel Stara Čaršija (Bar, ME)\nHotel Stara Čaršija is a boutique hotel and SPA located in the historic Old Town (Stari Bar) of Bar, Montenegro. Distinguished by its authentic Ottoman-style architecture, the hotel offers a unique hospitality experience featuring upscale accommodation, a traditional hammam, and signature dining options reflecting local and regional cuisine.\n\nBASHKIA GRAMSH\nThe Municipality of Gramsh presents its strategic vision \"Gramsh 2030,\" focusing on comprehensive development initiatives. Key priorities include urban transformation, enhancing energy efficiency in public buildings, implementing integrated waste management, promoting sustainable mobility, and boosting culture and tourism, complemented by the expansion of public Wi-Fi infrastructure.\n\nBASHKIA HIMARË\nThe Municipality of Himarë is a prominent coastal administrative region situated on Albania's Ionian Riviera. The municipality actively promotes investment opportunities, sustainable tourism development, and the continuous improvement of public services for its residents and visitors."
+  },
+  {
+    "id": "ex_1761600728809",
+    "name": "BEA Marketing",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gOiEwWAMNScxMcqBdN2ZtFE54HNE0dbNjQ&s",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "BEA Marketing is a full-service 360° marketing agency providing integrated communication solutions. The agency's expertise spans creative and digital marketing strategies, large-format printing, promotional merchandise production, public relations and event management, and impactful brand activation campaigns."
+  },
+  {
+    "id": "ex_1761601314802",
+    "name": "Behari KS",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWVc2j4kWsyt5Q0qX6Jm8s6B-4ETTtzfeiw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "BEHARI KS is a manufacturing company producing a diverse range of architectural and building products. Its core offerings include garage and automatic door systems, aluminium and glass façades, along with specialized products for wellness environments (saunas, jacuzzis) and durable Wood-Plastic Composite (WPC) flooring solutions."
+  },
+  {
+    "id": "ex_1761601381047",
+    "name": "Bfinance Srl",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdm0l7fsu09WZkHoJh6grlTxNxEJF-ZPdpQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "BFINANCE srl offers specialized financial advisory services tailored for Small and Medium Enterprises (SMEs). The firm provides expert guidance on accessing subsidized and structured finance, navigating funded training opportunities, and developing effective internationalization strategies."
+  },
+  {
+    "id": "ex_1761601433287",
+    "name": "Biodelta Srl",
+    "logoUrl": "https://i1.wp.com/www.biodelta.it/wp-content/uploads/2018/11/logo-biodelta.png?zoom=2&fit=180%2C180&ssl=1",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "BIODELTA S.R.L. focuses on the research, development, and marketing of dietary supplements and medical devices. The company possesses a specialized portfolio of nutraceutical products specifically formulated to support psychological well-being and overall health."
+  },
+  {
+    "id": "ex_1761601570626",
+    "name": "Burstock",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQF8B9-HdXUToQ/company-logo_100_100/company-logo_100_100/0/1678659123748/burstock_logo?e=2147483647&v=beta&t=sgtlxTu4hUNuaKC64NrFvNEHhJeYzKXnV714yTvgyjo",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "BURSTOCK is a UK-based strategic consultancy firm providing advisory services to sovereign and commercial clients across Europe and the Middle East/North Africa (MENA) region. The firm specializes in delivering expert counsel on matters related to defense, security, and public policy."
+  },
+  {
+    "id": "ex_1761601631275",
+    "name": "Veronesi Caffe",
+    "logoUrl": "https://www.veronesicaffe.com/wp-content/uploads/2023/05/cropped-Untitled-1.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "VERONESI CAFFÈ is a coffee roaster and distributor operating in Albania, serving the home, office, and HoReCa (Hotel/Restaurant/Café) markets. The company offers distinct product lines and compatible coffee machines, accessible through its online platform, ensuring quality coffee solutions for diverse consumer needs."
+  },
+  {
+    "id": "ex_1761601866397",
+    "name": "Celebic Group",
+    "logoUrl": "https://images.seeklogo.com/logo-png/20/1/celebic-logo-png_seeklogo-207686.png",
+    "sector": "Tourism & Culture",
+    "country": "Montenegro",
+    "description": "Established in 1991, the ČELEBIĆ Group is a leading Montenegrin holding company with primary activities in construction, real estate development, and associated services. Employing over 420 professionals, the Group is recognized for its significant contributions to the development of residential, commercial, and infrastructure projects across Montenegro."
+  },
+  {
+    "id": "ex_1761601940894",
+    "name": "Colloid / Koloid",
+    "logoUrl": "https://play-lh.googleusercontent.com/ihY2YRK0oIxGAtRlFqN5EqFCZkcl7BoiBQTYd84PPz-sZcD-pzEu4pqGyD6fzvyNCCU",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "COLLOID / Koloid d.o.o. specializes in the development and production of innovative silver-nanotechnology products. The company offers a range of solutions for health, personal hygiene, and cosmetic applications, supported by a growing retail and distribution network throughout the Balkan region."
+  },
+  {
+    "id": "ex_1761641180787",
+    "name": "Detag",
+    "logoUrl": "https://detag.al/logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "DETAG.al specializes in developing and implementing digital platforms and ERP-integrated solutions. The company provides tailored software systems designed to optimize business processes and enhance operational efficiency for its clients."
+  },
+  {
+    "id": "ex_1761641228244",
+    "name": "Digitalb",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Digitalb_logo.png/250px-Digitalb_logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "DIGITALB is Albania's leading pay-TV and Over-The-Top (OTT) platform provider. Established in 2004, the company offers a comprehensive range of premium sports and entertainment content through its extensive channel lineup and digital streaming services, reaching a wide national and international audience."
+  },
+  {
+    "id": "ex_1761641387236",
+    "name": "Salto Systems",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXrmb4VrsSc_5opC_W8aNBwZmmKHFRTwU4Q&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Salto Systems is a Spanish company represented in ALbania by Dryni.al\n\nDRYNI.al provides advanced access control and security solutions. The company offers a range of products encompassing both mechanical locking systems (keys/cylinders) and sophisticated electronic access control technologies for residential, commercial, and institutional applications."
+  },
+  {
+    "id": "ex_1761641670437",
+    "name": "Ermal Mamaqi Trainings",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAGTYILU65Ywb0zEublXFkOIe4LGyCmt4UA&s",
+    "sector": "Education & Innovation",
+    "country": "Albania",
+    "description": "ERMAL MAMAQI Trainings offers professional development programs focused on business enhancement and personal growth. The organization provides structured training courses and workshops designed to equip individuals and companies with practical skills for success."
+  },
+  {
+    "id": "ex_1761641727267",
+    "name": "Europtok Group",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsQ7ipT1pY-tT1nLdsPHwbmsDI-ILCue6-xATsndyDoYopF6C8N7iiLghHd46_8gyE7rg&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "EUROPTIK GROUP operates within the optical industry as a distributor and retailer. The company supplies a wide selection of optical frames and lenses, serving both wholesale partners and end consumers through its retail channels"
+  },
+  {
+    "id": "ex_1761641864209",
+    "name": "Molini Certosa",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc8Mlm8W3qkHLYNkB0Iux_eawH4DSK1BTGyg&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "With a rich history dating back to 1889, Molini Certosa S.p.A. is a distinguished Italian milling company. Operating from Certosa di Pavia, the mill specializes in producing high-quality durum wheat semolina and soft wheat flours, meticulously crafted to meet the specific requirements of both industrial food manufacturers and artisanal producers."
+  },
+  {
+    "id": "ex_1761641892464",
+    "name": "Federcamere",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQGeVIpTYMpCww/company-logo_200_200/company-logo_200_200/0/1709807071451/federcamere_logo?e=2147483647&v=beta&t=HnHxbkCjHl0wPH1OYep_zU_nnblmJHQsPLH93SkTOpI",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "FEDERCAMERE represents the network of Italian Chambers of Commerce operating abroad. It serves as a crucial platform for internationalization, providing businesses with essential information, training services, and networking opportunities to facilitate access to global markets."
+  },
+  {
+    "id": "ex_1761641936322",
+    "name": "Fredi Electronics",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS51yRfGDzM7R9qSO-i59_vD4LCEfQRcv0jA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "FREDI Electronics is a Tirana-based electronics systems integrator. The company specializes in the design, supply, and installation of integrated solutions across various domains, including audiovisual (AV) systems, LED displays, security infrastructure, and power management systems."
+  },
+  {
+    "id": "ex_1761642088759",
+    "name": "Gerba",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYmK6-g6ganawIp2dudJhj3HzTJmNbqjVLOA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "GERBA, based in Tirana, is a supplier of industrial adhesive solutions. The company offers a specialized range of adhesives designed for various applications, including woodworking, packaging, printing, hygiene product manufacturing, and profile wrapping."
+  },
+  {
+    "id": "ex_1761642235753",
+    "name": "Haus Majstor",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSR9mCAXCO2wfzi29tsQEr0eW6ZU52lL2CBw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "HAUS MAJSTOR is a Montenegrin company providing retail sales and professional services related to building installations and fixtures. Operating locations in Podgorica and Kotor, the company offers a wide range of products and support for plumbing, electrical systems, sanitary ware, and lighting solutions"
+  },
+  {
+    "id": "ex_1761642535774",
+    "name": "Autoriteti Kombetari i Sigurise Kibernetike",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlzazqoFiAPPVS26FaCM4uAs8B2wi0odjytw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The National Authority for Cybersecurity (AKSK) is the Albanian governmental body responsible for ensuring a high level of network and information system security. Established to implement national cybersecurity strategy, AKSK works on preventing and responding to cyber incidents, coordinating relevant actors, and promoting a secure digital environment for citizens, businesses, and public institutions."
+  },
+  {
+    "id": "ex_1761642561610",
+    "name": "BD IMP EXP",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=BD",
+    "sector": "Energy & Infrastructure",
+    "country": "Turkey",
+    "description": "BD IMP EXP is a Turkish trading company specializing in import and export operations. The company facilitates international trade flows, connecting Turkish producers with global markets and sourcing international goods for the domestic market across various sectors."
+  },
+  {
+    "id": "ex_1761642582513",
+    "name": "Belgrade Fair",
+    "logoUrl": "https://sajam.rs/wp-content/uploads/sajam_logo_1100x600_eng.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Founded in 1937, the Belgrade Fair is the largest and most prominent exhibition center in Serbia and Southeast Europe. Located in Belgrade, it hosts over 40 international trade fairs and exhibitions annually, attracting hundreds of thousands of visitors and exhibitors across diverse industries, significantly contributing to regional business networking and economic activity."
+  },
+  {
+    "id": "ex_1761642589950",
+    "name": "Bellonina",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Bel",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Bellonina is an Italian company specializing in the design and production of high-quality furniture and interior décor. The brand is known for its craftsmanship and distinctive style, offering furnishings for residential and commercial spaces that blend traditional techniques with contemporary aesthetics."
+  },
+  {
+    "id": "ex_1761642624501",
+    "name": "Blacksheep",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTY-9isxvq27kyaddH8_0GyufQSt8iFe7hA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Blacksheep is an Albanian creative agency specializing in branding, marketing communications, and digital experiences. The agency develops innovative strategies and impactful campaigns to help businesses build strong brand identities and effectively engage with their target audiences in the modern market."
+  },
+  {
+    "id": "ex_1761642693042",
+    "name": "Brunes Technogym",
+    "logoUrl": "https://brunes.al/wp-content/uploads/2024/02/technogym-600x700.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Brunes serves as the official distributor for Technogym fitness and wellness equipment in Albania. Leveraging Technogym's global leadership in premium fitness solutions, Brunes provides sales, installation, and after-sales support for a wide range of state-of-the-art gym equipment and digital wellness platforms to commercial facilities and private residences."
+  },
+  {
+    "id": "ex_1761642721492",
+    "name": "Business House LTD",
+    "logoUrl": "https://busineshouse.com/img/logodark_only.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Turkey",
+    "description": "Business House LTD is a Turkish consultancy and business development firm. The company provides strategic advisory services, market entry support, and operational assistance to both domestic and international companies seeking to establish or expand their business activities in Turkey and the surrounding regions."
+  },
+  {
+    "id": "ex_1761642781546",
+    "name": "Coffe Club Lavazza",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu76KySnBKh33_v9C-8BxJPY1us9k2j69UxQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Coffee Club shpk is the exclusive official distributor of Lavazza coffee products in Albania. Established to bring authentic Italian coffee culture to the market, the company supplies a comprehensive range of Lavazza blends, capsules, machines, and related accessories to the HoReCa, office, and retail sectors nationwide."
+  },
+  {
+    "id": "ex_1761642867954",
+    "name": "Fatmarrela",
+    "logoUrl": "https://halsa.al/cdn/shop/collections/fatmarrela_logo.jpg?v=1749203885",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Fatmarrela is an Albanian company operating in the textile and garment manufacturing sector. The company specializes in producing clothing items, potentially focusing on specific niches like workwear, fashion apparel, or contract manufacturing for other brands."
+  },
+  {
+    "id": "ex_1761642891384",
+    "name": "Fibank",
+    "logoUrl": "https://fiaalbania.al/wp-content/uploads/2014/03/FIBank_newlogo_text_LAT.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Fibank Albania, part of the international Fibank Group, commenced operations in 2006. It is a dynamic commercial bank offering a wide range of banking products and financial services to individual, SME, and corporate clients. Fibank Albania focuses on providing modern banking solutions, including digital platforms, and contributing to the development of the Albanian financial sector."
+  },
+  {
+    "id": "ex_1761643731876",
+    "name": "Javorak",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk1hnCh-soIkPUtgZ51zBdzJLJ6ZbEhwY1ow&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "JAVORAK, based in Nikšić, Montenegro, is a producer specializing in confectionery products. The company manufactures a range of sweets and related items, supported by a distribution network that serves markets across the regional area."
+  },
+  {
+    "id": "ex_1761644005526",
+    "name": "Jugopapir",
+    "logoUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHupg65IXtO5sEGHwHKC0_jDFImHPGzdJifrGkF58hF1nIT2ydAwq1NMltqJUNoiR4ybOjALVzcJMXyCCAOeKiUIm51BYhXO4zqr5dADSAcKMypoJiS5PNdfqxJwXkn8mHhuYcBZthaoI/s1600-r/YUGOPAPIR14216worknow11.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "JUGOPAPIR, located in Bar, Montenegro, is engaged in the paper and packaging industry. The company functions as both a producer and distributor, supplying various paper-based products and packaging solutions to meet commercial and industrial needs"
+  },
+  {
+    "id": "ex_1761644064036",
+    "name": "Keypoint Partner",
+    "logoUrl": "https://static.wixstatic.com/media/04f522_e1d8a51bba4346a68f2607da6880ece1~mv2.jpg/v1/fill/w_514,h_162,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KeyPoint_logo_1124.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "KEYPOINT Partner is a Tirana-based business consultancy firm. The company provides expert advisory services covering strategic business development, project management, and guidance on navigating public procurement processes, assisting clients in achieving their operational and growth objectives"
+  },
+  {
+    "id": "ex_1761644145721",
+    "name": "Information and Data Protection Commissioner",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQFG5isgNSYAug/company-logo_200_200/B4EZmfeTmeHoAI-/0/1759317147551/idp_albania_logo?e=2147483647&v=beta&t=_VUzDwdMIg8KkByMRi_c2-wE0bCVCfgOTDcUyoXvz18",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Information and Data Protection Commissioner (IDP) is the independent supervisory authority in Albania responsible for overseeing the implementation of legislation concerning the right to information and the protection of personal data. Established in 2004, the Commissioner ensures compliance and safeguards citizens' fundamental rights in these areas."
+  },
+  {
+    "id": "ex_1761644182204",
+    "name": "KESH - Korporata Elektroenergjitike Shqiptare",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXslBxiVQqUq0KFzNuJGxYlK8dhXhTJH9VzkMsTBJiaCTHt4OdaSRdxWMWZF-kIPthpo&usqp=CAU",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Korporata Elektroenergjitike Shqiptare (KESH) is Albania's largest state-owned electricity producer. Managing the major hydropower plants on the Drin River cascade and the Vlora Thermal Power Plant, KESH plays a crucial role in the country's energy generation and supply stability."
+  },
+  {
+    "id": "ex_1761644277523",
+    "name": "Lajthiza Invest",
+    "logoUrl": "https://amcham.com.al/wp-content/uploads/2020/10/f3f2c57f-2df1-499e-b950-01ecd0cafcd1.png",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "LAJTHIZA INVEST sh.a. specializes in the production and bottling of natural mineral water sourced directly from the pristine Lajthiza spring in the Albanian Alps. The company adheres to rigorous quality standards, holding international certifications for its manufacturing processes and product purity."
+  },
+  {
+    "id": "ex_1761644418679",
+    "name": "Le Radici Normanne",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR25L2j8Yphq9PDSLI-dFD9JquzOrj6inGZqw&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "LE RADICI NORMANNE Società Agricola is an agricultural enterprise based in Palermo, Italy, focused on viticulture. The company specializes in grape cultivation and operates within the local wine-growing supply chain, contributing to regional wine production."
+  },
+  {
+    "id": "ex_1761644453221",
+    "name": "Lim-Em",
+    "logoUrl": "https://pbs.twimg.com/profile_images/894903057900859394/xbbGPQVM_400x400.jpg",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "LIM-EM is a Tirana-based real estate developer focused on creating residential and mixed-use projects that emphasize sustainable urban living. The company is actively involved in developing modern living spaces within the Tirana metropolitan area"
+  },
+  {
+    "id": "ex_1761644485464",
+    "name": "LLUCKA Organic EVOO",
+    "logoUrl": "https://worldolivecenter.com/wp-content/uploads/2023/04/lucka-logo-7e866f191d86661c01559c3ee26b721e.jpg",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "LLUCKA produces award-winning organic extra virgin olive oil from its groves located in Dečić, near Tuzi, Montenegro. The company is committed to organic farming practices and delivering premium quality olive oil recognized for its excellence."
+  },
+  {
+    "id": "ex_1761644545323",
+    "name": "London Bridge",
+    "logoUrl": "https://www.londonbridge.me/web/wp-content/uploads/2014/10/logotype2.png",
+    "sector": "Education & Innovation",
+    "country": "Montenegro",
+    "description": "LONDON BRIDGE d.o.o., based in Nikšić, Montenegro, provides specialized educational services. The company offers Business English courses and functions as an education agency, facilitating access to study programs in the United Kingdom."
+  },
+  {
+    "id": "ex_1761644613180",
+    "name": "Lufra",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaixlfAN9chKeg50mecrrwrkOVe8lw8bFwYg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "LUFRA is Albania's leading dairy processing company. Producing a wide range of products including milk, yogurt, cheese, and butter, LUFRA operates an extensive nationwide cold-chain logistics and distribution network ensuring product freshness and availability across the country."
+  },
+  {
+    "id": "ex_1761644716156",
+    "name": "Maestri Italiani",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBu1KAv_K1H7BzfZVXPn734IKPmtTue7l3g&s",
+    "sector": "Food & Agriculture",
+    "country": "Italy",
+    "description": "Maestri Italiani provides Italian-standard professional training and consulting services in Tirana. The company focuses on practical skills development tailored for Small and Medium Enterprises (SMEs) and individuals engaged in craftsmanship and trades."
+  },
+  {
+    "id": "ex_1761644790591",
+    "name": "Maritel / Miratel",
+    "logoUrl": "https://www.mira-tel.com/wp-content/uploads/2025/06/Miratel-LOGO-01-1-scaled.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "MARITEL / MIRATEL operates in the technology sector, providing communications services and potentially specializing in IT and Telecommunications (IT/Telco) systems integration."
+  },
+  {
+    "id": "ex_1761644823803",
+    "name": "MC Networking & Communication",
+    "logoUrl": "https://www.odoocompanies.com/UploadedImages/Company/637124513563232247.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "MC NETWORKING & COMMUNICATIONS is a Tirana-based Operational Technology (OT) and Information Technology (IT) systems integrator. The company specializes in designing and implementing robust networking and security solutions, providing enterprise-level services particularly for critical infrastructure operators."
+  },
+  {
+    "id": "ex_1761644856983",
+    "name": "MCN TV",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx_VPoV6aAx95Ext06tJY1lHlQE9d_WUsjtA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "MCN TV is an Albanian national television channel headquartered in Tirana. The station focuses its programming primarily on current affairs, economic news, and public information, serving as a key source of information for the Albanian audience."
+  },
+  {
+    "id": "ex_1761644890345",
+    "name": "Meso-Promet",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTai6DEKAg8zLUQNcvuz_5FCUYjHLwciyKkcw&s",
+    "sector": "Food & Agriculture",
+    "country": "Montenegro",
+    "description": "MESO-PROMET, based in Bijelo Polje, Montenegro, is a significant player in the meat industry. The company's core activities encompass meat processing and trade, supplying meat products to various markets."
+  },
+  {
+    "id": "ex_1761644961099",
+    "name": "MBZHR – Ministria e Bujqësisë & Zhvillimit Rural",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyLNLTz9RT27bMdkrlvOpdl4C9Rx44RXavzw&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The Ministry of Agriculture and Rural Development (MBZHR) is the Albanian government body responsible for formulating and implementing national agricultural policy and rural development strategies. Its mandate includes managing grant schemes and setting agricultural standards to promote sustainable growth in the sector."
+  },
+  {
+    "id": "ex_1761645154757",
+    "name": "N'Dritero Lounge & Books",
+    "logoUrl": "https://media.licdn.com/dms/image/v2/C4E03AQGeqIum74GCPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1661440332227?e=2147483647&v=beta&t=LWqR2tliajvSm1DLOrTcrGoBl23ZHao7Y6UWZZ9YY48",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "N’DRITËRO LOUNGE & BOOKS is a cultural space dedicated to the legacy of the prominent Albanian writer, Dritëro Agolli. It serves as a venue celebrating literature and arts, likely offering books and a conducive environment for cultural engagement."
+  },
+  {
+    "id": "ex_1761645209871",
+    "name": "New York University",
+    "logoUrl": "https://www.eduopinions.com/wp-content/uploads/2019/08/University-of-New-York-Tirana-logo-.jpg",
+    "sector": "Education & Innovation",
+    "country": "Albania",
+    "description": "New York University (NYU) is a renowned private research university with a global academic network, comprising multiple degree-granting campuses and study-away sites worldwide. It offers a vast range of undergraduate and graduate programs across numerous disciplines."
+  },
+  {
+    "id": "ex_1761645263718",
+    "name": "Nino Design",
+    "logoUrl": "https://ninodesign.me/wp-content/uploads/2019/10/nino-design-logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "NINO DESIGN provides professional services in exhibit design and interior design. The company specializes in creating bespoke visual concepts and functional layouts for exhibition spaces, commercial interiors, and potentially residential environments."
+  },
+  {
+    "id": "ex_1761645325168",
+    "name": "No Guts No Glory",
+    "logoUrl": "https://nogutsnoglory.it/wp-content/uploads/2024/06/Marchio-No-guts-no-glory-Low-res.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "NO GUTS NO GLORY / MOVE S.r.l. operates as a creative agency focused on brand development, marketing strategies, and event production. The agency delivers innovative concepts and execution for brand building and promotional activities."
+  },
+  {
+    "id": "ex_1761645364692",
+    "name": "NTS International",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddwFfJMwyb9vrIo1jBriof7yhmAa9wML1TA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "NTS INTERNATIONAL is a provider of advanced technology solutions in the fields of telematics, fleet management, and the Internet of Things (IoT). The company offers systems and services designed to optimize vehicle operations, asset tracking, and data connectivity."
+  },
+  {
+    "id": "ex_1761645525576",
+    "name": "Partners Albania",
+    "logoUrl": "https://resourcecentre.al/wp-content/uploads/2024/06/logo-partners-1-e1645192885160-1.jpg",
+    "sector": "Services",
+    "country": "Albania",
+    "description": "Partners Albania for Change and Development is an independent Albanian Non-Governmental Organization (NGO), established in 2001, dedicated to advancing civil society, social development, and philanthropy. It actively supports the development of a sustainable social enterprise ecosystem in Albania through capacity building, advocacy, and research"
+  },
+  {
+    "id": "ex_1761645570845",
+    "name": "Perdormo Cigars",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZH0yeXMSvijQh8tJFrHjZeAM5kF74MbDWAw&s",
+    "sector": "Services",
+    "country": "Albania",
+    "description": "PERDOMO Cigars is a family-owned company renowned for producing premium handmade cigars. Utilizing meticulously grown tobaccos primarily from their farms in Nicaragua, PERDOMO offers a broad portfolio of highly-rated cigars catering to discerning aficionados worldwide."
+  },
+  {
+    "id": "ex_1761645691640",
+    "name": "PIP Novi Sad",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ_8VBPneBIMgLPwDg_UBrQZ3XRzI8hqt0mA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Serbia",
+    "description": "PIP d.o.o., based in Novi Sad, Serbia, operates within the food production and/or distribution sector. The company specializes in products such as Mexican-style tortillas and related food items, catering to retail and/or foodservice markets."
+  },
+  {
+    "id": "ex_1761645760654",
+    "name": "Prosound",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfKP1-GlFo_zFYtOs3PWxqSOei-rvagTSOBGSldy5Uo5BhoBiamzDSYavUJpOoHpdEu8&usqp=CAU",
+    "sector": "Services",
+    "country": "Albania",
+    "description": "PROSOUND provides professional audiovisual (AV) system solutions in Tirana. The company offers sales and installation of permanent AV setups, as well as comprehensive equipment rental and technical support services for live events, conferences, and productions."
+  },
+  {
+    "id": "ex_1761645865116",
+    "name": "QKK – Qendra Kombëtare e Kinematografisë",
+    "logoUrl": "https://qkk.al/wp-content/uploads/2017/12/QKK-ANCC-black-white-background-1.jpg",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "The Albanian National Center of Cinematography (QKK), established in 1997, is the primary public institution supporting the Albanian film industry. QKK manages national film funding schemes, facilitates distribution, promotes Albanian cinema internationally, and engages in co-production agreements."
+  },
+  {
+    "id": "ex_1761645963761",
+    "name": "RTSH - Radio Television Shqiptar",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOCdyrVk4KkDMehkvQeFMK25OXRTRjj2uASiD5fwFE3mxYp5HM68S2vT05IdrXd0jwuvk&usqp=CAU",
+    "sector": "Services",
+    "country": "Albania",
+    "description": "Radio Televizioni Shqiptar (RTSH) is the official public service broadcaster of Albania, established in 1938 (Radio) and 1960 (Television). RTSH operates an extensive multi-channel television and radio network, including the dedicated news channel RTSH 24, providing comprehensive informational, educational, and cultural programming nationwide."
+  },
+  {
+    "id": "ex_1761646022490",
+    "name": "Real Coffee Albania",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Rea",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "REAL COFFEE ALBANIA is a supplier focused on the coffee market, providing finished coffee beverages and essential barista equipment. The company caters to businesses and potentially consumers seeking quality coffee products and preparation tools."
+  },
+  {
+    "id": "ex_1761646052374",
+    "name": "Remid VIS",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7MLtSI0LHLmbk7hoL6yrPuM7LkaZsOkJ6w&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "REMID VIS d.o.o. supplies metal fasteners and related industrial accessories. The company provides essential components used in manufacturing, construction, or maintenance applications across various industrial sectors."
+  },
+  {
+    "id": "ex_1761646077346",
+    "name": "Scan TV",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq-MnibsRBH6jaGrkPoJcCoLpDkmutOspORg&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "SCAN TV is an Albanian national television channel, established in 2000/2010 and part of the BALFIN Group since 2022. The station specializes exclusively in economic and financial news coverage, providing in-depth analysis and reporting on business, markets, and economic affairs in Albania and the region."
+  },
+  {
+    "id": "ex_1761646105715",
+    "name": "Schunk GmbH",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Logo_Schunk.svg/2560px-Logo_Schunk.svg.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Austria",
+    "description": "SCHUNK GmbH & Co. KG, founded in 1945, is a global competence leader in gripping systems, robotic End-of-Arm Tooling (EOAT), and clamping technology for manufacturing and automation. The German family-owned company provides innovative, high-performance solutions for diverse industrial applications worldwide."
+  },
+  {
+    "id": "ex_1761646167066",
+    "name": "Shkolla Kombëtare e Koreografisë",
+    "logoUrl": "https://placehold.co/100x100/E2E8F0/4A5568?text=Shk",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "The National School of Choreography, established in 1957, is Albania's premier state institution for pre-university education in ballet and choreography. Located in Tirana, the school provides specialized artistic training for aspiring dancers and choreographers."
+  },
+  {
+    "id": "ex_1761646198432",
+    "name": "Sika",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sika_Logo.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "SIKA S.r.l., based in Casier (TV), Italy, specializes in the design and extrusion of technical profiles made from thermoplastic materials. The company provides customized profile solutions for various industrial applications."
+  },
+  {
+    "id": "ex_1761646313363",
+    "name": "Spitali Shendetesor Merkur",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0UlPxjYJXj2gHi2St2z82AkZm8VNOSi3gQ&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "Merkur Health Hospital is a healthcare provider offering a range of medical, health, and wellness services. It operates as a hospital or specialized clinic focused on patient care and well-being."
+  },
+  {
+    "id": "ex_1761646341467",
+    "name": "Stella Foods",
+    "logoUrl": "https://www.stella-evoluzionealimentare.it/wp-content/uploads/2023/02/logo_stella_video-768x303.png",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "STELLA FOODS operates within the food sector, focusing on the production and/or distribution of food products. The company supplies various food items to retail, wholesale, or HoReCa markets."
+  },
+  {
+    "id": "ex_1761646505770",
+    "name": "Te Komuna - Foodis",
+    "logoUrl": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=350,fit=crop,q=95/mnlJ0bjLVZi3L8JD/te-komuna-menu--01-dOqDEGyxMOSL3Zwy.png",
+    "sector": "Food & Agriculture",
+    "country": "Albania",
+    "description": "TE KOMUNA – FOODIS represents a gastronomy concept, likely focused on modern street food or casual dining experiences. The brand offers a unique culinary proposition within the food service sector."
+  },
+  {
+    "id": "ex_1761646547823",
+    "name": "TOB & AP – Teatri i Operas & Ansambli Popullor",
+    "logoUrl": "https://observerkult.com/wp-content/uploads/2021/02/tokoap-696x393.jpg",
+    "sector": "Tourism & Culture",
+    "country": "Albania",
+    "description": "The National Theatre of Opera and Ballet (TKOB) and the National Folk Song and Dance Ensemble (AKVP) are Albania's premier national performing arts institutions. Based in Tirana, they are dedicated to preserving and promoting Albanian and international opera, ballet, and folk traditions through high-calibre performances and artistic development."
+  },
+  {
+    "id": "ex_1761646629648",
+    "name": "Tourist Organization Kolašin",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp9T_I8gpL6Czvocv129QcJXfvhzq4dBMiqA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Montenegro",
+    "description": "The Tourist Organization of Kolašin is the official municipal body responsible for destination promotion for the Kolašin region in Montenegro. It provides comprehensive visitor information, guides, and support services to enhance the tourism experience in this mountainous area."
+  },
+  {
+    "id": "ex_1761646728374",
+    "name": "UET – Universiteti Europian i Tiranës",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/sq/5/53/UET_Logo.PNG",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "The European University of Tirana (UET) is a leading private university in Albania, established in 2006. It offers a wide range of academic programs at bachelor, master, and doctoral levels, particularly focused on social sciences, economics, law, communication, and political sciences."
+  },
+  {
+    "id": "ex_1761646760067",
+    "name": "Unioncamera Puglia",
+    "logoUrl": "https://www.unioncamerepuglia.it/wp-content/uploads/2023/01/logo-unioncamere-puglia-news.png",
+    "sector": "Energy & Infrastructure",
+    "country": "Italy",
+    "description": "Unioncamere Puglia represents the regional network of Chambers of Commerce in the Puglia region of Italy. It serves as a key institutional body supporting local businesses, particularly through internationalization services, training, and promoting economic development within the region"
+  },
+  {
+    "id": "ex_1761646918459",
+    "name": "Xhengo Photography",
+    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTx-paRgKV0yryaQFPD4nYV49CBzgLOgXrvA&s",
+    "sector": "Energy & Infrastructure",
+    "country": "Albania",
+    "description": "XHENGO Photography provides professional photographic services and potentially visual branding solutions. Operating as a photo studio, it offers high-quality imagery for commercial, personal, or artistic purposes."
+  }
+]
