@@ -219,8 +219,8 @@
 
                     const name = obj.get('exhibitorName') || '';
 
-                    // Check if the exhibitor name *STARTS WITH* the search term
-                    if (term.length > 0 && name.toLowerCase().startsWith(term)) {
+                    // Check if the exhibitor name *INCLUDES* the search term
+                    if (term.length > 0 && name.toLowerCase().includes(term)) {
                         // Highlight match: bright green, full opacity
                         obj.set({
                             stroke: '#10B981', // Tailwind green-500
@@ -328,4 +328,5 @@
     </script>
 </body>
 </html>
+
 
