@@ -100,7 +100,7 @@
                         <option value="za">Sort Z to A</option>
                     </select>
                 </div>
-                
+
                 <!-- ADMIN CONTROLS REMOVED -->
 
             </div>
@@ -116,14 +116,14 @@
                         <div class="h-3 bg-gray-200 rounded w-1/2"></div>
                     </div>
                 </div>
-                 <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
+                <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
                     <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
                     <div class="flex-1 min-w-0 space-y-2">
                         <div class="h-4 bg-gray-200 rounded w-3/4"></div>
                         <div class="h-3 bg-gray-200 rounded w-1/2"></div>
                     </div>
                 </div>
-                 <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
+                <div class="loading-skeleton p-3 border rounded-lg flex items-center space-x-3 bg-white animate-pulse">
                     <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
                     <div class="flex-1 min-w-0 space-y-2">
                         <div class="h-4 bg-gray-200 rounded w-3/4"></div>
@@ -175,6 +175,33 @@
                         <input type="text" id="company" name="company" required
                             class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
+
+                    <!-- START: ADDED DATE/TIME FIELDS -->
+                    <div>
+                        <label for="meeting-date" class="block text-sm font-medium text-gray-700 mb-1">Meeting
+                            Date*</label>
+                        <select id="meeting-date" name="meeting-date" required
+                            class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="" disabled selected>Select a date</option>
+                            <option value="November 5">November 5</option>
+                            <option value="November 6">November 6</option>
+                            <option value="November 7">November 7</option>
+                            <option value="November 8">November 8</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="meeting-time" class="block text-sm font-medium text-gray-700 mb-1">Meeting
+                            Time*</label>
+                        <select id="meeting-time" name="meeting-time" required
+                            class="w-full p-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="" disabled selected>Select a time slot</option>
+                            <option value="10:00 - 12:00">10:00 - 12:00</option>
+                            <option value="12:00 - 14:00">12:00 - 14:00</option>
+                            <option value="16:00 - 18:00">16:00 - 18:00</option>
+                            <option value="18:00 - 20:00">18:00 - 20:00</option>
+                        </select>
+                    </div>
+                    <!-- END: ADDED DATE/TIME FIELDS -->
                 </div>
 
                 <!-- Call to Action -->
@@ -200,7 +227,8 @@
             </div>
             <!-- Modal Content (Read-Only) -->
             <div class="py-4 space-y-4 overflow-y-auto">
-                <img id="info-logo" src="" alt="Company Logo" class="w-24 h-24 bg-gray-200 rounded-lg object-cover mb-4">
+                <img id="info-logo" src="" alt="Company Logo"
+                    class="w-24 h-24 bg-gray-200 rounded-lg object-cover mb-4">
                 <div>
                     <label class="block text-sm font-medium text-gray-500 mb-1">Sector</label>
                     <p id="info-sector" class="w-full p-2 text-gray-800 font-medium"></p>
@@ -237,6 +265,9 @@
             <div id="session-list" class="mt-6 text-left max-w-md mx-auto space-y-2">
                 <!-- Selected companies will be listed here by JS -->
             </div>
+            <!-- START: ADDED CONFIRMATION DETAILS -->
+            <p id="confirmation-details" class="mt-6 text-lg text-gray-600"></p>
+            <!-- END: ADDED CONFIRMATION DETAILS -->
         </div>
     </div>
 
@@ -262,6 +293,29 @@
         let mainAppContainer, confirmationScreen, sessionList;
         let infoModal, closeInfoModalBtn, closeInfoModalBtnFooter, infoModalTitle, infoLogo, infoSector, infoCountry, infoDescription;
         let loadingSkeletons;
+        let confirmationDetails; // <-- ADDED THIS
+
+        // START: ADDED MOCK DATA FUNCTION
+        // Function to generate a small list of mock exhibitors for startup
+        function generateMockData(count) {
+            let data = [];
+            for (let i = 1; i <= count; i++) {
+                const sector = MOCK_SECTORS[i % MOCK_SECTORS.length];
+                const country = MOCK_COUNTRIES[i % MOCK_COUNTRIES.length];
+                const name = `Exhibitor ${i} ${sector.substring(0, 3)}`;
+
+                data.push({
+                    id: `ex_${i}`,
+                    name: name,
+                    logoUrl: `https://placehold.co/100x100/E2E8F0/4A5568?text=${name.substring(0, 3)}${i}`,
+                    sector: sector,
+                    country: country,
+                    description: `This is a detailed description for ${name}, a leading company in the ${sector} industry from ${country}. They specialize in innovative solutions and are looking to connect with partners in B2B matchmaking. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+                });
+            }
+            return data;
+        }
+        // END: ADDED MOCK DATA FUNCTION
 
         // --- CORE FUNCTIONS ---
 
@@ -276,7 +330,7 @@
             // Clear existing options
             sectorFilter.innerHTML = '<option value="all">All Sectors</option>';
             countryFilter.innerHTML = '<option value="all">All Countries</option>';
-            
+
             allSectors.forEach(sector => {
                 sectorFilter.add(new Option(sector, sector));
             });
@@ -316,7 +370,7 @@
             exhibitorList.innerHTML = filteredData.map(ex => {
                 const isSelected = selectedExhibitors.has(ex.id);
                 const logo = ex.logoUrl || `https://placehold.co/100x100/E2E8F0/4A5568?text=${encodeURIComponent(ex.name.substring(0, 3))}`;
-                
+
                 return `
                     <div class="exhibitor-card bg-white p-3 border rounded-lg flex items-center space-x-3 cursor-pointer transition-all duration-200 hover:shadow-md ${isSelected ? 'card-selected' : 'border-gray-200'}" data-id="${ex.id}">
                         <img src="${logo}" alt="${ex.name} Logo" class="w-12 h-12 bg-gray-200 rounded-lg flex-shrink-0 object-cover" onerror="this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=Logo';">
@@ -450,7 +504,7 @@
             });
 
             if (!allValid) {
-                showFormMessage('Please fill in all the required fields marked with (MUST FILL IN).', true);
+                showFormMessage('Please fill in all the required fields marked with *.', true); // Updated message
                 return;
             }
 
@@ -463,6 +517,10 @@
 
             // 3. Prepare data for submission
             const formData = new FormData(contactForm);
+            // Get date/time for confirmation *before* resetting form
+            const selectedDate = formData.get('meeting-date');
+            const selectedTime = formData.get('meeting-time');
+
             const submissionData = {
                 contactInfo: Object.fromEntries(formData.entries()),
                 selectedCompanyIds: Array.from(selectedExhibitors)
@@ -497,6 +555,10 @@
                     }
                 });
 
+                // START: ADDED confirmation details
+                confirmationDetails.textContent = `Your requested meeting time is: ${selectedDate} at ${selectedTime}.`;
+                // END: ADDED confirmation details
+
                 // 6. Hide app, show confirmation
                 mainAppContainer.classList.add('hidden');
                 confirmationScreen.classList.remove('hidden');
@@ -506,7 +568,7 @@
                 selectedExhibitors.clear();
                 renderExhibitors(); // Re-render to remove 'selected' styles
                 updateSelectionSummary(); // Resets counter
-                
+
             } catch (error) {
                 console.error("Form submission error:", error);
                 showFormMessage(`An error occurred during submission: ${error.message}. Please try again.`, true);
@@ -536,6 +598,7 @@
             confirmationScreen = document.getElementById('confirmation-screen');
             sessionList = document.getElementById('session-list');
             loadingSkeletons = document.querySelectorAll('.loading-skeleton');
+            confirmationDetails = document.getElementById('confirmation-details'); // <-- ADDED THIS
 
             // "Info" Modal
             infoModal = document.getElementById('info-modal');
@@ -548,29 +611,17 @@
             infoDescription = document.getElementById('info-description');
 
 
-            // --- LOAD DATA FROM JSON ---
-            fetch('exhibitors.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    exhibitorsData = data; // Load data from JSON
-                    
-                    // 2. Set up filters
-                    populateFilters();
+            // --- START: REPLACED FETCH WITH MOCK DATA ---
+            // 1. Generate data
+            exhibitorsData = generateMockData(20); // Start with a sample of 20
 
-                    // 3. Initial render
-                    renderExhibitors();
-                    updateSelectionSummary();
-                })
-                .catch(error => {
-                    console.error("Error loading exhibitors.json:", error);
-                    exhibitorList.innerHTML = `<div class="text-center text-red-600 font-medium p-6">Failed to load exhibitor list. Please make sure 'exhibitors.json' is present.</div>`;
-                    loadingSkeletons.forEach(el => el.classList.add('hidden'));
-                });
+            // 2. Set up filters
+            populateFilters();
+
+            // 3. Initial render
+            renderExhibitors();
+            updateSelectionSummary();
+            // --- END: REPLACED FETCH WITH MOCK DATA ---
 
 
             // --- ATTACH EVENT LISTENERS ---
