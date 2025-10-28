@@ -302,9 +302,9 @@
             const autoLoadData = async () => {
                 try {
                     // --- FIX: Use the correct file name ---
-                    const response = await fetch('./floor-plan-data-3.json');
+                    const response = await fetch('./floor-plan-data.json');
                     if (!response.ok) {
-                        throw new Error('floor-plan-data-3.json not found or failed to load.');
+                        throw new Error('floor-plan-data.json not found or failed to load.');
                     }
                     const loadedData = await response.json();
                     if (loadedData.activeFloor !== undefined && loadedData.floors) {
