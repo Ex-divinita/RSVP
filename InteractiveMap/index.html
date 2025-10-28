@@ -204,7 +204,7 @@
 
             const hideTooltip = () => { tooltip.classList.add('hidden'); };
 
-            // --- START: ADDED SEARCH FUNCTION ---
+            // --- START: MODIFIED SEARCH FUNCTION ---
             /**
              * Handles highlighting objects on the canvas based on the search term.
              * @param {string} searchTerm - The text from the search input.
@@ -216,27 +216,36 @@
                     // Get original stroke color to reset non-matches
                     const sector = obj.get('sector') || 'Unassigned';
                     const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                    
+
                     const name = obj.get('exhibitorName') || '';
 
-                    // Check if the exhibitor name includes the search term
-                    if (term.length > 0 && name.toLowerCase().includes(term)) {
-                        // Highlight match with a bright green
+                    // Check if the exhibitor name *STARTS WITH* the search term
+                    if (term.length > 0 && name.toLowerCase().startsWith(term)) {
+                        // Highlight match: bright green, full opacity
                         obj.set({
                             stroke: '#10B981', // Tailwind green-500
-                            strokeWidth: 5
+                            strokeWidth: 5,
+                            opacity: 1 // Make sure it's fully visible
                         });
-                    } else {
-                        // Reset to original stroke
+                    } else if (term.length > 0) {
+                        // Dim non-matches
                         obj.set({
                             stroke: originalStroke,
-                            strokeWidth: 2
+                            strokeWidth: 2,
+                            opacity: 0.3 // Dim by 70%
+                        });
+                    } else {
+                        // Reset all to original stroke and full opacity if search is empty
+                        obj.set({
+                            stroke: originalStroke,
+                            strokeWidth: 2,
+                            opacity: 1 // Ensure full opacity
                         });
                     }
                 });
                 canvas.renderAll(); // Re-render the canvas to show changes
             };
-            // --- END: ADDED SEARCH FUNCTION ---
+            // --- END: MODIFIED SEARCH FUNCTION ---
 
 
             // --- Event Listeners ---
@@ -260,9 +269,10 @@
             canvas.on('mouse:over', (e) => {
                 if (e.target) { // currentMode check removed (always viewer)
                     showTooltip(e.target);
-                    // --- FIX: Only highlight if not currently search-highlighted ---
+                    // --- FIX: Only highlight if not currently search-highlighted AND not dimmed ---
                     const currentStroke = e.target.get('stroke');
-                    if (currentStroke !== '#10B981') { // Don't override search highlight
+                    const currentOpacity = e.target.get('opacity') || 1; // Default to 1 if undefined
+                    if (currentStroke !== '#10B981' && currentOpacity === 1) { // Don't override search highlight or hover dimmed items
                         e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue hover
                         canvas.renderAll();
                     }
@@ -273,7 +283,7 @@
                     hideTooltip();
                     // --- FIX: Only reset if not search-highlighted ---
                     const currentStroke = e.target.get('stroke');
-                    if (currentStroke !== '#10B981') {
+                    if (currentStroke !== '#10B981') { // Don't override search highlight
                         const sector = e.target.get('sector') || 'Unassigned';
                         const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
                         e.target.set({ stroke: originalStroke, strokeWidth: 2 });
@@ -292,9 +302,9 @@
             const autoLoadData = async () => {
                 try {
                     // --- FIX: Use the correct file name ---
-                    const response = await fetch('./floor-plan-data.json');
+                    const response = await fetch('./floor-plan-data-3.json');
                     if (!response.ok) {
-                        throw new Error('floor-plan-data.json not found or failed to load.');
+                        throw new Error('floor-plan-data-3.json not found or failed to load.');
                     }
                     const loadedData = await response.json();
                     if (loadedData.activeFloor !== undefined && loadedData.floors) {
@@ -318,3 +328,4 @@
     </script>
 </body>
 </html>
+
