@@ -32,7 +32,7 @@
             <!-- Removed App Mode Subtitle -->
         </div>
         <div class="w-1/3">
-            <input type="text" id="searchInput" placeholder="Search Exhibitors..."
+            <input type="text" id="searchInput" placeholder="Search Exhibitors on this floor..."
                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
     </header>
@@ -146,6 +146,8 @@
                 canvas.loadFromJSON({ objects: newFloorData.objects }, () => {
                     canvas.renderAll();
                     updateCanvasInteractivity();
+                    // --- FIX: Apply search to newly loaded floor ---
+                    handleSearch(searchInput.value);
                 });
                 floorSwitchers.forEach(btn => btn.classList.toggle('active-floor', parseInt(btn.dataset.floor, 10) === floorNumber));
             };
@@ -202,8 +204,47 @@
 
             const hideTooltip = () => { tooltip.classList.add('hidden'); };
 
+            // --- START: ADDED SEARCH FUNCTION ---
+            /**
+             * Handles highlighting objects on the canvas based on the search term.
+             * @param {string} searchTerm - The text from the search input.
+             */
+            const handleSearch = (searchTerm) => {
+                const term = searchTerm.toLowerCase().trim();
+
+                canvas.getObjects().forEach(obj => {
+                    // Get original stroke color to reset non-matches
+                    const sector = obj.get('sector') || 'Unassigned';
+                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
+                    
+                    const name = obj.get('exhibitorName') || '';
+
+                    // Check if the exhibitor name includes the search term
+                    if (term.length > 0 && name.toLowerCase().includes(term)) {
+                        // Highlight match with a bright green
+                        obj.set({
+                            stroke: '#10B981', // Tailwind green-500
+                            strokeWidth: 5
+                        });
+                    } else {
+                        // Reset to original stroke
+                        obj.set({
+                            stroke: originalStroke,
+                            strokeWidth: 2
+                        });
+                    }
+                });
+                canvas.renderAll(); // Re-render the canvas to show changes
+            };
+            // --- END: ADDED SEARCH FUNCTION ---
+
+
             // --- Event Listeners ---
             floorSwitchers.forEach(btn => btn.addEventListener('click', () => switchFloor(parseInt(btn.dataset.floor, 10))));
+
+            // --- START: ADDED SEARCH EVENT LISTENER ---
+            searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
+            // --- END: ADDED SEARCH EVENT LISTENER ---
 
             // Removed all editor/drawing event listeners
 
@@ -219,17 +260,25 @@
             canvas.on('mouse:over', (e) => {
                 if (e.target) { // currentMode check removed (always viewer)
                     showTooltip(e.target);
-                    e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue highlight
-                    canvas.renderAll();
+                    // --- FIX: Only highlight if not currently search-highlighted ---
+                    const currentStroke = e.target.get('stroke');
+                    if (currentStroke !== '#10B981') { // Don't override search highlight
+                        e.target.set({ stroke: '#0ea5e9', strokeWidth: 4 }); // Bright blue hover
+                        canvas.renderAll();
+                    }
                 }
             });
             canvas.on('mouse:out', (e) => {
                 if (e.target) { // currentMode check removed (always viewer)
                     hideTooltip();
-                    const sector = e.target.get('sector') || 'Unassigned';
-                    const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
-                    e.target.set({ stroke: originalStroke, strokeWidth: 2 });
-                    canvas.renderAll();
+                    // --- FIX: Only reset if not search-highlighted ---
+                    const currentStroke = e.target.get('stroke');
+                    if (currentStroke !== '#10B981') {
+                        const sector = e.target.get('sector') || 'Unassigned';
+                        const originalStroke = (sectorColors[sector] || sectorColors['Unassigned']).stroke;
+                        e.target.set({ stroke: originalStroke, strokeWidth: 2 });
+                        canvas.renderAll();
+                    }
                 }
             });
 
@@ -242,9 +291,10 @@
             // Auto-load function for GitHub Pages (Viewer Mode)
             const autoLoadData = async () => {
                 try {
+                    // --- FIX: Use the correct file name ---
                     const response = await fetch('./floor-plan-data.json');
                     if (!response.ok) {
-                        throw new Error('floor-plan-data.json not found or failed to load.');
+                        throw new Error('floor-plan-data-3.json not found or failed to load.');
                     }
                     const loadedData = await response.json();
                     if (loadedData.activeFloor !== undefined && loadedData.floors) {
