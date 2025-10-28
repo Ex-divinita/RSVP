@@ -532,7 +532,7 @@
                 // --- START: ADDED confirmation details ---
                 const confirmationDetails = document.getElementById('confirmation-details');
                 if (selectedDate && selectedTime) {
-                    confirmationDetails.textContent = `Your requested meeting time is: ${selectedDate} at ${selectedTime}.`;
+                    confirmationDetails.textContent = `Your requested meeting time is: ${selectedDate} from ${selectedTime}.`;
                 } else {
                     confirmationDetails.textContent = ''; // Clear if date/time somehow missing
                 }
