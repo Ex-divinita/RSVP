@@ -100,7 +100,7 @@
                         <option value="za">Sort Z to A</option>
                     </select>
                 </div>
-               
+
                 <!-- ADMIN CONTROLS REMOVED -->
 
             </div>
@@ -263,6 +263,9 @@
             <div id="session-list" class="mt-6 text-left max-w-md mx-auto space-y-2">
                 <!-- Selected companies will be listed here by JS -->
             </div>
+            <!-- START: ADDED confirmation details -->
+            <p id="confirmation-details" class="mt-4 text-md text-gray-500 font-medium"></p>
+            <!-- END: ADDED confirmation details -->
         </div>
     </div>
 
@@ -302,7 +305,7 @@
             // Clear existing options
             sectorFilter.innerHTML = '<option value="all">All Sectors</option>';
             countryFilter.innerHTML = '<option value="all">All Countries</option>';
-           
+
             allSectors.forEach(sector => {
                 sectorFilter.add(new Option(sector, sector));
             });
@@ -342,16 +345,16 @@
             exhibitorList.innerHTML = filteredData.map(ex => {
                 const isSelected = selectedExhibitors.has(ex.id);
                 const logo = ex.logoUrl || `https://placehold.co/100x100/E2E8F0/4A5568?text=${encodeURIComponent(ex.name.substring(0, 3))}`;
-               
+
                 return `
                     <div class="exhibitor-card bg-white p-3 border rounded-lg flex items-center space-x-3 cursor-pointer transition-all duration-200 hover:shadow-md ${isSelected ? 'card-selected' : 'border-gray-200'}" data-id="${ex.id}">
                         <img src="${logo}" alt="${ex.name} Logo" class="w-12 h-12 bg-gray-200 rounded-lg flex-shrink-0 object-cover" onerror="this.src='https://placehold.co/100x100/E2E8F0/4A5568?text=Logo';">
-                       
+
                         <div class="flex-1 min-w-0">
                             <p class="font-semibold text-gray-800 truncate">${ex.name}</p>
                             <p class="text-sm text-gray-500">${ex.sector} | ${ex.country}</p>
                         </div>
-                       
+
                         <button class="info-button text-sm font-medium text-blue-600 hover:underline flex-shrink-0 px-2 py-1" data-id="${ex.id}">
                             More Info
                         </button>
@@ -476,7 +479,7 @@
             });
 
             if (!allValid) {
-                showFormMessage('Please fill in all the required fields marked with (MUST FILL IN).', true);
+                showFormMessage('Please fill in all the required fields marked with *. ', true); // Updated message
                 return;
             }
 
@@ -526,6 +529,15 @@
                     }
                 });
 
+                // --- START: ADDED confirmation details ---
+                const confirmationDetails = document.getElementById('confirmation-details');
+                if (selectedDate && selectedTime) {
+                    confirmationDetails.textContent = `Your requested meeting time is: ${selectedDate} at ${selectedTime}.`;
+                } else {
+                    confirmationDetails.textContent = ''; // Clear if date/time somehow missing
+                }
+                // --- END: ADDED confirmation details ---
+
                 // 6. Hide app, show confirmation
                 mainAppContainer.classList.add('hidden');
                 confirmationScreen.classList.remove('hidden');
@@ -535,7 +547,7 @@
                 selectedExhibitors.clear();
                 renderExhibitors(); // Re-render to remove 'selected' styles
                 updateSelectionSummary(); // Resets counter
-               
+
             } catch (error) {
                 console.error("Form submission error:", error);
                 showFormMessage(`An error occurred during submission: ${error.message}. Please try again.`, true);
@@ -587,7 +599,7 @@
                 })
                 .then(data => {
                     exhibitorsData = data; // Load data from JSON
-                   
+
                     // 2. Set up filters
                     populateFilters();
 
