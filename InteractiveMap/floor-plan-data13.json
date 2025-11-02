@@ -1,0 +1,6179 @@
+{
+  "activeFloor": 0,
+  "floors": {
+    "0": {
+      "backgroundURL": "floor0.jpg",
+      "objects": [
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 721,
+          "top": 454.52,
+          "width": 137,
+          "height": 51.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 0.98,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Serbia",
+          "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
+          "sector": "Construction",
+          "id": "booth_1761037413290"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 671,
+          "top": 489.4,
+          "width": 0,
+          "height": 0,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Unnamed Booth",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1761037865103"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 501,
+          "top": 454.4,
+          "width": 68,
+          "height": 50.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Burstock",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQF8B9-HdXUToQ/company-logo_100_100/company-logo_100_100/0/1678659123748/burstock_logo?e=2147483647&v=beta&t=sgtlxTu4hUNuaKC64NrFvNEHhJeYzKXnV714yTvgyjo",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761037978910"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 444,
+          "top": 454.4,
+          "width": 57,
+          "height": 49.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.02,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Sol Energy Solutions",
+          "logoUrl": "https://i.ibb.co/xt602zT2/Screenshot-2025-10-29-at-11-00-43.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761038096256"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 406,
+          "top": 454.4,
+          "width": 40,
+          "height": 53.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.93,
+          "scaleY": 0.96,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Partners Albania",
+          "logoUrl": "https://resourcecentre.al/wp-content/uploads/2024/06/logo-partners-1-e1645192885160-1.jpg",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761038264342"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 148,
+          "top": 282.94,
+          "width": 54,
+          "height": 103.98,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Deol Light",
+          "logoUrl": "https://deol-light.com/wp-content/uploads/2022/06/deol-done-OR-1-NEW.pdf-3.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761043433137"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 144.5,
+          "top": 37.99,
+          "width": 184,
+          "height": 143.97,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Belmet MI",
+          "logoUrl": "https://belmet.si/content/uploads/2021/09/BELMET-MI-logo-2017-color_web.png",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761048280420",
+          "points": [
+            {
+              "x": 176,
+              "y": 181.4611598544832
+            },
+            {
+              "x": 176,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 147,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 147,
+              "y": 101.47827947785149
+            },
+            {
+              "x": 165,
+              "y": 82.48234538840146
+            },
+            {
+              "x": 145,
+              "y": 62.48662529424353
+            },
+            {
+              "x": 147,
+              "y": 58.487481275411945
+            },
+            {
+              "x": 162,
+              "y": 37.49197517654612
+            },
+            {
+              "x": 226,
+              "y": 37.49197517654612
+            },
+            {
+              "x": 226,
+              "y": 100.4784934731436
+            },
+            {
+              "x": 235,
+              "y": 110.47635352022256
+            },
+            {
+              "x": 263,
+              "y": 110.47635352022256
+            },
+            {
+              "x": 320,
+              "y": 131.47185961908838
+            },
+            {
+              "x": 329,
+              "y": 128.4725016049647
+            },
+            {
+              "x": 286,
+              "y": 181.4611598544832
+            },
+            {
+              "x": 175,
+              "y": 181.4611598544832
+            },
+            {
+              "x": 175,
+              "y": 181.4611598544832
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 224,
+          "top": 215.45,
+          "width": 82,
+          "height": 64.99,
+          "fill": "rgba(239, 68, 68, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Porti i Durresit",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy20dlcgO_OC7rZBKdoDI6b9UEupb9F6t3tg&s",
+          "sector": "Automotive",
+          "id": "booth_1761048400613"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 225,
+          "top": 281.94,
+          "width": 39,
+          "height": 87.98,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Kesh",
+          "logoUrl": "https://www.kesh.al/wp-content/uploads/2024/03/logo-kesh-24.svg",
+          "sector": "Energy",
+          "id": "booth_1761048565515"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 265,
+          "top": 281.94,
+          "width": 40,
+          "height": 88.98,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 0.99,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "OST",
+          "logoUrl": "https://ost.al/wp-content/uploads/2022/01/ost-logo-top.png",
+          "sector": "Energy",
+          "id": "booth_1761048641464"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 224,
+          "top": 372.42,
+          "width": 84,
+          "height": 61.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.95,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "OSHEE",
+          "logoUrl": "https://oshee.al/wp-content/uploads/2019/02/Logo_footer.png",
+          "sector": "Energy",
+          "id": "booth_1761048742376"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 327,
+          "top": 216.45,
+          "width": 81,
+          "height": 36.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Carsija",
+          "logoUrl": "",
+          "sector": "Manufacturing",
+          "id": "booth_1761048849062"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 326,
+          "top": 254.45,
+          "width": 81,
+          "height": 177.96,
+          "fill": "rgba(139, 92, 246, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Montenegro",
+          "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/1200px-Flag_of_Montenegro.svg.png",
+          "sector": "Finance",
+          "id": "booth_1761048954329"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 430,
+          "top": 215.45,
+          "width": 68,
+          "height": 129.97,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Veronesi / Real Coffee",
+          "logoUrl": "https://www.veronesi.it/wp-content/uploads/2021/02/Logo-Veronesi-no-fondo-bianco-300.png",
+          "sector": "Construction",
+          "id": "booth_1761049049120"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 357.5,
+          "top": 118.47,
+          "width": 82,
+          "height": 76.98,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Scan TV",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq-MnibsRBH6jaGrkPoJcCoLpDkmutOspORg&s",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1761049171596",
+          "points": [
+            {
+              "x": 358,
+              "y": 195.95805692274772
+            },
+            {
+              "x": 358,
+              "y": 118.97453456023968
+            },
+            {
+              "x": 413,
+              "y": 137.9704686496897
+            },
+            {
+              "x": 413,
+              "y": 157.96618874384765
+            },
+            {
+              "x": 439,
+              "y": 157.96618874384765
+            },
+            {
+              "x": 440,
+              "y": 195.95805692274772
+            },
+            {
+              "x": 358,
+              "y": 195.95805692274772
+            },
+            {
+              "x": 358,
+              "y": 195.95805692274772
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 440,
+          "top": 157.97,
+          "width": 55,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "EIS – Engineering Innovation Solutions",
+          "logoUrl": "https://i.ibb.co/qLF1gGkL/Screenshot-2025-10-29-at-23-24-46.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761049224470"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 653,
+          "top": 158.97,
+          "width": 36,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.97,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Salto Systems",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXrmb4VrsSc_5opC_W8aNBwZmmKHFRTwU4Q&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761049439063"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 691,
+          "top": 151.47,
+          "width": 31,
+          "height": 43.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.3,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Keypoint Partner",
+          "logoUrl": "https://static.wixstatic.com/media/04f522_e1d8a51bba4346a68f2607da6880ece1~mv2.jpg/v1/fill/w_514,h_162,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/KeyPoint_logo_1124.jpg",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761049726910"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 734,
+          "top": 159.47,
+          "width": 43,
+          "height": 35.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.96,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "ART Piano",
+          "logoUrl": "",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1761049800936"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 776.5,
+          "top": 118.97,
+          "width": 46,
+          "height": 76.98,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Fredi Electronics",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS51yRfGDzM7R9qSO-i59_vD4LCEfQRcv0jA&s",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1761049956743",
+          "points": [
+            {
+              "x": 778,
+              "y": 195.45816392039376
+            },
+            {
+              "x": 777,
+              "y": 132.4716456237963
+            },
+            {
+              "x": 812,
+              "y": 119.47442756259363
+            },
+            {
+              "x": 823,
+              "y": 119.47442756259363
+            },
+            {
+              "x": 823,
+              "y": 196.45794992510164
+            },
+            {
+              "x": 778,
+              "y": 196.45794992510164
+            },
+            {
+              "x": 778,
+              "y": 196.45794992510164
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 850.5,
+          "top": 56.99,
+          "width": 187,
+          "height": 124.97,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Klevi Fire Protection",
+          "logoUrl": "https://i.ibb.co/5hHSHJBv/Screenshot-2025-10-29-at-10-53-54.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761050101158",
+          "points": [
+            {
+              "x": 1005,
+              "y": 181.4611598544832
+            },
+            {
+              "x": 896,
+              "y": 182.4609458591911
+            },
+            {
+              "x": 851,
+              "y": 128.4725016049647
+            },
+            {
+              "x": 859,
+              "y": 131.47185961908838
+            },
+            {
+              "x": 918,
+              "y": 110.47635352022256
+            },
+            {
+              "x": 946,
+              "y": 110.47635352022256
+            },
+            {
+              "x": 956,
+              "y": 100.4784934731436
+            },
+            {
+              "x": 956,
+              "y": 57.487695270704045
+            },
+            {
+              "x": 1034,
+              "y": 59.48726728011984
+            },
+            {
+              "x": 1035,
+              "y": 59.48726728011984
+            },
+            {
+              "x": 1035,
+              "y": 62.48662529424353
+            },
+            {
+              "x": 1015,
+              "y": 81.48255938369356
+            },
+            {
+              "x": 1038,
+              "y": 105.47742349668307
+            },
+            {
+              "x": 1038,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 1004,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 1005,
+              "y": 181.4611598544832
+            },
+            {
+              "x": 1005,
+              "y": 181.4611598544832
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 978.08,
+          "top": 312.36,
+          "width": 53,
+          "height": 61.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1.02,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "TREZETA Soc. Cooperativa",
+          "logoUrl": "https://www.trezetaitaly.com/wp-content/uploads/2025/04/trezeta-logo-300.png",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761050405900"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 796,
+          "top": 567.38,
+          "width": 68,
+          "height": 49.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.17,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Maestri Italiani",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBu1KAv_K1H7BzfZVXPn734IKPmtTue7l3g&s",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761050633559"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 740,
+          "top": 567.38,
+          "width": 54,
+          "height": 51.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.94,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "NTS International",
+          "logoUrl": "",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761050727493"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 376,
+          "top": 567.38,
+          "width": 55,
+          "height": 49.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.16,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Ministria e Turizmit, Kulturës dhe Sportit",
+          "logoUrl": "https://yt3.googleusercontent.com/TCTZmF-cOEvNu7GBo_4ki1QqxOKwDbhrRZwjg8ZEamDGM9dzheyNWiJ84wyV73puoNXi2Vus_A=s900-c-k-c0x00ffffff-no-rj",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761050964077"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 305,
+          "top": 567.38,
+          "width": 65,
+          "height": 49.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.06,
+          "scaleY": 1.02,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Information and Data Protection Commissioner - Komisioneri per te Drejten e Informimit dhe Mbrojtjen e te Dhenave Personale",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQFG5isgNSYAug/company-logo_200_200/B4EZmfeTmeHoAI-/0/1759317147551/idp_albania_logo?e=2147483647&v=beta&t=_VUzDwdMIg8KkByMRi_c2-wE0bCVCfgOTDcUyoXvz18",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761051023988"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 611,
+          "top": 454.9,
+          "width": 107,
+          "height": 49.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Pajtoni",
+          "logoUrl": "https://pajtonigroup.al/wp-content/uploads/2024/12/429102024124959-1.png",
+          "sector": "Unassigned",
+          "id": "booth_1761051146722"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 803,
+          "top": 507.39,
+          "width": 54,
+          "height": 35.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Farina Molini ",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1761051197405"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 748,
+          "top": 507.39,
+          "width": 54,
+          "height": 36.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.96,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Mamo Pizza",
+          "logoUrl": "https://mamopizza.it/wp-content/uploads/2023/03/Logo-Mamo-Pizza_Colori.png",
+          "sector": "Manufacturing",
+          "id": "booth_1761051273498"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 721,
+          "top": 506.89,
+          "width": 27,
+          "height": 37.99,
+          "fill": "rgba(239, 68, 68, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.96,
+          "scaleY": 0.96,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Union Cam",
+          "logoUrl": "",
+          "sector": "Automotive",
+          "id": "booth_1761051350057"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 665,
+          "top": 507.39,
+          "width": 54,
+          "height": 36.99,
+          "fill": "rgba(16, 185, 129, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.97,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "D.R. Ferroviaria",
+          "logoUrl": "https://www.drferroviaria.it/wp-content/uploads/2025/06/Logo_2023-no-padd-scaled.png",
+          "sector": "Technology",
+          "id": "booth_1761051489669"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 611,
+          "top": 507.89,
+          "width": 53,
+          "height": 35.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "FederCamere",
+          "logoUrl": "https://federcamere.it/public_html/uploads/20230519150905_1150548612.png",
+          "sector": "Energy",
+          "id": "booth_1761051526091"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 515,
+          "top": 507.39,
+          "width": 55,
+          "height": 36.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "FederCamere",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQGeVIpTYMpCww/company-logo_200_200/company-logo_200_200/0/1709807071451/federcamere_logo?e=2147483647&v=beta&t=HnHxbkCjHl0wPH1OYep_zU_nnblmJHQsPLH93SkTOpI",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761051623286"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 488,
+          "top": 506.39,
+          "width": 26,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Lubing System",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQGs-P5OEbuq6A/company-logo_200_200/B4EZXRa6ZdHcAI-/0/1742975248312/lubing_logo?e=2147483647&v=beta&t=FnlAPoa36AWG5pTJCs7unsyJfUZQGIMtB9dYfvvT3LA",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761051648774"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 460,
+          "top": 506.39,
+          "width": 27,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Cooperazione Italiana Catering",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzTCfUw3-RT5DPFcFmKDwxp2FY35kSI2mXA&s",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761051709420"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 433,
+          "top": 506.39,
+          "width": 26,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Biodelta",
+          "logoUrl": "https://i1.wp.com/www.biodelta.it/wp-content/uploads/2018/11/logo-biodelta.png?zoom=2&fit=180%2C180&ssl=1",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761051773098"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 406,
+          "top": 506.39,
+          "width": 26,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Sika",
+          "logoUrl": "https://www.sikaprofili.com/wp-content/uploads/2025/01/Clip-path-group.svg",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761051856607"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 351,
+          "top": 506.39,
+          "width": 27,
+          "height": 37.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Algeco",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs96YPnIypXS8PWEwVSVjn05ARDtpZqPk_og&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761051931911"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 379,
+          "top": 507.39,
+          "width": 24,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.08,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Aluminox",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDid-5T4V3eVfU9KZQ7_84NePR9pp8jLXZNTrTchJ-D6mQap4oXjUtzrWXK4HYZuApig&usqp=CAU",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761051987365"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 324,
+          "top": 506.39,
+          "width": 25,
+          "height": 38.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.98,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Intermizzo",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVBjXuEVUKdT64b03N0WBLIKqLWG-FYEFt0A&s",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761052033333"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 323,
+          "top": 454.4,
+          "width": 82,
+          "height": 50.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "LGM Surfaces – Shot & Sandblasting",
+          "logoUrl": "https://i.ibb.co/k28DKf2G/Screenshot-2025-10-29-at-10-55-25.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761052087665"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 914,
+          "top": 350.42,
+          "width": 43,
+          "height": 83.98,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Ministria e Mjedisit",
+          "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Ministria_e_Turizmit_dhe_Mjedisit.svg",
+          "sector": "Construction",
+          "id": "booth_1761056457350"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 875,
+          "top": 366.92,
+          "width": 39,
+          "height": 67.99,
+          "fill": "rgba(239, 68, 68, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Advantage Austria",
+          "logoUrl": "https://intellectual-property-helpdesk.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2020-12/Advantage%20Austria.png?itok=xkcI6Vun",
+          "sector": "Automotive",
+          "id": "booth_1761056588283"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 875,
+          "top": 248.95,
+          "width": 39,
+          "height": 112.98,
+          "fill": "rgba(139, 92, 246, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.04,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "QKK",
+          "logoUrl": "https://qkk.al/wp-content/uploads/2017/12/QKK-ANCC-black-white-background-1.jpg",
+          "sector": "Finance",
+          "id": "booth_1761056744856"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 873,
+          "top": 215.95,
+          "width": 81,
+          "height": 131.97,
+          "fill": "rgba(16, 185, 129, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Ministria Bujqesise",
+          "logoUrl": "https://bujqesia.gov.al/wp-content/uploads/2017/11/cropped-small_logo.jpg",
+          "sector": "Technology",
+          "id": "booth_1761056779834",
+          "points": [
+            {
+              "x": 875,
+              "y": 247.44703616520437
+            },
+            {
+              "x": 875,
+              "y": 216.4536700192596
+            },
+            {
+              "x": 955,
+              "y": 216.4536700192596
+            },
+            {
+              "x": 956,
+              "y": 348.4254226407019
+            },
+            {
+              "x": 916,
+              "y": 348.4254226407019
+            },
+            {
+              "x": 917,
+              "y": 348.4254226407019
+            },
+            {
+              "x": 916,
+              "y": 247.44703616520437
+            },
+            {
+              "x": 875,
+              "y": 246.44725016049648
+            },
+            {
+              "x": 875,
+              "y": 246.44725016049648
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 772,
+          "top": 216.95,
+          "width": 82,
+          "height": 217.95,
+          "fill": "rgba(16, 185, 129, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Serbia",
+          "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg ",
+          "sector": "Technology",
+          "id": "booth_1761056853247"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 682,
+          "top": 216.95,
+          "width": 68,
+          "height": 126.97,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Euro Electra",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4D16AQHO1tu-ipgwuA/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1708933337273?e=2147483647&v=beta&t=VN0QHhFrllzLRVMEk1mOihL-mqWW1YLwdvry32GQ77c",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761056917132"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 630,
+          "top": 567.38,
+          "width": 43,
+          "height": 29.99,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.93,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "InfoPoint Klik",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHmmaT64pAbnAPrTzHpNbWC9AgytROzqVoYQ&s",
+          "sector": "Other",
+          "id": "booth_1762124239685"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 440,
+          "top": 567.38,
+          "width": 108,
+          "height": 29.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Digitalb",
+          "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Digitalb_logo.png/250px-Digitalb_logo.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1762124347341",
+          "points": [
+            {
+              "x": 551,
+              "y": 596.3723518082602
+            },
+            {
+              "x": 512,
+              "y": 595.3725658035523
+            },
+            {
+              "x": 511,
+              "y": 578.3762037235181
+            },
+            {
+              "x": 443,
+              "y": 577.3764177188102
+            },
+            {
+              "x": 443,
+              "y": 566.3787716670233
+            },
+            {
+              "x": 550,
+              "y": 566.3787716670233
+            },
+            {
+              "x": 550,
+              "y": 596.3723518082602
+            },
+            {
+              "x": 550,
+              "y": 596.3723518082602
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 672,
+          "top": 567.38,
+          "width": 66,
+          "height": 12,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.93,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Prosound",
+          "logoUrl": "https://i0.wp.com/prosound-sales.al/wp-content/uploads/2024/02/cropped-favicon.png?fit=512%2C512&ssl=1",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762124390948"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 977.5,
+          "top": 374.92,
+          "width": 60,
+          "height": 88.98,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "L'atre",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2Yv7jDSqzJD73RKQpUYRMuiv0vzYZXdrGA&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1762124674865",
+          "points": [
+            {
+              "x": 978,
+              "y": 376.419430772523
+            },
+            {
+              "x": 978,
+              "y": 452.40316713032314
+            },
+            {
+              "x": 992,
+              "y": 451.4033811256153
+            },
+            {
+              "x": 1007,
+              "y": 464.4005991868179
+            },
+            {
+              "x": 1038,
+              "y": 464.4005991868179
+            },
+            {
+              "x": 1038,
+              "y": 425.40894500320996
+            },
+            {
+              "x": 1020,
+              "y": 406.41301091375993
+            },
+            {
+              "x": 1017,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 1015,
+              "y": 406.41301091375993
+            },
+            {
+              "x": 1033,
+              "y": 388.41686282901776
+            },
+            {
+              "x": 1033,
+              "y": 375.4196447678151
+            },
+            {
+              "x": 1032,
+              "y": 377.41921677723093
+            },
+            {
+              "x": 978,
+              "y": 376.419430772523
+            },
+            {
+              "x": 978,
+              "y": 376.419430772523
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 977.5,
+          "top": 185.46,
+          "width": 56,
+          "height": 60.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Unnamed Booth",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1762124881673",
+          "points": [
+            {
+              "x": 1012,
+              "y": 245.94735715814252
+            },
+            {
+              "x": 979,
+              "y": 246.94714316285044
+            },
+            {
+              "x": 978,
+              "y": 185.96019687566874
+            },
+            {
+              "x": 1034,
+              "y": 186.95998288037663
+            },
+            {
+              "x": 1034,
+              "y": 219.95292103573723
+            },
+            {
+              "x": 1011,
+              "y": 219.95292103573723
+            },
+            {
+              "x": 1012,
+              "y": 245.94735715814252
+            },
+            {
+              "x": 1012,
+              "y": 245.94735715814252
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 978.5,
+          "top": 248.45,
+          "width": 54,
+          "height": 61.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Unnamed Booth",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1762124926892",
+          "points": [
+            {
+              "x": 1032,
+              "y": 310.9334474641558
+            },
+            {
+              "x": 1032,
+              "y": 260.944147228761
+            },
+            {
+              "x": 1013,
+              "y": 259.94436122405307
+            },
+            {
+              "x": 1012,
+              "y": 248.9467151722662
+            },
+            {
+              "x": 979,
+              "y": 248.9467151722662
+            },
+            {
+              "x": 979,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 1033,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 1033,
+              "y": 309.93366145944793
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 497,
+          "top": 157.97,
+          "width": 32,
+          "height": 38.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 0.95,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "BEA Marketing",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gOiEwWAMNScxMcqBdN2ZtFE54HNE0dbNjQ&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762125198891"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 529,
+          "top": 156.47,
+          "width": 121,
+          "height": 37.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1.04,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Abissnet",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSnuSxcfI0S-6ijKOQV4xJGsdbQBTqc47Fg&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762125338547",
+          "points": [
+            {
+              "x": 652,
+              "y": 195.95805692274772
+            },
+            {
+              "x": 532,
+              "y": 194.9582709180398
+            },
+            {
+              "x": 532,
+              "y": 177.96190883800557
+            },
+            {
+              "x": 544,
+              "y": 176.96212283329768
+            },
+            {
+              "x": 543,
+              "y": 157.96618874384765
+            },
+            {
+              "x": 640,
+              "y": 157.96618874384765
+            },
+            {
+              "x": 640,
+              "y": 177.96190883800557
+            },
+            {
+              "x": 653,
+              "y": 177.96190883800557
+            },
+            {
+              "x": 653,
+              "y": 195.95805692274772
+            },
+            {
+              "x": 653,
+              "y": 195.95805692274772
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 147.5,
+          "top": 182.96,
+          "width": 55,
+          "height": 69.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Unnamed Booth",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1762125517858",
+          "points": [
+            {
+              "x": 149,
+              "y": 185.46030387331479
+            },
+            {
+              "x": 203,
+              "y": 188.45966188743847
+            },
+            {
+              "x": 203,
+              "y": 253.44575219345177
+            },
+            {
+              "x": 176,
+              "y": 253.44575219345177
+            },
+            {
+              "x": 175,
+              "y": 219.45302803338328
+            },
+            {
+              "x": 150,
+              "y": 215.45388401455168
+            },
+            {
+              "x": 148,
+              "y": 183.460731863899
+            },
+            {
+              "x": 148,
+              "y": 188.45966188743847
+            },
+            {
+              "x": 148,
+              "y": 188.45966188743847
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 148.5,
+          "top": 254.95,
+          "width": 53,
+          "height": 25.99,
+          "fill": "rgba(156, 163, 175, 0.5)",
+          "stroke": "#6b7280",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Unnamed Booth",
+          "logoUrl": "",
+          "sector": "Unassigned",
+          "id": "booth_1762125529470",
+          "points": [
+            {
+              "x": 178,
+              "y": 255.44532420286754
+            },
+            {
+              "x": 178,
+              "y": 263.44361224053074
+            },
+            {
+              "x": 149,
+              "y": 263.44361224053074
+            },
+            {
+              "x": 150,
+              "y": 277.44061630644126
+            },
+            {
+              "x": 202,
+              "y": 281.43976032527286
+            },
+            {
+              "x": 202,
+              "y": 256.44511020757545
+            },
+            {
+              "x": 178,
+              "y": 256.44511020757545
+            },
+            {
+              "x": 178,
+              "y": 256.44511020757545
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 147.5,
+          "top": 389.92,
+          "width": 55,
+          "height": 72.98,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Ermal Mamaqi Trainings",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAGTYILU65Ywb0zEublXFkOIe4LGyCmt4UA&s",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762125613423",
+          "points": [
+            {
+              "x": 148,
+              "y": 428.40830301733365
+            },
+            {
+              "x": 165,
+              "y": 427.40851701262574
+            },
+            {
+              "x": 165,
+              "y": 390.4164348384336
+            },
+            {
+              "x": 202,
+              "y": 390.4164348384336
+            },
+            {
+              "x": 203,
+              "y": 451.4033811256153
+            },
+            {
+              "x": 188,
+              "y": 451.4033811256153
+            },
+            {
+              "x": 174,
+              "y": 463.40081318211
+            },
+            {
+              "x": 149,
+              "y": 463.40081318211
+            },
+            {
+              "x": 148,
+              "y": 427.40851701262574
+            },
+            {
+              "x": 148,
+              "y": 427.40851701262574
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 446.5,
+          "top": 373.92,
+          "width": 36,
+          "height": 33.99,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Tirana International Piano School",
+          "logoUrl": "",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762126545041",
+          "points": [
+            {
+              "x": 447,
+              "y": 382.4181468007704
+            },
+            {
+              "x": 447,
+              "y": 400.41429488551256
+            },
+            {
+              "x": 456,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 473,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 482,
+              "y": 399.41450888080465
+            },
+            {
+              "x": 483,
+              "y": 383.4179328054783
+            },
+            {
+              "x": 473,
+              "y": 374.41985876310724
+            },
+            {
+              "x": 456,
+              "y": 374.41985876310724
+            },
+            {
+              "x": 456,
+              "y": 374.41985876310724
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 697.99,
+          "top": 373.43,
+          "width": 36,
+          "height": 33.99,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Tirana International Piano School",
+          "logoUrl": "",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762126590268",
+          "points": [
+            {
+              "x": 699,
+              "y": 399.41450888080465
+            },
+            {
+              "x": 699,
+              "y": 384.4177188101862
+            },
+            {
+              "x": 708,
+              "y": 375.4196447678151
+            },
+            {
+              "x": 725,
+              "y": 374.41985876310724
+            },
+            {
+              "x": 735,
+              "y": 383.4179328054783
+            },
+            {
+              "x": 735,
+              "y": 400.41429488551256
+            },
+            {
+              "x": 726,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 709,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 700,
+              "y": 400.41429488551256
+            },
+            {
+              "x": 700,
+              "y": 400.41429488551256
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 509,
+          "top": 362.42,
+          "width": 137,
+          "height": 72.98,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.17,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Multimedia Stage",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1762126637826"
+        }
+      ]
+    },
+    "1": {
+      "backgroundURL": "floor1.jpg",
+      "objects": [
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 164,
+          "top": 476.4,
+          "width": 54,
+          "height": 38.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Alflexim",
+          "logoUrl": "https://alflexim.com/images/alflexim_logo.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761043040731"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 164,
+          "top": 438.41,
+          "width": 53,
+          "height": 35.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Bashkia Librazhd",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPovVjOjk8-i27mth3WKeZ1iktNJTyhTGlIw&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761057396533"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 162,
+          "top": 399.41,
+          "width": 51,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.08,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Shendetembel",
+          "logoUrl": "https://imageproxy.wolt.com/assets/6825b19c0fde75c474ee371c",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761057403402"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 162,
+          "top": 360.42,
+          "width": 53,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.04,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Vytal",
+          "logoUrl": "https://cdn.prod.website-files.com/678e1d6e1199b32897776eab/67a3347b2522e5be6795850f_CMYK%20Vytal%20Logo.jpg",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761057408806"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 163,
+          "top": 321.43,
+          "width": 52,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.04,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Detag.al",
+          "logoUrl": "https://detag.al/logo.png",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761057413946"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 163,
+          "top": 283.44,
+          "width": 52,
+          "height": 34.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.04,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Zenz Global Tourism and Trade ",
+          "logoUrl": "https://www.zenzglobal.com/assets/logo.svg",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1761057419894"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 250,
+          "top": 314.94,
+          "width": 38,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.07,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Crateo",
+          "logoUrl": "https://i.ibb.co/GvWVP76L/Screenshot-2025-10-29-at-10-48-47.png",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761057426712"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 293,
+          "top": 315.43,
+          "width": 38,
+          "height": 49.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.02,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Gerba",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYmK6-g6ganawIp2dudJhj3HzTJmNbqjVLOA&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761057436717"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 292,
+          "top": 467.4,
+          "width": 40,
+          "height": 35.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 1.08,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "No Guts No Glory",
+          "logoUrl": "https://nogutsnoglory.it/wp-content/uploads/2024/06/Marchio-No-guts-no-glory-Low-res.png",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761057525186"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 251,
+          "top": 467.4,
+          "width": 41,
+          "height": 39.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Bfinance",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdm0l7fsu09WZkHoJh6grlTxNxEJF-ZPdpQ&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1761057530874"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 250,
+          "top": 428.41,
+          "width": 41,
+          "height": 37.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "VM Group",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtg6c013TCt6NDJnnFQ7JLRnA32DM7qav6A&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761057535559"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 163.5,
+          "top": 208.46,
+          "width": 81,
+          "height": 73.98,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Coffee Club Lavazza",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu76KySnBKh33_v9C-8BxJPY1us9k2j69UxQ&s",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761057619072",
+          "points": [
+            {
+              "x": 165,
+              "y": 281.9396533276268
+            },
+            {
+              "x": 165,
+              "y": 245.94735715814252
+            },
+            {
+              "x": 205,
+              "y": 244.94757115343464
+            },
+            {
+              "x": 206,
+              "y": 208.95527498395037
+            },
+            {
+              "x": 245,
+              "y": 208.95527498395037
+            },
+            {
+              "x": 244,
+              "y": 282.9394393323347
+            },
+            {
+              "x": 164,
+              "y": 280.93986732291893
+            },
+            {
+              "x": 164,
+              "y": 280.93986732291893
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 244,
+          "top": 234.95,
+          "width": 96,
+          "height": 47.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.03,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Vreshti i Pashait",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhPtVf5ILdY3U7ATuJMNZfJcl__-AKUKW6w&s",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761057647475",
+          "points": [
+            {
+              "x": 343,
+              "y": 283.43933233468863
+            },
+            {
+              "x": 247,
+              "y": 282.4395463299808
+            },
+            {
+              "x": 247,
+              "y": 235.44960410870962
+            },
+            {
+              "x": 301,
+              "y": 235.44960410870962
+            },
+            {
+              "x": 306,
+              "y": 240.4485341322491
+            },
+            {
+              "x": 310,
+              "y": 246.44725016049648
+            },
+            {
+              "x": 316,
+              "y": 253.44575219345177
+            },
+            {
+              "x": 322,
+              "y": 260.44425422640705
+            },
+            {
+              "x": 327,
+              "y": 266.4429702546544
+            },
+            {
+              "x": 333,
+              "y": 273.44147228760966
+            },
+            {
+              "x": 343,
+              "y": 283.43933233468863
+            },
+            {
+              "x": 343,
+              "y": 283.43933233468863
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 363.5,
+          "top": 342.93,
+          "width": 150,
+          "height": 208.96,
+          "fill": "rgba(255, 105, 180, 0.5)",
+          "stroke": "#8c4564",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Europtik Group",
+          "logoUrl": "https://i.ibb.co/S7GS12sg/Screenshot-2025-10-29-at-23-25-55.png",
+          "sector": "Retail & Commerce",
+          "id": "booth_1761057735033",
+          "points": [
+            {
+              "x": 432,
+              "y": 552.3817676011128
+            },
+            {
+              "x": 363,
+              "y": 550.382195591697
+            },
+            {
+              "x": 364,
+              "y": 344.4262786218703
+            },
+            {
+              "x": 393,
+              "y": 343.4264926171624
+            },
+            {
+              "x": 399,
+              "y": 344.4262786218703
+            },
+            {
+              "x": 410,
+              "y": 351.4247806548256
+            },
+            {
+              "x": 423,
+              "y": 358.4232826877809
+            },
+            {
+              "x": 444,
+              "y": 368.42114273485987
+            },
+            {
+              "x": 443,
+              "y": 369.4209287395677
+            },
+            {
+              "x": 461,
+              "y": 377.41921677723093
+            },
+            {
+              "x": 477,
+              "y": 383.4179328054783
+            },
+            {
+              "x": 490,
+              "y": 388.41686282901776
+            },
+            {
+              "x": 505,
+              "y": 393.4157928525573
+            },
+            {
+              "x": 513,
+              "y": 395.41536486197305
+            },
+            {
+              "x": 503,
+              "y": 398.41472287609673
+            },
+            {
+              "x": 494,
+              "y": 402.41386689492833
+            },
+            {
+              "x": 482,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 472,
+              "y": 415.411084956131
+            },
+            {
+              "x": 465,
+              "y": 421.40980098437836
+            },
+            {
+              "x": 458,
+              "y": 428.40830301733365
+            },
+            {
+              "x": 453,
+              "y": 434.407019045581
+            },
+            {
+              "x": 448,
+              "y": 441.4055210785363
+            },
+            {
+              "x": 443,
+              "y": 447.4042371067837
+            },
+            {
+              "x": 440,
+              "y": 454.40273913973897
+            },
+            {
+              "x": 438,
+              "y": 460.40145516798634
+            },
+            {
+              "x": 436,
+              "y": 467.39995720094157
+            },
+            {
+              "x": 434,
+              "y": 473.398673229189
+            },
+            {
+              "x": 433,
+              "y": 479.3973892574364
+            },
+            {
+              "x": 432,
+              "y": 486.39589129039166
+            },
+            {
+              "x": 432,
+              "y": 494.3941793280548
+            },
+            {
+              "x": 432,
+              "y": 502.39246736571795
+            },
+            {
+              "x": 432,
+              "y": 552.3817676011128
+            },
+            {
+              "x": 432,
+              "y": 552.3817676011128
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 695,
+          "top": 345.93,
+          "width": 150,
+          "height": 205.96,
+          "fill": "rgba(255, 105, 180, 0.5)",
+          "stroke": "#8c4564",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.04,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Europtik Group",
+          "logoUrl": "https://i.ibb.co/S7GS12sg/Screenshot-2025-10-29-at-23-25-55.png",
+          "sector": "Retail & Commerce",
+          "id": "booth_1761057797682",
+          "points": [
+            {
+              "x": 782,
+              "y": 552.3817676011128
+            },
+            {
+              "x": 851,
+              "y": 551.3819815964049
+            },
+            {
+              "x": 851,
+              "y": 346.42585063128615
+            },
+            {
+              "x": 814,
+              "y": 346.42585063128615
+            },
+            {
+              "x": 805,
+              "y": 350.4249946501177
+            },
+            {
+              "x": 794,
+              "y": 357.423496683073
+            },
+            {
+              "x": 782,
+              "y": 363.42221271132036
+            },
+            {
+              "x": 770,
+              "y": 368.42114273485987
+            },
+            {
+              "x": 770,
+              "y": 370.42071474427564
+            },
+            {
+              "x": 753,
+              "y": 377.41921677723093
+            },
+            {
+              "x": 745,
+              "y": 381.41836079606253
+            },
+            {
+              "x": 734,
+              "y": 386.417290819602
+            },
+            {
+              "x": 722,
+              "y": 390.4164348384336
+            },
+            {
+              "x": 711,
+              "y": 392.41600684784936
+            },
+            {
+              "x": 701,
+              "y": 395.41536486197305
+            },
+            {
+              "x": 715,
+              "y": 400.41429488551256
+            },
+            {
+              "x": 724,
+              "y": 403.41365289963625
+            },
+            {
+              "x": 733,
+              "y": 408.4125829231757
+            },
+            {
+              "x": 742,
+              "y": 414.4112989514231
+            },
+            {
+              "x": 748,
+              "y": 419.4102289749626
+            },
+            {
+              "x": 754,
+              "y": 424.40915899850205
+            },
+            {
+              "x": 758,
+              "y": 429.4080890220415
+            },
+            {
+              "x": 762,
+              "y": 433.4072330408731
+            },
+            {
+              "x": 765,
+              "y": 438.4061630644126
+            },
+            {
+              "x": 769,
+              "y": 443.4050930879521
+            },
+            {
+              "x": 772,
+              "y": 448.40402311149154
+            },
+            {
+              "x": 774,
+              "y": 454.40273913973897
+            },
+            {
+              "x": 777,
+              "y": 460.40145516798634
+            },
+            {
+              "x": 779,
+              "y": 468.3997432056495
+            },
+            {
+              "x": 781,
+              "y": 477.39781724802054
+            },
+            {
+              "x": 782,
+              "y": 484.39631928097583
+            },
+            {
+              "x": 782,
+              "y": 495.3939653327627
+            },
+            {
+              "x": 782,
+              "y": 504.3920393751338
+            },
+            {
+              "x": 782,
+              "y": 550.382195591697
+            },
+            {
+              "x": 782,
+              "y": 550.382195591697
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 322.5,
+          "top": 612.37,
+          "width": 572,
+          "height": 31.99,
+          "fill": "rgba(255, 105, 180, 0.5)",
+          "stroke": "#8c4564",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Europtik Group",
+          "logoUrl": "https://i.ibb.co/S7GS12sg/Screenshot-2025-10-29-at-23-25-55.png",
+          "sector": "Retail & Commerce",
+          "id": "booth_1761057874274",
+          "points": [
+            {
+              "x": 357,
+              "y": 612.8688208859405
+            },
+            {
+              "x": 859,
+              "y": 612.8688208859405
+            },
+            {
+              "x": 878,
+              "y": 632.8645409800985
+            },
+            {
+              "x": 895,
+              "y": 632.8645409800985
+            },
+            {
+              "x": 895,
+              "y": 644.8619730365932
+            },
+            {
+              "x": 774,
+              "y": 644.8619730365932
+            },
+            {
+              "x": 774,
+              "y": 631.8647549753906
+            },
+            {
+              "x": 690,
+              "y": 631.8647549753906
+            },
+            {
+              "x": 690,
+              "y": 644.8619730365932
+            },
+            {
+              "x": 528,
+              "y": 643.8621870318854
+            },
+            {
+              "x": 528,
+              "y": 631.8647549753906
+            },
+            {
+              "x": 444,
+              "y": 631.8647549753906
+            },
+            {
+              "x": 444,
+              "y": 644.8619730365932
+            },
+            {
+              "x": 323,
+              "y": 644.8619730365932
+            },
+            {
+              "x": 323,
+              "y": 632.8645409800985
+            },
+            {
+              "x": 336,
+              "y": 632.8645409800985
+            },
+            {
+              "x": 357,
+              "y": 613.8686068906484
+            },
+            {
+              "x": 357,
+              "y": 613.8686068906484
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 250.48,
+          "top": 506.92,
+          "width": 79,
+          "height": 36.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.02,
+          "scaleY": 1.02,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Abito Holz",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFEfAGUPDmHdMquD1TwNDqb_ovpTHTQKvAA&s",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1761058655839",
+          "points": [
+            {
+              "x": 332,
+              "y": 545.3832655681575
+            },
+            {
+              "x": 332,
+              "y": 508.3911833939654
+            },
+            {
+              "x": 253,
+              "y": 510.39075540338115
+            },
+            {
+              "x": 292,
+              "y": 545.3832655681575
+            },
+            {
+              "x": 332,
+              "y": 545.3832655681575
+            },
+            {
+              "x": 332,
+              "y": 545.3832655681575
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 883.5,
+          "top": 364.92,
+          "width": 82,
+          "height": 180.96,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "RTSH - Radio Television Shqiptar",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOCdyrVk4KkDMehkvQeFMK25OXRTRjj2uASiD5fwFE3mxYp5HM68S2vT05IdrXd0jwuvk&usqp=CAU",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762122582239",
+          "points": [
+            {
+              "x": 924,
+              "y": 546.3830515728654
+            },
+            {
+              "x": 884,
+              "y": 545.3832655681575
+            },
+            {
+              "x": 884,
+              "y": 365.4217847207362
+            },
+            {
+              "x": 966,
+              "y": 365.4217847207362
+            },
+            {
+              "x": 966,
+              "y": 508.3911833939654
+            },
+            {
+              "x": 925,
+              "y": 545.3832655681575
+            },
+            {
+              "x": 925,
+              "y": 545.3832655681575
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 996,
+          "top": 347.43,
+          "width": 49,
+          "height": 34.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Kosovapress",
+          "logoUrl": "https://i.ibb.co/C5sSjm1c/Screenshot-2025-10-29-at-23-45-09.png",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762122640253"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 996,
+          "top": 383.42,
+          "width": 50,
+          "height": 54.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "ATSH - Agjencia Telegrafike Shqiptare",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStdxtbYnJfdcm9v7-6P290sATGpcBoMXQAUg&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762122703661"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 996,
+          "top": 440.41,
+          "width": 50,
+          "height": 75.98,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Previsa",
+          "logoUrl": "https://i.ibb.co/Kc4gVbB6/Screenshot-2025-10-29-at-23-29-00.png",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1762122745816"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 854.5,
+          "top": 207.96,
+          "width": 192,
+          "height": 138.97,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "B2B Meeting Point",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1762122874166",
+          "points": [
+            {
+              "x": 855,
+              "y": 347.425636635994
+            },
+            {
+              "x": 1047,
+              "y": 346.42585063128615
+            },
+            {
+              "x": 1046,
+              "y": 246.44725016049648
+            },
+            {
+              "x": 1024,
+              "y": 246.44725016049648
+            },
+            {
+              "x": 1025,
+              "y": 209.4551679863043
+            },
+            {
+              "x": 971,
+              "y": 208.45538198159642
+            },
+            {
+              "x": 970,
+              "y": 234.44981810400174
+            },
+            {
+              "x": 915,
+              "y": 234.44981810400174
+            },
+            {
+              "x": 911,
+              "y": 240.4485341322491
+            },
+            {
+              "x": 907,
+              "y": 245.4474641557886
+            },
+            {
+              "x": 903,
+              "y": 251.44618018403597
+            },
+            {
+              "x": 898,
+              "y": 257.44489621228337
+            },
+            {
+              "x": 893,
+              "y": 263.44361224053074
+            },
+            {
+              "x": 887,
+              "y": 269.4423282687781
+            },
+            {
+              "x": 883,
+              "y": 274.44125829231757
+            },
+            {
+              "x": 878,
+              "y": 279.4401883158571
+            },
+            {
+              "x": 872,
+              "y": 284.43911833939654
+            },
+            {
+              "x": 866,
+              "y": 289.438048362936
+            },
+            {
+              "x": 858,
+              "y": 296.4365503958913
+            },
+            {
+              "x": 856,
+              "y": 346.42585063128615
+            },
+            {
+              "x": 856,
+              "y": 346.42585063128615
+            },
+            {
+              "x": 856,
+              "y": 346.42585063128615
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 292,
+          "top": 441.41,
+          "width": 42,
+          "height": 25.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.95,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Enoreum",
+          "logoUrl": "https://i.ibb.co/7tyJNBxP/Whats-App-Image-2025-10-29-at-9-34-07-PM.jpg",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1762123744951"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 291,
+          "top": 415.36,
+          "width": 42,
+          "height": 25.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 0.93,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Unical AG",
+          "logoUrl": "https://www.unicalag.it/img/logo-unical.svg",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1762123757508"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 250,
+          "top": 390.42,
+          "width": 38,
+          "height": 37.99,
+          "fill": "rgba(250, 204, 21, 0.5)",
+          "stroke": "#d97706",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.07,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Hydro Home",
+          "logoUrl": "https://i.ebayimg.com/images/g/WhAAAOSwm5NdvwrE/s-l300.jpg",
+          "sector": "Energy, Infrastructure & Construction",
+          "id": "booth_1762123767950"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 250.48,
+          "top": 351.94,
+          "width": 40,
+          "height": 36.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Antica Drogheria del Castello",
+          "logoUrl": "https://anticadrogheria.it/wp-content/uploads/2025/04/cropped-Screenshot-2025-04-24-alle-12.34.46-1.png",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1762123779846"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 292,
+          "top": 392.42,
+          "width": 41,
+          "height": 23,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.98,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Driss Kiss",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZqOdJEX3hN0Ko5lDaA2q-4xLrj_Un3QJD0g&s",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762123789215"
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 292,
+          "top": 367.42,
+          "width": 44,
+          "height": 23.99,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.91,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Belonina",
+          "logoUrl": "https://i.ibb.co/Y4ZVh49m/Whats-App-Image-2025-10-29-at-9-33-29-PM.jpg",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762123794464"
+        }
+      ]
+    },
+    "2": {
+      "backgroundURL": "floor2.jpg",
+      "objects": [
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 343.5,
+          "top": 473.4,
+          "width": 487,
+          "height": 40.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Keidi Biraci",
+          "logoUrl": "https://cdnimpuls.com/bordo.al/wp-content/uploads/2022/12/KEJDI-1-scaled.jpeg?ssl=1",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1761058188992",
+          "points": [
+            {
+              "x": 788,
+              "y": 475.3982452386048
+            },
+            {
+              "x": 831,
+              "y": 516.3894714316285
+            },
+            {
+              "x": 344,
+              "y": 516.3894714316285
+            },
+            {
+              "x": 388,
+              "y": 475.3982452386048
+            },
+            {
+              "x": 407,
+              "y": 480.39717526214423
+            },
+            {
+              "x": 427,
+              "y": 485.39610528568375
+            },
+            {
+              "x": 441,
+              "y": 488.39546329980743
+            },
+            {
+              "x": 455,
+              "y": 493.3943933233469
+            },
+            {
+              "x": 469,
+              "y": 494.3941793280548
+            },
+            {
+              "x": 488,
+              "y": 496.3937513374706
+            },
+            {
+              "x": 508,
+              "y": 499.39310935159426
+            },
+            {
+              "x": 529,
+              "y": 501.3926813610101
+            },
+            {
+              "x": 549,
+              "y": 502.39246736571795
+            },
+            {
+              "x": 565,
+              "y": 503.39225337042586
+            },
+            {
+              "x": 582,
+              "y": 503.39225337042586
+            },
+            {
+              "x": 601,
+              "y": 503.39225337042586
+            },
+            {
+              "x": 622,
+              "y": 503.39225337042586
+            },
+            {
+              "x": 645,
+              "y": 501.3926813610101
+            },
+            {
+              "x": 663,
+              "y": 500.3928953563022
+            },
+            {
+              "x": 684,
+              "y": 497.3935373421785
+            },
+            {
+              "x": 704,
+              "y": 494.3941793280548
+            },
+            {
+              "x": 722,
+              "y": 491.3948213139311
+            },
+            {
+              "x": 738,
+              "y": 487.3956772950995
+            },
+            {
+              "x": 759,
+              "y": 483.3965332762679
+            },
+            {
+              "x": 774,
+              "y": 480.39717526214423
+            },
+            {
+              "x": 789,
+              "y": 475.3982452386048
+            },
+            {
+              "x": 789,
+              "y": 475.3982452386048
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 856.5,
+          "top": 110.98,
+          "width": 213,
+          "height": 116.97,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Shkolla e Baletit",
+          "logoUrl": "",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762121214880",
+          "points": [
+            {
+              "x": 1070,
+              "y": 227.45131607104645
+            },
+            {
+              "x": 1000,
+              "y": 228.45110207575433
+            },
+            {
+              "x": 999,
+              "y": 176.46222983094373
+            },
+            {
+              "x": 995,
+              "y": 168.46394179328055
+            },
+            {
+              "x": 990,
+              "y": 163.46501176974107
+            },
+            {
+              "x": 980,
+              "y": 159.4658677509095
+            },
+            {
+              "x": 901,
+              "y": 161.46543976032527
+            },
+            {
+              "x": 888,
+              "y": 166.46436978386475
+            },
+            {
+              "x": 876,
+              "y": 175.46244382623584
+            },
+            {
+              "x": 859,
+              "y": 192.45880590627007
+            },
+            {
+              "x": 857,
+              "y": 189.4594478921464
+            },
+            {
+              "x": 865,
+              "y": 178.46180184035953
+            },
+            {
+              "x": 876,
+              "y": 167.46415578857267
+            },
+            {
+              "x": 888,
+              "y": 153.4671517226621
+            },
+            {
+              "x": 896,
+              "y": 142.46950567087524
+            },
+            {
+              "x": 904,
+              "y": 132.4716456237963
+            },
+            {
+              "x": 907,
+              "y": 125.473143590841
+            },
+            {
+              "x": 917,
+              "y": 112.47592552963835
+            },
+            {
+              "x": 1001,
+              "y": 111.47613952493046
+            },
+            {
+              "x": 1002,
+              "y": 143.46929167558315
+            },
+            {
+              "x": 1057,
+              "y": 142.46950567087524
+            },
+            {
+              "x": 1056,
+              "y": 162.46522576503318
+            },
+            {
+              "x": 1070,
+              "y": 174.46265782152793
+            },
+            {
+              "x": 1070,
+              "y": 228.45110207575433
+            },
+            {
+              "x": 1070,
+              "y": 228.45110207575433
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 1029,
+          "top": 227.45,
+          "width": 42,
+          "height": 51.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.95,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Bashkim Zahaj",
+          "logoUrl": "https://cdn.adrionltd.com/items/2022/oct/06/ktjolrrwwk-0.jpg?1667592386",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1762121241184"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 1004.88,
+          "top": 279.94,
+          "width": 64,
+          "height": 144.97,
+          "fill": "rgba(185, 56, 255, 0.5)",
+          "stroke": "#7b26aa",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Polis University",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDtdIabmtvI8Vgd7FbhoLF6JSRfkoU7UpPg&s",
+          "sector": "Education, Health & Wellness",
+          "id": "booth_1762121440639",
+          "points": [
+            {
+              "x": 1008,
+              "y": 424.40915899850205
+            },
+            {
+              "x": 1057,
+              "y": 425.40894500320996
+            },
+            {
+              "x": 1056,
+              "y": 407.4127969184678
+            },
+            {
+              "x": 1070,
+              "y": 396.41515086668096
+            },
+            {
+              "x": 1070,
+              "y": 280.43997432056494
+            },
+            {
+              "x": 1029,
+              "y": 280.43997432056494
+            },
+            {
+              "x": 1029,
+              "y": 394.41557885726513
+            },
+            {
+              "x": 1006,
+              "y": 425.40894500320996
+            },
+            {
+              "x": 1006,
+              "y": 425.40894500320996
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 746.5,
+          "top": 541.88,
+          "width": 136,
+          "height": 83.98,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Multimedia Stage",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1762121524457",
+          "points": [
+            {
+              "x": 748,
+              "y": 624.3663599400813
+            },
+            {
+              "x": 748,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 829,
+              "y": 543.3836935587417
+            },
+            {
+              "x": 851,
+              "y": 559.3802696340681
+            },
+            {
+              "x": 872,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 883,
+              "y": 543.3836935587417
+            },
+            {
+              "x": 883,
+              "y": 574.3770597046865
+            },
+            {
+              "x": 856,
+              "y": 573.3772736999787
+            },
+            {
+              "x": 802,
+              "y": 625.3661459447892
+            },
+            {
+              "x": 747,
+              "y": 626.3659319494972
+            },
+            {
+              "x": 747,
+              "y": 626.3659319494972
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 295.5,
+          "top": 540.88,
+          "width": 137,
+          "height": 83.98,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "QKK – Qendra Kombëtare e Kinematografisë",
+          "logoUrl": "https://qkk.al/wp-content/uploads/2017/12/QKK-ANCC-black-white-background-1.jpg",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762121575890",
+          "points": [
+            {
+              "x": 432,
+              "y": 625.3661459447892
+            },
+            {
+              "x": 431,
+              "y": 543.3836935587417
+            },
+            {
+              "x": 350,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 327,
+              "y": 560.380055638776
+            },
+            {
+              "x": 309,
+              "y": 541.384121549326
+            },
+            {
+              "x": 296,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 296,
+              "y": 573.3772736999787
+            },
+            {
+              "x": 322,
+              "y": 573.3772736999787
+            },
+            {
+              "x": 378,
+              "y": 625.3661459447892
+            },
+            {
+              "x": 433,
+              "y": 625.3661459447892
+            },
+            {
+              "x": 433,
+              "y": 625.3661459447892
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 433.09,
+          "top": 541.88,
+          "width": 311,
+          "height": 70.98,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "MCN TV",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx_VPoV6aAx95Ext06tJY1lHlQE9d_WUsjtA&s",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762121655732",
+          "points": [
+            {
+              "x": 435,
+              "y": 613.3687138882945
+            },
+            {
+              "x": 435,
+              "y": 581.3755617376418
+            },
+            {
+              "x": 508,
+              "y": 581.3755617376418
+            },
+            {
+              "x": 509,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 672,
+              "y": 542.3839075540338
+            },
+            {
+              "x": 672,
+              "y": 581.3755617376418
+            },
+            {
+              "x": 746,
+              "y": 581.3755617376418
+            },
+            {
+              "x": 746,
+              "y": 612.3689278835866
+            },
+            {
+              "x": 435,
+              "y": 612.3689278835866
+            },
+            {
+              "x": 435,
+              "y": 612.3689278835866
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 103.15,
+          "top": 144.47,
+          "width": 41,
+          "height": 81.98,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.03,
+          "scaleY": 1.03,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Xhengo Photography",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTx-paRgKV0yryaQFPD4nYV49CBzgLOgXrvA&s",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1762122145864",
+          "points": [
+            {
+              "x": 146,
+              "y": 226.9514230686925
+            },
+            {
+              "x": 107,
+              "y": 226.9514230686925
+            },
+            {
+              "x": 105,
+              "y": 175.96233682858977
+            },
+            {
+              "x": 120,
+              "y": 161.96533276267922
+            },
+            {
+              "x": 120,
+              "y": 144.968970682645
+            },
+            {
+              "x": 146,
+              "y": 144.968970682645
+            },
+            {
+              "x": 146,
+              "y": 226.9514230686925
+            },
+            {
+              "x": 146,
+              "y": 226.9514230686925
+            }
+          ]
+        },
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 105,
+          "top": 228.63,
+          "width": 42,
+          "height": 53.99,
+          "fill": "rgba(249, 115, 22, 0.5)",
+          "stroke": "#c2410c",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 0.97,
+          "scaleY": 0.97,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Bujar Kapexhiu Expo",
+          "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrlEKV4aY7bnzw2rKg_fYM583Q-tXe4lD4Mg&s",
+          "sector": "Tourism, Culture & Entertainment",
+          "id": "booth_1762122199363"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 105.5,
+          "top": 282.94,
+          "width": 66,
+          "height": 140.97,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Teatri Operas & Ansambli Popullor",
+          "logoUrl": "https://tkob.gov.al/wp-content/themes/tob/images/tob.png",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762122293681",
+          "points": [
+            {
+              "x": 171,
+              "y": 424.40915899850205
+            },
+            {
+              "x": 121,
+              "y": 424.40915899850205
+            },
+            {
+              "x": 121,
+              "y": 407.4127969184678
+            },
+            {
+              "x": 107,
+              "y": 393.4157928525573
+            },
+            {
+              "x": 107,
+              "y": 283.43933233468863
+            },
+            {
+              "x": 147,
+              "y": 283.43933233468863
+            },
+            {
+              "x": 146,
+              "y": 393.4157928525573
+            },
+            {
+              "x": 173,
+              "y": 424.40915899850205
+            },
+            {
+              "x": 173,
+              "y": 424.40915899850205
+            }
+          ]
+        }
+      ]
+    },
+    "-1": {
+      "backgroundURL": "floor-1.jpg",
+      "objects": [
+        {
+          "type": "rect",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 537,
+          "top": 259.44,
+          "width": 54,
+          "height": 41.99,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "rx": 0,
+          "ry": 0,
+          "exhibitorName": "Multimedia Stage",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1761058688977"
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 450.5,
+          "top": 127.97,
+          "width": 226,
+          "height": 38.99,
+          "fill": "rgba(130, 250, 130, 0.5)",
+          "stroke": "#5b945b",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Restorant \"Te Komuna\"",
+          "logoUrl": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=350,fit=crop,q=95/mnlJ0bjLVZi3L8JD/te-komuna-menu--01-dOqDEGyxMOSL3Zwy.png",
+          "sector": "Agriculture, Food & Forestry",
+          "id": "booth_1761058731329",
+          "points": [
+            {
+              "x": 451,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 463,
+              "y": 167.46415578857267
+            },
+            {
+              "x": 662,
+              "y": 166.46436978386475
+            },
+            {
+              "x": 677,
+              "y": 145.46886368499892
+            },
+            {
+              "x": 619,
+              "y": 128.4725016049647
+            },
+            {
+              "x": 606,
+              "y": 131.47185961908838
+            },
+            {
+              "x": 596,
+              "y": 132.4716456237963
+            },
+            {
+              "x": 583,
+              "y": 133.47143162850418
+            },
+            {
+              "x": 572,
+              "y": 134.47121763321206
+            },
+            {
+              "x": 560,
+              "y": 134.47121763321206
+            },
+            {
+              "x": 550,
+              "y": 134.47121763321206
+            },
+            {
+              "x": 539,
+              "y": 133.47143162850418
+            },
+            {
+              "x": 527,
+              "y": 132.4716456237963
+            },
+            {
+              "x": 518,
+              "y": 130.4720736143805
+            },
+            {
+              "x": 509,
+              "y": 128.4725016049647
+            },
+            {
+              "x": 451,
+              "y": 144.46907768029104
+            },
+            {
+              "x": 451,
+              "y": 144.46907768029104
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 281.5,
+          "top": 126.97,
+          "width": 114,
+          "height": 131.97,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "3D Mapping Projection",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1761058761005",
+          "points": [
+            {
+              "x": 357,
+              "y": 258.4446822169912
+            },
+            {
+              "x": 283,
+              "y": 225.45174406163065
+            },
+            {
+              "x": 282,
+              "y": 172.46308581211215
+            },
+            {
+              "x": 329,
+              "y": 127.4727156002568
+            },
+            {
+              "x": 396,
+              "y": 165.46458377915687
+            },
+            {
+              "x": 395,
+              "y": 223.45217205221485
+            },
+            {
+              "x": 357,
+              "y": 259.44446822169914
+            },
+            {
+              "x": 357,
+              "y": 259.44446822169914
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 723.5,
+          "top": 126.47,
+          "width": 122,
+          "height": 131.97,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "3D Mapping Projection",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1761058794972",
+          "points": [
+            {
+              "x": 772,
+              "y": 257.9447892146373
+            },
+            {
+              "x": 846,
+              "y": 225.9516370639846
+            },
+            {
+              "x": 846,
+              "y": 171.9631928097582
+            },
+            {
+              "x": 799,
+              "y": 126.97282259790285
+            },
+            {
+              "x": 725,
+              "y": 171.9631928097582
+            },
+            {
+              "x": 724,
+              "y": 216.95356302161355
+            },
+            {
+              "x": 732,
+              "y": 222.95227904986092
+            },
+            {
+              "x": 739,
+              "y": 227.9512090734004
+            },
+            {
+              "x": 772,
+              "y": 258.9445752193452
+            },
+            {
+              "x": 772,
+              "y": 258.9445752193452
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 438,
+          "top": 303.94,
+          "width": 248,
+          "height": 137.97,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1.01,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Salla B",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1761058869834",
+          "points": [
+            {
+              "x": 440,
+              "y": 385.91739781724806
+            },
+            {
+              "x": 519,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 522,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 523,
+              "y": 304.9347314359084
+            },
+            {
+              "x": 606,
+              "y": 304.9347314359084
+            },
+            {
+              "x": 606,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 609,
+              "y": 309.93366145944793
+            },
+            {
+              "x": 688,
+              "y": 384.91761181254014
+            },
+            {
+              "x": 685,
+              "y": 390.9163278407875
+            },
+            {
+              "x": 684,
+              "y": 396.9150438690349
+            },
+            {
+              "x": 683,
+              "y": 402.91375989728226
+            },
+            {
+              "x": 683,
+              "y": 408.91247592552963
+            },
+            {
+              "x": 685,
+              "y": 415.9109779584849
+            },
+            {
+              "x": 687,
+              "y": 419.9101219773165
+            },
+            {
+              "x": 663,
+              "y": 419.9101219773165
+            },
+            {
+              "x": 642,
+              "y": 442.90520008559815
+            },
+            {
+              "x": 483,
+              "y": 442.90520008559815
+            },
+            {
+              "x": 463,
+              "y": 418.9103359726086
+            },
+            {
+              "x": 443,
+              "y": 418.9103359726086
+            },
+            {
+              "x": 444,
+              "y": 413.91140594906915
+            },
+            {
+              "x": 445,
+              "y": 406.91290391611386
+            },
+            {
+              "x": 445,
+              "y": 398.9146158784507
+            },
+            {
+              "x": 443,
+              "y": 391.91611384549543
+            },
+            {
+              "x": 441,
+              "y": 385.91739781724806
+            },
+            {
+              "x": 440,
+              "y": 385.91739781724806
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 384.5,
+          "top": 443.41,
+          "width": 352,
+          "height": 161.97,
+          "fill": "rgba(129, 248, 252, 0.5)",
+          "stroke": "#5b9395",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1.01,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "Salla A",
+          "logoUrl": "",
+          "sector": "Other",
+          "id": "booth_1761058941610",
+          "points": [
+            {
+              "x": 414,
+              "y": 607.3699978600471
+            },
+            {
+              "x": 385,
+              "y": 578.3762037235181
+            },
+            {
+              "x": 386,
+              "y": 492.39460731863903
+            },
+            {
+              "x": 405,
+              "y": 483.3965332762679
+            },
+            {
+              "x": 406,
+              "y": 445.40466509736785
+            },
+            {
+              "x": 451,
+              "y": 445.40466509736785
+            },
+            {
+              "x": 474,
+              "y": 469.3995292103574
+            },
+            {
+              "x": 653,
+              "y": 469.3995292103574
+            },
+            {
+              "x": 675,
+              "y": 446.40445110207577
+            },
+            {
+              "x": 722,
+              "y": 446.40445110207577
+            },
+            {
+              "x": 723,
+              "y": 482.39674727156006
+            },
+            {
+              "x": 737,
+              "y": 489.39524930451535
+            },
+            {
+              "x": 737,
+              "y": 579.375989728226
+            },
+            {
+              "x": 710,
+              "y": 606.3702118553392
+            },
+            {
+              "x": 414,
+              "y": 606.3702118553392
+            },
+            {
+              "x": 414,
+              "y": 606.3702118553392
+            }
+          ]
+        },
+        {
+          "type": "polygon",
+          "version": "5.1.0",
+          "originX": "left",
+          "originY": "top",
+          "left": 683.5,
+          "top": 364.42,
+          "width": 98,
+          "height": 77.98,
+          "fill": "rgba(59, 130, 246, 0.5)",
+          "stroke": "#1d4ed8",
+          "strokeWidth": 2,
+          "strokeDashArray": null,
+          "strokeLineCap": "butt",
+          "strokeDashOffset": 0,
+          "strokeLineJoin": "miter",
+          "strokeUniform": false,
+          "strokeMiterLimit": 4,
+          "scaleX": 1,
+          "scaleY": 1,
+          "angle": 0,
+          "flipX": false,
+          "flipY": false,
+          "opacity": 1,
+          "shadow": null,
+          "visible": true,
+          "backgroundColor": "",
+          "fillRule": "nonzero",
+          "paintFirst": "fill",
+          "globalCompositeOperation": "source-over",
+          "skewX": 0,
+          "skewY": 0,
+          "exhibitorName": "PR Press",
+          "logoUrl": "",
+          "sector": "Professional Services & Institutions",
+          "id": "booth_1762120984285",
+          "points": [
+            {
+              "x": 782,
+              "y": 441.90541408089024
+            },
+            {
+              "x": 721,
+              "y": 442.90520008559815
+            },
+            {
+              "x": 716,
+              "y": 441.90541408089024
+            },
+            {
+              "x": 710,
+              "y": 440.9056280761823
+            },
+            {
+              "x": 704,
+              "y": 437.90627006205864
+            },
+            {
+              "x": 699,
+              "y": 434.90691204793495
+            },
+            {
+              "x": 696,
+              "y": 430.90776802910335
+            },
+            {
+              "x": 691,
+              "y": 425.9088380055639
+            },
+            {
+              "x": 688,
+              "y": 419.9101219773165
+            },
+            {
+              "x": 686,
+              "y": 415.9109779584849
+            },
+            {
+              "x": 685,
+              "y": 410.91204793494546
+            },
+            {
+              "x": 684,
+              "y": 405.91311791140595
+            },
+            {
+              "x": 684,
+              "y": 401.9139738925744
+            },
+            {
+              "x": 685,
+              "y": 395.915257864327
+            },
+            {
+              "x": 687,
+              "y": 389.9165418360796
+            },
+            {
+              "x": 690,
+              "y": 384.91761181254014
+            },
+            {
+              "x": 694,
+              "y": 379.9186817890007
+            },
+            {
+              "x": 697,
+              "y": 375.9195377701691
+            },
+            {
+              "x": 702,
+              "y": 372.9201797560454
+            },
+            {
+              "x": 709,
+              "y": 368.9210357372138
+            },
+            {
+              "x": 715,
+              "y": 366.921463727798
+            },
+            {
+              "x": 721,
+              "y": 364.9218917183822
+            },
+            {
+              "x": 731,
+              "y": 364.9218917183822
+            },
+            {
+              "x": 782,
+              "y": 366.921463727798
+            },
+            {
+              "x": 782,
+              "y": 441.90541408089024
+            },
+            {
+              "x": 782,
+              "y": 441.90541408089024
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
