@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirana International Fair 30th AfterShow Report - Interactive</title>
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --primary-blue: #0A3D62; /* Dark Blue from Klik Expo logo */
+            --secondary-red: #D62828; /* Bright Red for accents */
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f6f8;
+            background-color: #f7f9fb; /* Whitish Background */
         }
+        /* Custom Utilities using CSS variables */
+        .text-primary-blue { color: var(--primary-blue); }
+        .bg-primary-blue { background-color: var(--primary-blue); }
+        .text-secondary-red { color: var(--secondary-red); }
+        .bg-secondary-red { background-color: var(--secondary-red); }
+        .border-secondary-red { border-color: var(--secondary-red); }
+        
+        /* Smooth scrolling for anchors */
+        html { scroll-behavior: smooth; }
+        
+        /* 1. STYLES FOR FIXED SIDEBAR */
         .sidebar {
-            /* Blue color matching the report theme */
-            background-color: #0d254b;
+            background-color: var(--primary-blue);
             box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
@@ -21,11 +37,13 @@
             height: 100%;
             overflow-y: auto;
             padding: 1.5rem 1rem;
-            z-index: 10;
+            z-index: 50; 
         }
+        /* 2. MAIN CONTENT PADDING for Desktop */
         .content-container {
-            padding-right: 320px; /* Space for the 80px sidebar */
+            padding-right: 320px; 
         }
+        /* 3. MOBILE ADAPTATION: Remove fixed position and padding */
         @media (max-width: 1024px) {
             .sidebar {
                 position: relative;
@@ -35,13 +53,12 @@
             }
             .content-container {
                 padding-right: 0;
-                padding-top: 1.5rem;
             }
         }
         .report-section {
-            scroll-margin-top: 80px; /* Offset for fixed header */
+            scroll-margin-top: 80px; 
         }
-        /* Custom scrollbar for aesthetics */
+        /* Custom scrollbar */
         .sidebar::-webkit-scrollbar {
             width: 8px;
         }
@@ -51,14 +68,14 @@
         }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-<!-- Video Modal -->
+<!-- Video Modal (Hidden by default) -->
 <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center p-4 z-50 transition-opacity duration-300">
     <div class="bg-white p-6 rounded-xl shadow-2xl max-w-2xl w-full">
         <div class="flex justify-between items-start mb-4">
             <h3 class="text-2xl font-bold text-gray-900">Exclusive Testimonial Video</h3>
-            <button onclick="closeModal()" class="text-gray-400 hover:text-red-600 transition-colors">
+            <button onclick="closeModal()" class="text-gray-400 hover:text-secondary-red transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -74,215 +91,484 @@
     </div>
 </div>
 
-<!-- Right Sidebar (Table of Contents) -->
+<!-- FIXED RIGHT SIDEBAR (Table of Contents & PDF Embed) -->
 <nav class="sidebar w-80">
     <div class="sticky top-0">
         <div class="flex items-center space-x-2 pb-6 border-b border-white border-opacity-20 mb-6">
             <div class="h-8 w-8 bg-white rounded-full flex items-center justify-center">
-                <span class="text-red-600 font-extrabold text-lg">30</span>
+                <span class="text-secondary-red font-extrabold text-lg">30</span>
             </div>
             <h2 class="text-xl font-bold text-white leading-tight">Interactive TOC</h2>
         </div>
-        <ul class="space-y-3">
-            <li class="font-bold text-yellow-300 hover:text-yellow-400 transition-colors text-lg">Report Sections</li>
-            <li><a href="#highlights" class="text-white hover:text-red-400 transition-colors block text-sm">1. Highlights</a></li>
-            <li><a href="#introduction" class="text-white hover:text-red-400 transition-colors block text-sm">2. Introduction</a></li>
-            <li><a href="#opening-remarks" class="text-white hover:text-red-400 transition-colors block text-sm">3. Opening Ceremony Remarks <span class="text-xs text-yellow-500">(Tap to Expand)</span></a></li>
-            <li><a href="#testimonials" class="text-white hover:text-red-400 transition-colors block text-sm">4. Testimonials <span class="text-xs text-red-500">(Tap for Video)</span></a></li>
-            <li><a href="#state-participants" class="text-white hover:text-red-400 transition-colors block text-sm">5. Key State Participants</a></li>
-            <li><a href="#pavilion" class="text-white hover:text-red-400 transition-colors block text-sm">7. 30for30's Pavilion <span class="text-xs text-yellow-500">(Tap for Details)</span></a></li>
-            <li><a href="#conferences" class="text-white hover:text-red-400 transition-colors block text-sm">8. Conferences</a></li>
-            <li><a href="#matchmaking" class="text-white hover:text-red-400 transition-colors block text-sm">11. Matchmaking Stories</a></li>
-            <li><a href="#ceo-letter" class="text-white hover:text-red-400 transition-colors block text-sm">15. Letter from CEO</a></li>
-            <li><a href="#whats-next" class="text-white hover:text-red-400 transition-colors block text-sm">16. What's Next?</a></li>
+        <ul class="space-y-2">
+            <li class="font-bold text-yellow-300 transition-colors text-lg">Report Sections (1-17)</li>
+            <li><a href="#highlights" class="text-white hover:text-secondary-red transition-colors block text-sm">1. Highlights</a></li>
+            <li><a href="#introduction" class="text-white hover:text-secondary-red transition-colors block text-sm">2. Introduction</a></li>
+            <li><a href="#opening-remarks" class="text-white hover:text-secondary-red transition-colors block text-sm">3. Opening Remarks <span class="text-xs text-yellow-500">(Tap to Expand)</span></a></li>
+            <li><a href="#testimonials" class="text-white hover:text-secondary-red transition-colors block text-sm">4. Testimonials <span class="text-xs text-secondary-red">(Tap for Video)</span></a></li>
+            <li><a href="#participants" class="text-white hover:text-secondary-red transition-colors block text-sm">5. Key State Participants</a></li>
+            <li><a href="#state-entities" class="text-white hover:text-secondary-red transition-colors block text-sm">6. State Entity Participation</a></li>
+            <li><a href="#pavilion" class="text-white hover:text-secondary-red transition-colors block text-sm">7. 30for30’s Pavillion <span class="text-xs text-yellow-500">(Tap for Details)</span></a></li>
+            <li><a href="#conferences" class="text-white hover:text-secondary-red transition-colors block text-sm">8. Conferences & Panels</a></li>
+            <li><a href="#sustainability" class="text-white hover:text-secondary-red transition-colors block text-sm">9. Sustainability & Social Responsibility</a></li>
+            <li><a href="#youth-culture" class="text-white hover:text-secondary-red transition-colors block text-sm">10. Youth & Culture</a></li>
+            <li><a href="#matchmaking" class="text-white hover:text-secondary-red transition-colors block text-sm">11. Matchmaking Success Stories</a></li>
+            <li><a href="#awards" class="text-white hover:text-secondary-red transition-colors block text-sm">12. Awards & Recognitions</a></li>
+            <li><a href="#partners" class="text-white hover:text-secondary-red transition-colors block text-sm">13. Partners, Sponsors & Media</a></li>
+            <li><a href="#conclusions" class="text-white hover:text-secondary-red transition-colors block text-sm">14. Conclusions</a></li>
+            <li><a href="#ceo-letter" class="text-white hover:text-secondary-red transition-colors block text-sm">15. Letter of CEO</a></li>
+            <li><a href="#future" class="text-white hover:text-secondary-red transition-colors block text-sm">16. What’s Next</a></li>
+            <li><a href="#photo-album" class="text-white hover:text-secondary-red transition-colors block text-sm">17. Photo Album</a></li>
         </ul>
         
         <div class="mt-8 pt-6 border-t border-white border-opacity-20">
             <h3 class="text-lg font-bold text-white mb-2">Original Document</h3>
-            <!-- This iframe loads the actual PDF file as requested -->
-            <iframe src="uploaded:TIF 30th AfterShow Report.pdf" class="w-full h-96 rounded-lg shadow-lg border-2 border-red-500"></iframe>
-            <p class="text-xs text-white text-opacity-70 mt-2">The full PDF is displayed here. For interactive features, scroll through the content on the left.</p>
+            <!-- UPDATED with Google Drive embed link -->
+            <iframe src="https://drive.google.com/file/d/11-JWuCb7nGWNsb8LWXudNA1HMGnHR1Sv/preview" class="w-full h-96 rounded-lg shadow-lg border-2 border-secondary-red"></iframe>
+            <p class="text-xs text-white text-opacity-70 mt-2">The full PDF is displayed here via public URL. For interactive features, use the main content area.</p>
         </div>
     </div>
 </nav>
 
-<!-- Main Content Area -->
-<div class="content-container p-4 lg:p-12">
-    <header class="mb-10 text-center">
-        <h1 class="text-4xl font-extrabold text-gray-900 leading-tight">TIRANA INTERNATIONAL FAIR</h1>
-        <p class="text-xl font-medium text-red-600 mt-2">30th AfterShow Report - Interactive Edition</p>
-        <p class="text-gray-500 text-sm mt-1">UNITE, INVEST, INNOVATE | 6-9 NOVEMBER 2024</p>
+<!-- MAIN CONTENT AREA (Padded on right for the fixed sidebar) -->
+<div id="main-content-wrapper" class="content-container">
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-40 shadow-lg bg-white/95 backdrop-blur-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Title -->
+                <a href="#home" class="text-2xl font-black text-primary-blue">
+                    TIF <span class="text-secondary-red">30</span>
+                </a>
+
+                <!-- Desktop Navigation (Simplified: Navigation is handled by the fixed sidebar) -->
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#highlights" class="text-gray-600 hover:text-primary-blue transition duration-150">Highlights</a>
+                    <a href="#participants" class="text-gray-600 hover:text-primary-blue transition duration-150">Participants</a>
+                    <a href="#conferences" class="text-gray-600 hover:text-primary-blue transition duration-150">Conferences</a>
+                    <a href="#matchmaking" class="text-gray-600 hover:text-primary-blue transition duration-150">Matchmaking</a>
+                    <a href="#future" class="text-secondary-red border-b-2 border-secondary-red">What's Next?</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <div class="max-w-4xl mx-auto space-y-12">
+    <!-- Main Content -->
+    <main>
         
-        <!-- 1. Highlights -->
-        <section id="highlights" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">1. Highlights</h2>
-            <div class="grid md:grid-cols-2 gap-6 text-lg">
-                <div><span class="font-semibold text-red-600">Exhibition Space:</span> 6,850 m2</div>
-                <div><span class="font-semibold text-red-600">Total Visitors & Attendees:</span> 21,285</div>
-                <div><span class="font-semibold text-red-600">Exhibitors:</span> 270</div>
-                <div><span class="font-semibold text-red-600">Countries Represented:</span> 15 (18 including delegations)</div>
-                <div><span class="font-semibold text-red-600">Concurrent Events:</span> 64</div>
-                <div><span class="font-semibold text-red-600">B2B/B2C/B2G Meetings:</span> More than 1,200 companies</div>
+        <!-- 2. Introduction -->
+        <section id="introduction" class="report-section bg-primary-blue py-20 sm:py-28 text-white relative overflow-hidden">
+            <div class="container mx-auto px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+                    Tirana International Fair <span class="text-secondary-red">30</span><span class="text-white">th</span> Anniversary
+                </h1>
+                <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8 opacity-90">
+                    UNITE, INVEST, INNOVATE: The AfterShow Report for a landmark event celebrating three decades of economic growth and regional collaboration in the Balkans.
+                </p>
+            </div>
+            <div class="container mx-auto px-6 lg:px-8 mt-10 max-w-4xl text-left">
+                 <h2 class="text-2xl font-bold text-yellow-300 mb-3">2. Introduction</h2>
+                 <p class="text-gray-200 leading-relaxed">We are proud to present the aftershow report for the 30th anniversary edition of the Tirana International Fair, a milestone event celebrating three decades of fostering economic growth, innovation, and regional cooperation. This special edition featured the **30for30's Pavilion**, highlighting Albania's leading companies that have been operational for over 30 years.</p>
+                 <p class="text-gray-200 leading-relaxed mt-3">The fair welcomed participation from 18 countries, reinforcing its role as a hub for international collaboration and commerce. Italy and Serbia stood out with the largest participation among foreign countries, contributing 35 and 25 companies, respectively. With 270 exhibitors and 21,285 attendees, this year's edition exemplified the Tirana International Fair's legacy as a bridge connecting Albania to the world.</p>
+            </div>
+
+            <!-- Background pattern for style -->
+            <div class="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs><pattern id="a" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(2) rotate(45)"><rect x="0" y="0" width="100%" height="100%" fill="none"/><path d="M-10 10l20 -20zM0 40l20 -20zM30 50l20 -20z" stroke="#fff" stroke-width="0.5"/></pattern></defs>
+                    <rect width="100%" height="100%" fill="url(#a)"/>
+                </svg>
             </div>
         </section>
 
-        <!-- 2. Introduction -->
-        <section id="introduction" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">2. Introduction</h2>
-            <p class="text-gray-700 leading-relaxed">We are proud to present the aftershow report for the 30th anniversary edition of the Tirana International Fair, a milestone event celebrating three decades of fostering economic growth, innovation, and regional cooperation. This special edition featured the **30for30's Pavilion**, highlighting Albania's leading companies that have been operational for over 30 years.</p>
-            <p class="text-gray-700 leading-relaxed mt-3">The fair welcomed participation from 18 countries, reinforcing its role as a hub for international collaboration and commerce. Italy and Serbia stood out with the largest participation among foreign countries, contributing 35 and 25 companies, respectively. With 270 exhibitors and 21,285 attendees, this year's edition exemplified the Tirana International Fair's legacy as a bridge connecting Albania to the world.</p>
+        <!-- 1. Highlights - Animated Stats -->
+        <section id="highlights" class="report-section py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">1. Highlights: By The Numbers</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+
+                    <div class="text-center p-6 bg-gray-50 rounded-xl shadow-md transform hover:shadow-xl transition duration-300">
+                        <div id="stat-visitors" class="text-4xl sm:text-5xl font-extrabold text-secondary-red">0</div>
+                        <p class="mt-2 text-lg font-medium text-gray-600">Total Visitors</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-gray-50 rounded-xl shadow-md transform hover:shadow-xl transition duration-300">
+                        <div id="stat-exhibitors" class="text-4xl sm:text-5xl font-extrabold text-primary-blue">0</div>
+                        <p class="mt-2 text-lg font-medium text-gray-600">Exhibitors</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-gray-50 rounded-xl shadow-md transform hover:shadow-xl transition duration-300">
+                        <div id="stat-countries" class="text-4xl sm:text-5xl font-extrabold text-secondary-red">0</div>
+                        <p class="mt-2 text-lg font-medium text-gray-600">Countries Represented</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-gray-50 rounded-xl shadow-md transform hover:shadow-xl transition duration-300">
+                        <div id="stat-speakers" class="text-4xl sm:text-5xl font-extrabold text-primary-blue">0</div>
+                        <p class="mt-2 text-lg font-medium text-gray-600">Expert Speakers</p>
+                    </div>
+
+                    <div class="col-span-2 md:col-span-1 text-center p-6 bg-gray-50 rounded-xl shadow-md transform hover:shadow-xl transition duration-300">
+                        <div id="stat-reach" class="text-4xl sm:text-5xl font-extrabold text-secondary-red">0</div>
+                        <p class="mt-2 text-lg font-medium text-gray-600">Media Reach (M+)</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 3. Opening Ceremony Remarks (Interactive Element: Expandable Text) -->
-        <section id="opening-remarks" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">3. Opening Ceremony Remarks</h2>
-            
-            <!-- Default Visible Content -->
-            <div class="flex items-center justify-between p-3 bg-red-50 rounded-lg cursor-pointer hover:bg-red-100 transition-colors" onclick="toggleText('gonxhja-remarks')">
-                <h3 class="text-xl font-semibold text-red-700">Remarks from Minister Blendi Gonxhja</h3>
-                <span id="gonxhja-icon" class="text-red-700 font-bold transform transition-transform duration-300">+</span>
-            </div>
+        <section id="opening-remarks" class="report-section py-16 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">3. Opening Ceremony Remarks</h2>
+                
+                <!-- Default Visible Content -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-secondary-red">
+                    <div class="flex items-center justify-between p-3 bg-red-50 rounded-lg cursor-pointer hover:bg-red-100 transition-colors" onclick="toggleText('gonxhja-remarks')">
+                        <h3 class="text-xl font-semibold text-secondary-red">Remarks from Minister Blendi Gonxhja</h3>
+                        <span id="gonxhja-icon" class="text-secondary-red font-bold transform transition-transform duration-300 text-2xl">+</span>
+                    </div>
 
-            <!-- Expandable Content -->
-            <div id="gonxhja-remarks" class="mt-4 hidden p-4 border border-red-200 rounded-lg">
-                <blockquote class="text-gray-600 italic border-l-4 border-red-500 pl-4">
-                    Minister of Economy, Culture and Innovation, hailed the fair as a cornerstone of Albania's regional economic integration. Reflecting on Klik Ekspo Group's journey, he remarked: "When I first met Luan at the National Historical Museum, he was a man brimming with energy and vision. Thirty years later, Klik Ekspo Group has grown into more than just a private company-it has become a public treasure, a bridge connecting Albanian entrepreneurs with the global market. Today, this platform embodies Albania's aspirations for innovation and international cooperation."
-                    <footer class="mt-2 text-sm not-italic font-semibold text-red-600">- Mr. Blendi Gonxhja</footer>
-                </blockquote>
-            </div>
+                    <!-- Expandable Content -->
+                    <div id="gonxhja-remarks" class="mt-4 hidden p-4 border border-secondary-red rounded-lg">
+                        <blockquote class="text-gray-600 italic border-l-4 border-secondary-red pl-4">
+                            Minister of Economy, Culture and Innovation, hailed the fair as a cornerstone of Albania's regional economic integration. Reflecting on Klik Ekspo Group's journey, he remarked: "When I first met Luan at the National Historical Museum, he was a man brimming with energy and vision. Thirty years later, Klik Ekspo Group has grown into more than just a private company-it has become a public treasure, a bridge connecting Albanian entrepreneurs with the global market. Today, this platform embodies Albania's aspirations for innovation and international cooperation."
+                            <footer class="mt-2 text-sm not-italic font-semibold text-secondary-red">- Mr. Blendi Gonxhja</footer>
+                        </blockquote>
+                    </div>
 
-            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Vice Mayor of Tirana - Mr. Andi Seferi</h3>
-            <p class="text-gray-700 leading-relaxed">Deputy Mayor of Tirana, lauded the fair's transformative role in the city's evolution, saying: "This fair is now an integral part of Tirana's 104-year history, representing nearly a third of the city's lifespan as the capital. Klik Ekspo Group has given Tirana a gift that keeps on giving -a platform for investors and entrepreneurs that has beautified the city and strengthened its economic foundation."</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Vice Mayor of Tirana - Mr. Andi Seferi</h3>
+                    <p class="text-gray-700 leading-relaxed">Deputy Mayor of Tirana, lauded the fair's transformative role in the city's evolution, saying: "This fair is now an integral part of Tirana's 104-year history, representing nearly a third of the city's lifespan as the capital. Klik Ekspo Group has given Tirana a gift that keeps on giving -a platform for investors and entrepreneurs that has beautified the city and strengthened its economic foundation."</p>
+                </div>
+            </div>
         </section>
-        
+
         <!-- 4. Testimonials (Interactive Element: Video Modal) -->
-        <section id="testimonials" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">4. Testimonials From Our Exhibitors</h2>
-            
-            <div class="grid md:grid-cols-2 gap-6">
+        <section id="testimonials" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">4. Testimonials From Our Exhibitors</h2>
                 
-                <!-- Interactive Testimonial (Click for Video) -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-inner">
-                    <h3 class="text-xl font-bold text-blue-700 mb-2">Firat Gurelli, Bering Yachts</h3>
-                    <p class="text-gray-600 italic">"As TIF concludes, I must emphasize how impressed we are with the professionalism and exceptional organization of the event... We are genuinely looking forward to participating again next year."</p>
-                    <button onclick="openModal()" class="mt-4 w-full bg-red-600 text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md flex items-center justify-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                        </svg>
-                        WATCH VIDEO INTERVIEW (Tap me!)
-                    </button>
-                </div>
-                
-                <!-- Standard Testimonial -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sonila Mustafa, Qeliza</h3>
-                    <p class="text-gray-600 italic">"TIF has been an incredible experience for Qeliza, especially as first-time participants. The support we received from Klik Ekspo Group and the overall organization has been outstanding..."</p>
-                    <p class="mt-4 text-xs font-medium text-gray-500">B2B and B2C engagement success.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Interactive Testimonial (Click for Video) -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg border-t-4 border-secondary-red">
+                        <h3 class="text-xl font-bold text-secondary-red mb-2">Firat Gurelli, Bering Yachts</h3>
+                        <p class="text-gray-600 italic">"As TIF concludes, I must emphasize how impressed we are with the professionalism and exceptional organization of the event... We are genuinely looking forward to participating again next year."</p>
+                        <button onclick="openModal()" class="mt-4 w-full bg-secondary-red text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            WATCH VIDEO INTERVIEW (Tap me!)
+                        </button>
+                    </div>
+                    
+                    <!-- Standard Testimonial -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-gray-400">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sonila Mustafa, Qeliza</h3>
+                        <p class="text-gray-600 italic">"TIF has been an incredible experience for Qeliza, especially as first-time participants. The support we received from Klik Ekspo Group and the overall organization has been outstanding..."</p>
+                        <p class="mt-4 text-xs font-medium text-gray-500">B2B and B2C engagement success.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Key State Participants -->
-        <section id="state-participants" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">5. Key State Participants</h2>
-            <div class="space-y-4">
-                <div class="p-3 bg-red-50 rounded-lg">
-                    <h3 class="text-xl font-semibold text-red-700">Italy</h3>
-                    <p class="text-sm text-gray-700">Italy emerged as the largest international participant with 35 companies, showcasing products from Sicilian Arance Rosse to cutting-edge green transport. Remains Albania's top trading partner (49% of exports).</p>
+        <!-- 5. Key State Participants - Interactive Filter -->
+        <section id="participants" class="report-section py-16 sm:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">5. Key State Participants</h2>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <!-- Country Buttons (Red highlight) -->
+                    <button class="country-tab px-4 py-2 text-sm font-semibold rounded-full bg-secondary-red text-white hover:bg-red-700 transition duration-150" data-country="Italy">🇮🇹 Italy</button>
+                    <button class="country-tab px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-150" data-country="Serbia">🇷🇸 Serbia</button>
+                    <button class="country-tab px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-150" data-country="Hungary">🇭🇺 Hungary</button>
+                    <button class="country-tab px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-150" data-country="Montenegro">🇲🇪 Montenegro</button>
+                    <button class="country-tab px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-150" data-country="Türkiye">🇹🇷 Türkiye</button>
                 </div>
-                <div class="p-3 bg-blue-50 rounded-lg">
-                    <h3 class="text-xl font-semibold text-blue-700">Serbia</h3>
-                    <p class="text-sm text-gray-700">Second-largest international participant with 25 companies, highlighting expertise in construction, manufacturing, and food processing. Strong bilateral ties fostered over 20 consecutive years.</p>
+
+                <!-- Country Content Display -->
+                <div id="country-content" class="bg-white p-6 sm:p-10 rounded-xl shadow-xl border border-gray-100 transition-all duration-300 max-w-4xl mx-auto">
+                    <!-- Content will be injected here by JavaScript -->
                 </div>
-                <div class="p-3 bg-yellow-50 rounded-lg">
-                    <h3 class="text-xl font-semibold text-yellow-700">Hungary</h3>
-                    <p class="text-sm text-gray-700">Focus on regional cooperation under the EU Presidency (HU24EU), showcasing innovations in renewable energy, IT, and agri-tech. Hungary has invested around €350 million in Albania.</p>
+
+                <div class="text-center mt-10">
+                    <p class="text-gray-500 text-sm">Plus delegations and individual companies from 15+ countries, including Greece, Kosovo, Germany, and the UAE.</p>
                 </div>
             </div>
         </section>
         
-        <!-- 7. 30for30's Pavilion (Interactive Element: Detail Expansion) -->
-        <section id="pavilion" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">7. 30for30's Pavilion</h2>
-            <p class="text-gray-700 mb-4">This pavilion celebrated the enduring success and resilience of companies marking 30 years in the Albanian market, including Bolv Group, Lim Em Company, Aiba Company, Tirana Bank, Agna Group, and Coca-Cola Bottling Shqiperia.</p>
-
-            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
-                <div class="flex items-center justify-between cursor-pointer" onclick="toggleText('cocacola-details')">
-                    <h3 class="text-xl font-bold text-green-800">Coca-Cola Bottling Shqiperia Focus</h3>
-                    <span id="cocacola-icon" class="text-green-600 font-bold transform transition-transform duration-300 text-2xl">+</span>
-                </div>
-                
-                <!-- Expandable Content -->
-                <div id="cocacola-details" class="mt-4 hidden">
-                    <p class="text-gray-700 border-t border-green-200 pt-3">
-                        <span class="font-bold">Expanded Detail: Sustainability & Innovation.</span> Coca-Cola Bottling Shqiperia, a symbol of global brands in the local market, presented its local impact in terms of employment, distribution networks, and sustainability initiatives. The company emphasized how it has maintained its leadership position through innovation and customer engagement, specifically highlighting modernized production facilities and the implementation of sustainable practices in line with global environmental standards, including their eco-friendly fleet.
-                    </p>
+        <!-- 6. State Entity Participation (NEW SECTION) -->
+        <section id="state-entities" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">6. State Entity Participation</h2>
+                <div class="space-y-6">
+                    <div class="p-5 bg-gray-50 rounded-lg border-l-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue">AIDA - Albanian Investment Development Agency</h3>
+                        <p class="text-gray-700 mt-2">AIDA displayed the potential of local products through the "Choose Local Zgjidh të Vendit" campaign, focusing on the path towards international export for "Made in Albania" products.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50 rounded-lg border-l-4 border-secondary-red">
+                        <h3 class="text-xl font-semibold text-secondary-red">Ministry of Agriculture and Rural Development</h3>
+                        <p class="text-gray-700 mt-2">Participated to underline the role of rural women in preserving and promoting Albania's unique natural flavours, featuring products handmade by over 20 rural women producers.</p>
+                    </div>
+                    <div class="p-5 bg-gray-50 rounded-lg border-l-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue">AIC - Albanian Investments Corporation</h3>
+                        <p class="text-gray-700 mt-2">Highlighted upcoming strategic projects, including Durana Tech Park and Expo Albania, aimed at developing Albania as a major technological and expo hub in the Western Balkans.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- 7. 30for30's Pavilion (Interactive Element: Detail Expansion) -->
+        <section id="pavilion" class="report-section py-16 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">7. 30for30's Pavillion: Celebrating 30 Years</h2>
+                <p class="text-gray-700 mb-6 text-center">This pavilion celebrated the enduring success and resilience of companies marking 30 years in the Albanian market (Bolv Group, Lim Em Company, Aiba Company, Tirana Bank, Agna Group, and Coca-Cola Bottling Shqiperia).</p>
+
+                <div class="bg-red-100 p-6 rounded-xl shadow-lg border-l-4 border-secondary-red">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="toggleText('cocacola-details')">
+                        <h3 class="text-xl font-bold text-secondary-red">Coca-Cola Bottling Shqiperia Focus: Sustainability & Innovation</h3>
+                        <span id="cocacola-icon" class="text-secondary-red font-bold transform transition-transform duration-300 text-2xl">+</span>
+                    </div>
+                    
+                    <!-- Expandable Content -->
+                    <div id="cocacola-details" class="mt-4 hidden">
+                        <p class="text-gray-700 border-t border-secondary-red pt-3">
+                            <span class="font-bold">Expanded Detail:</span> Coca-Cola Bottling Shqiperia, a symbol of global brands in the local market, presented its local impact in terms of employment, distribution networks, and sustainability initiatives. The company emphasized how it has maintained its leadership position through innovation and customer engagement, specifically highlighting **modernized production facilities and the implementation of sustainable practices** in line with global environmental standards, including their eco-friendly fleet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- 8. Conferences and Panel Discussions -->
-        <section id="conferences" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">8. Conferences and Panel Discussions</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li><span class="font-semibold">Regional Cooperation Roundtable:</span> Focused on cross-border trade, regional infrastructure, and economic collaboration in the Western Balkans.</li>
-                <li><span class="font-semibold">The Banking Sector in Albania:</span> Addressed digital transformation, transparency, and accountability in the evolving banking landscape.</li>
-                <li><span class="font-semibold">Competitiveness and Cohesion:</span> Organized by the Hungarian Embassy, this session highlighted Hungary's EU Presidency focus on regional partnerships.</li>
-                <li><span class="font-semibold">Albania's Strategic Investment Opportunities:</span> AIC highlighted projects like Durana Tech Park and Expo Albania.</li>
-                <li><span class="font-semibold">Consume and Grow Locally:</span> Discussed strategies to boost local production and transition toward international exports.</li>
-            </ul>
+        <section id="conferences" class="report-section py-16 sm:py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">8. Conferences and Panel Discussions (64 Events)</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                    <!-- Panel Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue mb-2">Albania's Strategic Investment Opportunities</h3>
+                        <p class="text-sm text-gray-600 mb-3">AIC Panel Discussion</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                            <li>Focus: Durana Tech Park & Expo Albania.</li>
+                            <li>Moderator: Ravik Mima.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Panel Card 2 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border-t-4 border-secondary-red">
+                        <h3 class="text-xl font-semibold text-secondary-red mb-2">Competitiveness and Cohesion (HU24EU)</h3>
+                        <p class="text-sm text-gray-600 mb-3">Organized by Hungarian Embassy & CDI</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                            <li>Focus: Regional cooperation under the EU Presidency.</li>
+                            <li>Key Speaker: H.E. Martina Kasnyik.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Panel Card 3 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue mb-2">The Banking Sector: Challenges of Digitalization</h3>
+                        <p class="text-sm text-gray-600 mb-3">Workshop under the IDP Commissioner's Cabinet</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                            <li>Focus: Data protection and transparency.</li>
+                            <li>Key Participants: Tirana Bank, UniFin, IUTE.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Panel Card 4 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 border-t-4 border-secondary-red">
+                        <h3 class="text-xl font-semibold text-secondary-red mb-2">Consume and Grow Locally</h3>
+                        <p class="text-sm text-gray-600 mb-3">AIDA-led Discussion</p>
+                        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                            <li>Focus: Boosting local production, "Made in Albania" export path.</li>
+                            <li>Key Speaker: Laura Saro Plaku (Executive Director of AIDA).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 9. Sustainability & Social Responsibility (NEW SECTION) -->
+        <section id="sustainability" class="report-section py-16 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">9. Sustainability & Social Responsibility</h2>
+                <p class="text-gray-700 mb-6">This edition demonstrated a strong commitment to eco-conscious practices, highlighting companies and initiatives prioritizing sustainable development and social impact.</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-white rounded-lg shadow border-l-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue">Empowering Producers</h3>
+                        <p class="text-sm text-gray-700 mt-1">AIDA supported 12 artisanal companies; the Ministry of Agriculture enabled 21 women local producers to showcase their products.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow border-l-4 border-secondary-red">
+                        <h3 class="text-xl font-semibold text-secondary-red">Pioneering Startups</h3>
+                        <p class="text-sm text-gray-700 mt-1">Partners Albania & Challenge Fund showcased 15 startups addressing sustainability in agriculture, education, and technology (e.g., AR-powered fashion, GREENBOT).</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow border-l-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold text-primary-blue">Industry Leaders</h3>
+                        <p class="text-sm text-gray-700 mt-1">Companies like Berry Global, Trans Italia Green Transport, and Coca-Cola Bottling Shqipëria showcased sustainable production and eco-friendly fleets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 10. Youth & Culture (NEW SECTION) -->
+        <section id="youth-culture" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">10. Youth & Culture</h2>
+                <div class="space-y-6">
+                    <p class="text-gray-700">The Upper Floor of the Palace of Congresses became a vibrant center for creativity and education, uniting leading Albanian universities (NYU, CIT, Qiriazi) and creative industries.</p>
+                    <ul class="list-disc list-inside text-gray-700 pl-4 space-y-2">
+                        <li>**Performances:** The Klea Huta Academy and The National Choreographic School delivered standout artistic performances.</li>
+                        <li>**Heritage:** The Central State Film Archive presented a captivating mini-museum highlighting Albania's cinematic heritage.</li>
+                        <li>**Tradition:** The National Ensemble of Opera and Ballet performed folkloric dances and exhibited Albania's oldest musical instruments.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- 11. Matchmaking Success Stories -->
-        <section id="matchmaking" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">11. Matchmaking Success Stories</h2>
-            <div class="space-y-4">
-                <div class="p-4 bg-gray-100 rounded-lg">
-                    <h3 class="text-xl font-semibold text-gray-800">Bolv Group & Bering Yachts</h3>
-                    <p class="text-sm text-gray-600">Strategic partnership to address the fuel needs of Bering Yachts' fleet both in Albania and internationally, ensuring a reliable, high-quality fuel supply.</p>
+        <section id="matchmaking" class="report-section py-16 sm:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">11. Some of the Matchmaking Success Stories</h2>
+                
+                <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    
+                    <!-- Story 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-blue">
+                        <p class="text-2xl font-black text-gray-900 mb-3">Bolv Group <span class="text-primary-blue">•</span> Bering Yachts</p>
+                        <p class="text-gray-700">**Strategic Fuel Supply:** Bolv Group (largest fuel provider) partnered with Bering Yachts to ensure reliable, high-quality fuel supply for their maritime operations internationally and in Albania.</p>
+                    </div>
+
+                    <!-- Story 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary-red">
+                        <p class="text-2xl font-black text-gray-900 mb-3">Remany GmbH <span class="text-secondary-red">•</span> CIT</p>
+                        <p class="text-gray-700">**International Career Bridge:** This collaboration provides Canadian Institute of Technology (CIT) students with unique summer internships and post-graduation employment opportunities in Germany.</p>
+                    </div>
+
+                    <!-- Story 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary-red">
+                        <p class="text-2xl font-black text-gray-900 mb-3">4A Architekten <span class="text-secondary-red">•</span> Albanian Market</p>
+                        <p class="text-gray-700">**Market Entry:** The German architecture firm secured verbal deals with major Albanian leaders (Balfin, Kastrati, Kika) after showcasing their wellness spa expertise, leading to their entry into the local market.</p>
+                    </div>
+
+                    <!-- Story 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-blue">
+                        <p class="text-2xl font-black text-gray-900 mb-3">Mayors' Handshake <span class="text-primary-blue">•</span> Vora & Francofonte</p>
+                        <p class="text-gray-700">**Municipal Cooperation:** The meeting between the Mayors established a foundation for promising cooperation focused on agriculture, tourism, and cultural exchange between Albania and Italy (Sicily).</p>
+                    </div>
                 </div>
-                <div class="p-4 bg-gray-100 rounded-lg">
-                    <h3 class="text-xl font-semibold text-gray-800">Remany GmbH & CIT (Canadian Institute of Technology)</h3>
-                    <p class="text-sm text-gray-600">Partnership to provide Albanian students with unique work experience opportunities in Germany, bridging academic learning with international career development.</p>
+
+                <div class="text-center mt-12">
+                    <p class="text-lg font-medium text-gray-600">Over <span class="font-extrabold text-primary-blue">1,200</span> B2C, B2B & B2G meetings were held, fostering dialogue across 18 countries.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 12. Awards & Recognitions (NEW SECTION) -->
+        <section id="awards" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">12. Awards & Recognitions</h2>
+                <p class="text-gray-700 mb-6">The Assessment Committee honored long-standing companies, institutions, and individuals who made remarkable contributions to Albania's economy, culture, and art.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-gray-50 rounded-lg border-t-2 border-secondary-red"><p class="font-semibold text-primary-blue">Long-standing Economic Contribution:</p> <span class="text-sm text-secondary-red font-bold">AGNA GROUP, COCA-COLA BOTTLING SHQIPËRIA, Bolv Group, AIBA, TIRANA BANK.</span></div>
+                    <div class="p-4 bg-gray-50 rounded-lg border-t-2 border-primary-blue"><p class="font-semibold text-primary-blue">Art & Culture:</p> <span class="text-sm text-primary-blue font-bold">Suzana Turku (Merited Artist), Alban Tahiri (National Ensemble).</span></div>
+                    <div class="p-4 bg-gray-50 rounded-lg border-t-2 border-secondary-red"><p class="font-semibold text-primary-blue">Innovation & Development:</p> <span class="text-sm text-secondary-red font-bold">LIM-EM, Blerina Arbana, Latif Hasolli.</span></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 13. Partners, Sponsors & Media (NEW SECTION) -->
+        <section id="partners" class="report-section py-16 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">13. Partners, Sponsors & Media</h2>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-primary-blue border-b border-primary-blue/30 pb-2">Key Sponsors & Supporters</h3>
+                    <p class="text-gray-700 font-semibold">Public Sponsors:</p>
+                    <p class="text-sm text-gray-600">AIDA, Ministry of Economy, Culture and Innovation, UCCIAL, Municipality of Tirana & Durrës.</p>
+                    <p class="text-gray-700 font-semibold mt-4">Main Corporate Sponsors:</p>
+                    <p class="text-sm text-gray-600">BOLV OIL, LIM-EM, TIRANA BANK, AGNA GROUP, AIBA.</p>
+
+                    <h3 class="text-2xl font-semibold text-secondary-red border-b border-secondary-red/30 pb-2 pt-6">Media Reach & Coverage</h3>
+                    <p class="text-gray-700 mt-2">The Fair achieved an impressive **Over 2 Million People Reached** digitally. Key media partners included MCN TV (exclusive on-site studio), RTSH (National Television), Telegraf (Print), and Radio Partnerships (Club FM, Top Albania Radio).</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 14. Conclusions (NEW SECTION) -->
+        <section id="conclusions" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">14. Conclusions</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">The 30th edition of the Tirana International Fair stands as a landmark celebration of Albania's transformative journey, highlighting its rise as a dynamic hub of opportunity in the Balkans. Anchored by the theme "Unite, Invest, Innovate," the event set a new benchmark for success by fostering impactful connections across industries and championing sustainability and social responsibility.</p>
+                <p class="text-gray-700 leading-relaxed font-semibold border-l-4 border-primary-blue pl-4 py-2">The Fair laid the foundation for a sustainable and globally integrated future, solidifying its legacy as a beacon of collaboration, innovation, and transformative growth for Albania and its partners worldwide.</p>
+            </div>
+        </section>
+        
+        <!-- 15. Letter of CEO (Full Section) -->
+        <section id="ceo-letter" class="report-section py-16 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">15. Letter of CEO, Elona Agolli</h2>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary-red">
+                    <p class="text-gray-700 leading-relaxed italic border-l-4 border-secondary-red pl-4 py-2">
+                        "It is with immense gratitude and pride that I extend my heartfelt thanks to each of you for your participation in the 30th anniversary edition of the Tirana International Fair... As we look to the future, the baton of leadership is gradually passing to the next generation, whose energy, ideas, and innovative spirit will undoubtedly propel the Tirana International Fair to even greater heights."
+                    </p>
+                    <p class="text-right font-semibold text-secondary-red mt-4">- Elona Agolli, CEO, Klik Ekspo Group</p>
                 </div>
             </div>
         </section>
 
-        <!-- 15. Letter from CEO -->
-        <section id="ceo-letter" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">15. Letter from CEO, Elona Agolli</h2>
-            <p class="text-gray-700 leading-relaxed italic border-l-4 border-red-400 pl-4">
-                "It is with immense gratitude and pride that I extend my heartfelt thanks to each of you for your participation in the 30th anniversary edition of the Tirana International Fair... As we look to the future, the baton of leadership is gradually passing to the next generation, whose energy, ideas, and innovative spirit will undoubtedly propel the Tirana International Fair to even greater heights."
-            </p>
-            <p class="text-right font-semibold text-red-600 mt-4">- Elona Agolli, CEO, Klik Ekspo Group</p>
-        </section>
+        <!-- 16. What's Next? (Future Focus) -->
+        <section id="future" class="report-section py-16 sm:py-24 bg-primary-blue text-white">
+            <div class="container mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">16. What’s Next?</h2>
+                <p class="text-xl font-light max-w-3xl mx-auto mb-10 opacity-90">
+                    Building on three decades of success, the Tirana International Fair is expanding for 2025.
+                </p>
 
-        <!-- 16. What's Next? -->
-        <section id="whats-next" class="report-section bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">16. What's Next?</h2>
-            <div class="space-y-4">
-                <div class="p-4 bg-blue-50 rounded-lg">
-                    <h3 class="text-xl font-semibold text-blue-700">31st Edition: Tirana International Fair</h3>
-                    <p class="text-sm text-gray-700 font-bold">November 5-8th, 2025</p>
-                    <p class="text-sm text-gray-600 mt-1">Anticipated to be larger, featuring new thematic pavilions like Food Industry & Agriculture, Tourism & Hospitality, and Energy.</p>
-                </div>
-                <div class="p-4 bg-blue-50 rounded-lg">
-                    <h3 class="text-xl font-semibold text-blue-700">Muse-X Expofest</h3>
-                    <p class="text-sm text-gray-700 font-bold">April 11-13th, 2025</p>
-                    <p class="text-sm text-gray-600 mt-1">The premier music and arts Expofest in the Balkans, combining professional exhibition with a vibrant festival.</p>
+                <!-- Future Edition Details -->
+                <div class="bg-white text-gray-900 p-8 rounded-xl shadow-2xl inline-block max-w-lg">
+                    <p class="text-4xl font-extrabold text-primary-blue mb-4">31st Edition</p>
+                    <p class="text-2xl font-bold mb-2">November 5th - 8th, 2025</p>
+                    <p class="text-lg font-medium text-gray-600 mb-6">Palace of Congresses, Tirana, Albania</p>
+
+                    <h3 class="text-xl font-semibold mb-3">New Thematic Pavilions Include:</h3>
+                    <div class="grid grid-cols-2 gap-3 text-sm font-medium text-left">
+                        <p class="bg-gray-100 p-2 rounded-lg">Food Industry & Agriculture</p>
+                        <p class="bg-gray-100 p-2 rounded-lg">Tourism & Hospitality</p>
+                        <p class="bg-gray-100 p-2 rounded-lg">Construction & Building Materials</p>
+                        <p class="bg-gray-100 p-2 rounded-lg">Energy Pavilion</p>
+                    </div>
+
+                    <button class="mt-8 px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-secondary-red hover:bg-red-700 transition duration-300">
+                        Stay Informed for 2025
+                    </button>
                 </div>
             </div>
         </section>
-
+        
+        <!-- 17. Photo Album (NEW SECTION) -->
+        <section id="photo-album" class="report-section py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b pb-4">17. Photo Album</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <!-- Placeholder images since we cannot embed the original gallery -->
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Opening+Ceremony" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Panel+Discussion" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Exhibitor+Booth" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Networking+Event" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Awards+Gala" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                    <img src="https://placehold.co/400x300/FEE2E2/B91C1C?text=Cultural+Performance" alt="Photo Placeholder" class="w-full h-auto rounded-lg shadow-md aspect-video object-cover">
+                </div>
+            </div>
+        </section>
+        
         <footer class="text-center text-sm text-gray-500 py-10">
             <p>End of Interactive Report. Content extracted from TIF 30th AfterShow Report.</p>
         </footer>
 
-    </div>
-</div>
+    </main>
+
+</div> <!-- End of main-content-wrapper -->
+
 
 <script>
     // --- JavaScript for Interactivity ---
@@ -326,6 +612,132 @@
         modal.classList.add('hidden');
         modal.classList.remove('flex');
     }
+
+    // --- Counter Animation Logic ---
+
+    // Data for animated counters
+    const stats = {
+        'stat-visitors': { target: 21285, duration: 2000, formatter: (n) => n.toLocaleString('en-US', {maximumFractionDigits: 0}) },
+        'stat-exhibitors': { target: 270, duration: 1500, formatter: (n) => n.toLocaleString('en-US', {maximumFractionDigits: 0}) },
+        'stat-countries': { target: 18, duration: 1500, formatter: (n) => n.toLocaleString('en-US', {maximumFractionDigits: 0}) },
+        'stat-speakers': { target: 125, duration: 1500, formatter: (n) => n.toLocaleString('en-US', {maximumFractionDigits: 0}) },
+        'stat-reach': { target: 2, duration: 2500, formatter: (n) => n.toFixed(1) + 'M+' }
+    };
+
+    // Function to animate a single counter
+    function animateCounter(id, target, duration, formatter) {
+        const obj = document.getElementById(id);
+        if (!obj) return;
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = target * progress;
+            obj.innerHTML = formatter(value);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+
+    // Observer to run animation when section is visible
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                Object.keys(stats).forEach(id => {
+                    const { target, duration, formatter } = stats[id];
+                    animateCounter(id, target, duration, formatter);
+                });
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const highlightsSection = document.getElementById('highlights');
+    if (highlightsSection) {
+        observer.observe(highlightsSection);
+    }
+    
+    // --- Country Filter Logic ---
+
+    // Data for the interactive country filter
+    const countryData = {
+        'Italy': {
+            flag: '🇮🇹',
+            title: 'Largest International Participant: 35 Companies',
+            summary: 'Italy remains Albania\'s top trading partner, accounting for 49% of total exports. Participation included Italian Fair Service and Italian Trade, showcasing sectors like green transport, construction, and food processing.',
+            details: 'A standout initiative was the launch of the **Startup10 project** (funded by Italian Development Cooperation) in partnership with the Agricultural University of Tirana, focusing on food safety and youth employment.'
+        },
+        'Serbia': {
+            flag: '🇷🇸',
+            title: 'Second Largest Participant: 25 Companies',
+            summary: 'Serbian businesses, represented by the Chamber of Commerce and Industry of Serbia, highlighted expertise in construction, manufacturing, and food processing. Serbia is Albania\'s second-largest export partner.',
+            details: 'This marks over 20 consecutive years of Serbian participation, strengthening bilateral ties and potentially laying groundwork for cooperation ahead of the Belgrade Expo 2027.'
+        },
+        'Hungary': {
+            flag: '🇭🇺',
+            title: 'Focus on Regional EU Cooperation (HU24EU)',
+            summary: 'Hungary, led by HEPA and the Hungarian Embassy, focused on fostering regional cooperation under their EU Presidency. Hungarian companies showcased innovations in renewable energy, IT, and agri-tech.',
+            details: 'Hungary has invested around **€350 million** in Albania and is a strong supporter of Albania\'s EU membership talks, using the fair as a platform for high-level roundtable discussions.'
+        },
+        'Montenegro': {
+            flag: '🇲🇪',
+            title: 'Promoting Regional Integration',
+            summary: 'The Montenegro Pavilion, organized by the Chamber of Economy, highlighted economic strengths in agriculture, tourism, and wood processing. The focus was on mutual benefits of cross-border collaboration.',
+            details: 'Emphasized sustainable development and regional integration, reinforcing strong economic ties with Albania.'
+        },
+        'Türkiye': {
+            flag: '🇹🇷',
+            title: 'Expanding Opportunities in Albania',
+            summary: 'Türkiye, organized by MÜSİAD Albania, presented a strong portfolio including a prominent luxury yacht manufacturer (Bering Yachts) and packaging machinery experts (Erensoy).',
+            details: 'MÜSİAD actively engaged in B2B meetings to attract Turkish and international investors, recognizing Albania\'s growing prominence in the Balkans.'
+        }
+    };
+
+    const countryTabs = document.querySelectorAll('.country-tab');
+    const countryContentDiv = document.getElementById('country-content');
+
+    function displayCountryContent(countryName) {
+        const data = countryData[countryName];
+        if (!data) return;
+
+        // Update tab styles
+        countryTabs.forEach(tab => {
+            // Updated class lists to use the red secondary color
+            if (tab.getAttribute('data-country') === countryName) {
+                tab.classList.remove('bg-gray-200', 'text-gray-800');
+                tab.classList.add('bg-secondary-red', 'text-white');
+            } else {
+                tab.classList.add('bg-gray-200', 'text-gray-800');
+                tab.classList.remove('bg-secondary-red', 'text-white');
+            }
+        });
+
+        // Inject content
+        countryContentDiv.innerHTML = `
+            <h3 class="text-2xl font-extrabold text-gray-900 mb-3 flex items-center">
+                <span class="mr-3 text-3xl">${data.flag}</span>
+                ${data.title}
+            </h3>
+            <p class="text-lg text-gray-700 mb-4">${data.summary}</p>
+            <div class="border-l-4 border-primary-blue pl-4 py-2">
+                <p class="font-semibold text-primary-blue">Key Initiative:</p>
+                <p class="text-gray-600">${data.details}</p>
+            </div>
+        `;
+    }
+
+    // Attach event listeners to country tabs
+    countryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            displayCountryContent(tab.getAttribute('data-country'));
+        });
+    });
+
+    // Initialize with Italy displayed on load
+    displayCountryContent('Italy');
+
 </script>
 
 </body>
